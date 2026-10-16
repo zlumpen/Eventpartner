@@ -22,6 +22,14 @@ export default function middleware(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  // Hidden quote-request page (Cvent package quote form, noindex).
+  // Served from public/requestaquote.html, outside the /en and /sv locale routing.
+  if (pathname === "/requestaquote" || pathname === "/requestaquote/") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/requestaquote.html";
+    return NextResponse.rewrite(url);
+  }
+
   return handleI18n(request);
 }
 
