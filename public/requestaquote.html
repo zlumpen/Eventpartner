@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Request a quote – EventPartner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#050608;--bg-panel:#0B0D12;--bg-panel-2:#0F1218;--line:rgba(243,245,247,0.10);--line-strong:rgba(243,245,247,0.18);--white:#F3F5F7;--muted:#8B93A6;--muted-dim:#5B6172;--cyan:#22E6EF;--cyan-dim:#0E8A91;--radius:10px;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Quicksand',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0;color:var(--white);text-wrap:balance;}
+  em{font-style:italic;color:var(--cyan);}
+  a{color:inherit;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px;position:relative;z-index:2;}
+  .logo{display:flex;align-items:center;gap:11px;}
+  .logo-text{font-family:'Quicksand',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:0.02em;}
+  .logo-text span{color:var(--cyan);}
+  .logo-tag{font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-dim);display:block;margin-top:1px;}
+  nav.top{position:sticky;top:0;z-index:50;background:rgba(5,6,8,0.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;gap:16px;flex-wrap:wrap;}
+  .nav-right{display:flex;align-items:center;gap:16px;}
+  .lang-switch{display:flex;align-items:center;gap:7px;border:1px solid var(--line-strong);border-radius:20px;padding:5px 9px;background:var(--bg-panel);}
+  .lang-btn{display:block;position:relative;width:24px;height:17px;padding:0;background:none;border:none;cursor:pointer;border-radius:3px;overflow:hidden;opacity:0.42;filter:grayscale(85%) brightness(0.9);transition:opacity .18s ease,filter .18s ease,box-shadow .18s ease,transform .18s ease;}
+  .lang-btn svg{display:block;width:100%;height:100%;}
+  .lang-btn:hover{opacity:0.75;filter:grayscale(30%);}
+  .lang-btn[aria-pressed="true"]{opacity:1;filter:none;transform:translateY(-1px);box-shadow:0 0 0 1.5px var(--cyan),0 0 10px rgba(34,230,239,0.35);}
+  .nav-cta{background:var(--cyan);color:#04191B;padding:10px 20px;border-radius:var(--radius);font-size:0.85rem;font-weight:600;text-decoration:none;border:1px solid var(--cyan);transition:opacity .15s ease;white-space:nowrap;}
+  .nav-cta:hover{opacity:0.85;}
+  .cobrand-badge{display:flex;align-items:center;gap:11px;background:#FFFFFF;border-radius:9px;padding:6px 13px;box-shadow:0 4px 14px -6px rgba(0,0,0,0.4);}
+  .cobrand-badge img{display:block;width:auto;}
+  .cobrand-badge .cobrand-divider{width:1px;align-self:stretch;background:#D8DBDF;border-radius:1px;}
+  .cobrand-badge .cobrand-cvent{height:14px;}
+  .cobrand-badge .cobrand-ep{height:28px;}
+  @media (max-width:620px){.cobrand-badge{display:none;}}
+  section.capture{background:var(--bg);padding:0 0 80px;scroll-margin-top:76px;}
+  .capture-shell{border:1px solid var(--line);border-top:none;border-radius:0 0 var(--radius) var(--radius);display:grid;grid-template-columns:0.85fr 1.15fr;overflow:hidden;background:var(--bg-panel);}
+  .capture-info{padding:44px 44px 52px;border-right:1px solid var(--line);}
+  .capture-info h2{font-size:1.7rem;margin-bottom:16px;}
+  .capture-info p{color:var(--muted);margin:0 0 32px;}
+  .mini-stats{display:flex;gap:28px;margin-bottom:32px;}
+  .mini-stats div b{font-family:'Space Mono',monospace;color:var(--cyan);font-size:1.3rem;display:block;}
+  .mini-stats div span{font-size:0.75rem;color:var(--muted);}
+  .capture-info ul{list-style:none;padding:0;margin:0;}
+  .capture-info li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;font-size:0.88rem;color:var(--muted);}
+  .capture-info li .check-ico{flex:0 0 auto;color:var(--cyan);margin-top:1px;}
+  form{padding:44px 44px 52px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:0.75rem;color:var(--muted);margin-bottom:6px;font-weight:500;text-transform:uppercase;letter-spacing:0.04em;}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line-strong);border-radius:6px;font-family:'Inter',sans-serif;font-size:0.92rem;color:var(--white);background:var(--bg-panel-2);}
+  .field input::placeholder,.field textarea::placeholder{color:var(--muted-dim);}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--cyan);outline-offset:1px;border-color:var(--cyan);}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .field-row.three{grid-template-columns:1fr 1fr 1fr;}
+  .headroom-box{margin-bottom:16px;padding:16px 18px;border:1px solid var(--cyan-dim);border-radius:var(--radius);background:rgba(34,230,239,0.06);}
+  .headroom-label-row{display:flex;align-items:center;gap:6px;margin-bottom:6px;}
+  .headroom-label{font-size:0.75rem;color:var(--white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;}
+  .info-dot{display:inline-flex;color:var(--muted);}
+  .headroom-desc{font-size:0.82rem;color:var(--muted);margin:0 0 14px;line-height:1.45;}
+  .headroom-btns{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}
+  .headroom-btn{padding:10px 2px;border:1px solid var(--line-strong);border-radius:6px;background:var(--bg-panel-2);color:var(--white);font-family:'Inter',sans-serif;font-size:0.76rem;font-weight:600;cursor:pointer;transition:all .15s ease;text-align:center;white-space:nowrap;}
+  .headroom-btn:hover{border-color:var(--cyan);}
+  .headroom-btn.active{background:rgba(34,230,239,0.14);border-color:var(--cyan);color:var(--cyan);}
+  .submit-btn{width:100%;padding:15px;background:var(--cyan);color:#04191B;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;margin-top:8px;transition:opacity .15s ease;font-family:'Inter',sans-serif;}
+  .submit-btn:hover{opacity:0.88;}
+  .book-link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--cyan);text-decoration:none;}
+  .book-link:hover{text-decoration:underline;}
+  .success-msg{display:none;background:rgba(34,230,239,0.12);border:1px solid var(--cyan-dim);color:var(--white);padding:16px 18px;border-radius:8px;font-size:0.9rem;margin-bottom:18px;}
+  .success-msg.show{display:block;}
+  .error-msg{display:none;background:rgba(239,43,45,0.12);border:1px solid rgba(239,43,45,0.55);color:var(--white);padding:16px 18px;border-radius:8px;font-size:0.9rem;margin-bottom:18px;}
+  .error-msg.show{display:block;}
+  .submit-btn:disabled{opacity:0.5;cursor:not-allowed;}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  @media (max-width:900px){.capture-shell{grid-template-columns:1fr;}.capture-info{border-right:none;border-bottom:1px solid var(--line);}.field-row,.field-row.three{grid-template-columns:1fr;}.headroom-btns{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:620px){.headroom-btns{grid-template-columns:repeat(2,1fr);}.capture-info,form{padding:32px 22px 38px;}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="wrap">
+    <div class="logo">
+      <div class="cobrand-badge" aria-label="Official Cvent partner"><img class="cobrand-cvent" src="data:image/webp;base64,UklGRsYFAABXRUJQVlA4ILoFAABwGwCdASqXACAAPl0kj0UjoiGaaT9sOAXEtIBps8FP6h+PniM+g/s35KfuVoIvsT96/LvzSfBvgBfiv8x/tn5JflVx6AAPxv+c/5H8wPPB1UMEX8n/xv5q88B5N7Af8r/tX/G9NP/m/wnn6+gP+x/k/gK/ln9K/4fBDfroWVgsr/ryxHra/RiuiD0iEzJVvG5oLbnyFUfSXdsVm9SvAujKwyH+t6NCHYfptP68Ks6eElr7h7AS8zrShmYn8iICFrd2+GSQFi2PU7tC/qZ8AlP2TxySnIId5QJRrL9/hAChtkyg8AAA/v8Snb9x/o/yrjbmSfM3rkgtNjaiNZJyP/+yVu3dkn2GV/D4yUeXo9g31jvAqLXhmJWVQjNUpnOZqKx6G5iBEhq/DFkQxxalXlcG4WhajY6f0AC+OOlUYizDH+2Rudeb8sEL8whvpoF0rqcGIPdHT0oSxCyFt/RTUaWb0quhFt8jvjg/+pIyJqdbQVDg0BoRV+nDL6C5hag2mqK/Z5xgCav1+Xo8Fui+fDuSo05tvJbhFLm4ABQ2eVtz02p9yR62EKcIfBLrESjiWU0h95/WQkIGTOd6/Swe5T6YmHBPXRxOktvBfseE1JZ6BOPZ6s1qDVE/T2k5VF7pE89XxJOn8fHgL8ze9Ix+0kBY+Gn8enpYzqrWOgdFT1jLBYReuOaGl7CVW0WysLmjQjzaj3Y3botLJk2OaLxx6xA7A/q39TmFnEcNmeYWVAOlrxpYxJvXWYzGNWeGWFROPgTV/G5kUUeEZEwvh+Dj2nYNv4S878FP/UCJd6xv486wD/KbSsI3d4VQtk6NCe7LeNKYaa7/3OP2nNwujUeG90fWk4XiunlENlH1Gb9mRniEuBBCivfleKLxUbf/1KzXbI4VQWognJn+4FnrzQkNrQHcuzhGpCqwsl7ujsmGsIM+zGr5/3ZXyq75WqWBfHS1PH4HgvMnzLKCbl6u6W/lVcekuOCYEbxgk6XuJPjzK36u/D2Py46gVcZdrQ3myCZmEqBjj1mHMGq9i/yUBQGXX/zcEhLQXLf8GgxICi3yVWoAY5YpO30+8LHD71ItnPzgG0JP8Rn4PBtgPcw3jeZ4kC96MR/rdubdUjuSAflM5t1wOsgA5xF1ih7L+PwTwmoSO3lj8DMcWvfB9dr5znKyQUg0/pgXT5sEwn9FbQzIu/SqmtKKT5NR9GgGx52Vkb03TA0hazVgY6f+035WfRfPREm+wSFS5/gl9UQTdiztq4sUG22ZKRZ8kBbEgwA8F/aOnMs2voBUVc6JOL09eVYmhdpGFoULIVP3N0Ff596Fzwv7/gDsIyaSKjggnOUqC3wiyhgN5+RZA/RJ91RSS3LQJPfMqGEV4lylt9/yn0n8NlTnePz2N+0XW5u07nJMS5AmYfQ5jZXo+J+Qou3DklH6ArOrTKicaB6rnVW2CfR9FU2iXaNfbP/svL7SIA3HqYLNjDIgoaCVAI/8E+uYbwHveNtsC5lI1InGBmCCBxYzxbNS9e4Ee2e35MYV6a9h/+OmWL/m8eapXMw9M64kdlYTWP0WNOxMeOEp9tYUCKxSloIqZuvuQx2zcXB2TFOi9awPePaT+O0TUpEO61ZHt1ERg8EscU966IlPCdev7lae4u9ubrQN8om2r38SGO/caCgT0Eqnt7tD/k1l/bnnxSzJwsPlJcuIMw8mWsoGzxLXFYSAIUJbW77zQoIr79Zj0DgyeknoFX9klNfhI1/9r/c5XX6qIjuMvV1tRzo421Vjc6YnQdaW/S+NAsk8i+qoMddYhfQDHFI7bktdZc9xvq3tQfhERPxjG+gbqbdczrY6ZlB3zsluWaLGZhDG1EBAAbYuZjIDoI9d4LxMH+oui+W23MGpz7VXxON0ollljz+sjYgD+ercEMXVHUjfvYN2x1QbJkmPQ3t46tau9xk73LoBMcUrl8y78XoZkIAAAA==" alt="Cvent"><span class="cobrand-divider"></span><img class="cobrand-ep" src="data:image/webp;base64,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" alt="EventPartner"></div>
+      <div>
+        <span class="logo-text">EVENT<span>PARTNER</span></span>
+        <span class="logo-tag" id="logoTag">Certified Cvent sales partner</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true" title="English" aria-label="English"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#00247D"/><path d="M0,0 60,40M60,0 0,40" stroke="#FFFFFF" stroke-width="7"/><path d="M0,0 60,40M60,0 0,40" stroke="#CF142B" stroke-width="2.6"/><path d="M30,0V40M0,20H60" stroke="#FFFFFF" stroke-width="11"/><path d="M30,0V40M0,20H60" stroke="#CF142B" stroke-width="6.5"/></svg></button>
+        <button type="button" class="lang-btn" data-lang="sv" aria-pressed="false" title="Svenska" aria-label="Svenska"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#006AA7"/><rect x="19" width="9" height="40" fill="#FECC02"/><rect y="15.5" width="60" height="9" fill="#FECC02"/></svg></button>
+        <button type="button" class="lang-btn" data-lang="no" aria-pressed="false" title="Norsk" aria-label="Norsk"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#EF2B2D"/><rect x="19" width="9" height="40" fill="#FFFFFF"/><rect y="15.5" width="60" height="9" fill="#FFFFFF"/><rect x="21.5" width="4" height="40" fill="#002868"/><rect y="18" width="60" height="4" fill="#002868"/></svg></button>
+        <button type="button" class="lang-btn" data-lang="da" aria-pressed="false" title="Dansk" aria-label="Dansk"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="60" height="40" fill="#C60C30"/><rect x="19" width="9" height="40" fill="#FFFFFF"/><rect y="15.5" width="60" height="9" fill="#FFFFFF"/></svg></button>
+      </div>
+      <a href="#form" class="nav-cta" id="navCta">Request a quote</a>
+    </div>
+  </div>
+</nav>
+<section class="capture" id="form">
+  <div class="wrap">
+    <div class="capture-shell">
+      <div class="capture-info">
+        <h2 id="capH2">Request a quote right away.<br><em>We'll put together the right package for you.</em></h2>
+        <p id="capP">Fill in the form and we'll send you a tailored quote with a recommended package and price.<br><br>Want to go through the quote together? Book a 15-minute meeting and we'll walk through everything and answer your questions.</p>
+        <div class="mini-stats">
+          <div><b>24h</b><span id="miniLabel1">Quote within 24h</span></div>
+          <div><b>4</b><span id="miniLabel2">Package tiers</span></div>
+          <div><b>15 min</b><span id="miniLabel3">Walkthrough</span></div>
+        </div>
+        <ul>
+          <li><svg class="check-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 12.5L10.5 15.5L16.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="capLi1">Quote tailored to your venue</span></li>
+          <li><svg class="check-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 12.5L10.5 15.5L16.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="capLi2">Clear package, price and what's included</span></li>
+          <li><svg class="check-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 12.5L10.5 15.5L16.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="capLi3">We set everything up for you at the start</span></li>
+        </ul>
+      </div>
+      <form id="leadForm">
+        <div class="success-msg" id="successMsg" role="status">Thanks! We've received your request and will send your quote within 24 hours.</div>
+        <div class="error-msg" id="errorMsg" role="alert">Something went wrong sending your request. Please try again or email us at malin@eventpartner.io.</div>
+        <div class="hp" aria-hidden="true"><label>Website<input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field-row three">
+          <div class="field"><label for="venue" id="lblVenue">Company name</label><input type="text" id="venue" placeholder="Your company name" required></div>
+          <div class="field"><label for="orgnr" id="lblOrgNr">Organization number</label><input type="text" id="orgnr" placeholder="e.g. 556677-8899"></div>
+          <div class="field"><label for="contact" id="lblContact">Contact person</label><input type="text" id="contact" placeholder="Name" required></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="email" id="lblEmail">Email</label><input type="email" id="email" placeholder="you@venue.com" required></div>
+          <div class="field"><label for="phone" id="lblPhone">Phone</label><input type="tel" id="phone" placeholder="+46 70 123 45 67"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="city" id="lblCity">City</label><input type="text" id="city" placeholder="e.g. Stockholm"></div>
+          <div class="field"><label for="capacity" id="lblCapacity">Max event capacity</label><input type="number" id="capacity" placeholder="e.g. 250"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="status" id="lblStatus">Currently on Cvent?</label>
+            <select id="status"><option value="Not listed yet">Not listed yet</option><option value="Yes — basic listing">Yes — basic listing</option><option value="Yes — Diamond listing">Yes — Diamond listing</option><option value="Not sure">Not sure</option></select>
+          </div>
+          <div class="field">
+            <label for="pkg" id="lblPkg">Package you're interested in</label>
+            <select id="pkg"><option value="Not sure — recommend one">Not sure — recommend one</option><option value="Minimum — Be Found">Minimum — Be Found</option><option value="Growth — Get Discovered">Growth — Get Discovered</option><option value="Premium — Create Demand">Premium — Create Demand</option><option value="Portfolio — Own Your Market">Portfolio — Own Your Market</option></select>
+          </div>
+        </div>
+        <div class="headroom-box">
+          <div class="headroom-label-row">
+            <span class="headroom-label" id="lblHeadroom">How much more capacity do you have to accept?</span>
+            <span class="info-dot" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.5" r="1.2" fill="currentColor"/></svg></span>
+          </div>
+          <p class="headroom-desc" id="hrDesc">Choose roughly what share of your total capacity (100%) you could fill with more bookings. This covers hotel rooms, meeting rooms and events.</p>
+          <div class="headroom-btns" id="headroomBtns" role="group">
+            <button type="button" class="headroom-btn" id="hrBtn1" data-val="5–10%">5–10%</button>
+            <button type="button" class="headroom-btn" id="hrBtn2" data-val="10–20%">10–20%</button>
+            <button type="button" class="headroom-btn" id="hrBtn3" data-val="20–30%">20–30%</button>
+            <button type="button" class="headroom-btn" id="hrBtn4" data-val="30–40%">30–40%</button>
+            <button type="button" class="headroom-btn" id="hrBtn5" data-val="40–50%">40–50%</button>
+            <button type="button" class="headroom-btn" id="hrBtn6" data-val="50%+">50%+</button>
+            <button type="button" class="headroom-btn" id="hrBtn7" data-val="Not sure">Not sure</button>
+          </div>
+          <input type="hidden" id="headroom" value="">
+        </div>
+        <div class="field">
+          <label for="message" id="lblMessage">Message (optional)</label>
+          <textarea id="message" rows="3" placeholder="Tell us about your venue — meeting spaces, occupancy goals, target markets, or anything else we should know..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">Request my quote →</button>
+        <a href="https://cal.com/eventpartner/15min" target="_blank" rel="noopener" class="book-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.3" stroke="currentColor" stroke-width="2"/><path d="M3 9.5H21" stroke="currentColor" stroke-width="2"/><path d="M8 2.5V6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 2.5V6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span id="capBookLink">Want to go through the quote together? Book a 15-minute meeting →</span>
+        </a>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var SV={"logoTag": "Certifierad Cvent-säljpartner", "navCta": "Be om offert", "capH2": "Be om en offert direkt.<br><em>Vi tar fram rätt paket för er.</em>", "capP": "Fyll i formuläret så skickar vi en skräddarsydd offert med rekommenderat paket och pris.<br><br>Vill ni gå igenom offerten tillsammans? Boka ett 15-minuters möte, så går vi igenom allt och svarar på era frågor.", "miniLabel1": "Offert inom 24h", "miniLabel2": "Paketnivåer", "miniLabel3": "Genomgång", "capLi1": "Offert anpassad efter er anläggning", "capLi2": "Tydligt paket, pris och vad som ingår", "capLi3": "Vi sätter upp allt åt er vid start", "successMsg": "Tack! Din e-postapp bör ha öppnats med din förfrågan ifylld — tryck skicka så hör EventPartner av sig inom 24 timmar.", "lblVenue": "Företagsnamn", "lblOrgNr": "Organisationsnummer", "lblContact": "Kontaktperson", "lblEmail": "E-post", "lblPhone": "Telefon", "lblCity": "Stad", "lblCapacity": "Max antal gäster", "lblStatus": "Listade på Cvent idag?", "lblPkg": "Vilket paket är ni intresserade av?", "lblMessage": "Meddelande (valfritt)", "lblHeadroom": "Hur mycket mer har ni kapacitet att ta emot?", "hrDesc": "Välj ungefär hur stor del av er totala kapacitet (100%) som ni har möjlighet att fylla med fler bokningar. Det gäller hotellrum, konferenser och event.", "hrBtn1": "5–10 %", "hrBtn2": "10–20 %", "hrBtn3": "20–30 %", "hrBtn4": "30–40 %", "hrBtn5": "40–50 %", "hrBtn6": "50 % eller mer", "hrBtn7": "Osäker", "submitBtn": "Be om min offert →", "capBookLink": "Vill ni gå igenom offerten tillsammans? Boka ett 15-minuters möte →", "ph_venue": "Ert företags namn", "ph_orgnr": "t.ex. 556677-8899", "ph_contact": "Namn", "ph_city": "t.ex. Stockholm", "ph_capacity": "t.ex. 250", "ph_message": "Berätta om er anläggning — mötesytor, beläggningsmål, målmarknader eller annat vi bör veta...", "opt_status": ["Inte listade än", "Ja — baslistning", "Ja — Diamond-listning", "Osäker"], "opt_pkg": ["Osäker — rekommendera ett", "Minimum — Bli hittad", "Growth — Bli upptäckt", "Premium — Skapa efterfrågan", "Portfolio — Äg er marknad"]}, NO={"logoTag": "Sertifisert Cvent-salgspartner", "navCta": "Be om tilbud", "capH2": "Be om et tilbud med en gang.<br><em>Vi setter sammen riktig pakke for dere.</em>", "capP": "Fyll ut skjemaet, så sender vi et skreddersydd tilbud med anbefalt pakke og pris.<br><br>Vil dere gå gjennom tilbudet sammen? Book et 15-minutters møte, så går vi gjennom alt og svarer på spørsmålene deres.", "miniLabel1": "Tilbud innen 24h", "miniLabel2": "Pakkenivåer", "miniLabel3": "Gjennomgang", "capLi1": "Tilbud tilpasset lokalet deres", "capLi2": "Tydelig pakke, pris og hva som er inkludert", "capLi3": "Vi setter opp alt for dere ved oppstart", "successMsg": "Takk! E-postappen din skal ha åpnet seg med forespørselen ferdig utfylt — trykk send, så tar EventPartner kontakt innen 24 timer.", "lblVenue": "Firmanavn", "lblOrgNr": "Organisasjonsnummer", "lblContact": "Kontaktperson", "lblEmail": "E-post", "lblPhone": "Telefon", "lblCity": "By", "lblCapacity": "Maks antall gjester", "lblStatus": "Listet på Cvent i dag?", "lblPkg": "Hvilken pakke er dere interessert i?", "lblMessage": "Melding (valgfritt)", "lblHeadroom": "Hvor mye mer kapasitet har dere til å ta imot?", "hrDesc": "Velg omtrent hvor stor del av deres totale kapasitet (100 %) dere har mulighet til å fylle med flere bookinger. Det gjelder hotellrom, konferanser og arrangementer.", "hrBtn1": "5–10 %", "hrBtn2": "10–20 %", "hrBtn3": "20–30 %", "hrBtn4": "30–40 %", "hrBtn5": "40–50 %", "hrBtn6": "50 % eller mer", "hrBtn7": "Usikker", "submitBtn": "Be om tilbudet mitt →", "capBookLink": "Vil dere gå gjennom tilbudet sammen? Book et 15-minutters møte →", "ph_venue": "Firmaets navn", "ph_orgnr": "f.eks. 987 654 325", "ph_contact": "Navn", "ph_city": "f.eks. Oslo", "ph_capacity": "f.eks. 250", "ph_message": "Fortell oss om lokalet — møterom, beleggsmål, målmarkeder eller annet vi bør vite...", "opt_status": ["Ikke listet ennå", "Ja — baselisting", "Ja — Diamond-listing", "Usikker"], "opt_pkg": ["Usikker — anbefal en", "Minimum — Bli funnet", "Growth — Bli oppdaget", "Premium — Skap etterspørsel", "Portfolio — Eie markedet deres"]}, DA={"logoTag": "Certificeret Cvent-salgspartner", "navCta": "Bed om et tilbud", "capH2": "Bed om et tilbud med det samme.<br><em>Vi sammensætter den rigtige pakke til jer.</em>", "capP": "Udfyld formularen, så sender vi et skræddersyet tilbud med anbefalet pakke og pris.<br><br>Vil I gennemgå tilbuddet sammen? Book et 15-minutters møde, så gennemgår vi det hele og svarer på jeres spørgsmål.", "miniLabel1": "Tilbud inden for 24t", "miniLabel2": "Pakkeniveauer", "miniLabel3": "Gennemgang", "capLi1": "Tilbud tilpasset jeres lokale", "capLi2": "Tydelig pakke, pris og hvad der er inkluderet", "capLi3": "Vi sætter det hele op for jer ved opstart", "successMsg": "Tak! Din e-mail-app skulle nu være åbnet med din forespørgsel udfyldt — tryk send, så hører I fra EventPartner inden for 24 timer.", "lblVenue": "Virksomhedsnavn", "lblOrgNr": "CVR-nummer", "lblContact": "Kontaktperson", "lblEmail": "E-mail", "lblPhone": "Telefon", "lblCity": "By", "lblCapacity": "Maks. antal gæster", "lblStatus": "Listet på Cvent i dag?", "lblPkg": "Hvilken pakke er I interesseret i?", "lblMessage": "Besked (valgfrit)", "lblHeadroom": "Hvor meget mere kapacitet har I til at tage imod?", "hrDesc": "Vælg cirka hvor stor en del af jeres samlede kapacitet (100 %) I har mulighed for at fylde med flere bookinger. Det gælder hotelværelser, konferencer og events.", "hrBtn1": "5–10 %", "hrBtn2": "10–20 %", "hrBtn3": "20–30 %", "hrBtn4": "30–40 %", "hrBtn5": "40–50 %", "hrBtn6": "50 % eller mere", "hrBtn7": "Usikker", "submitBtn": "Bed om mit tilbud →", "capBookLink": "Vil I gennemgå tilbuddet sammen? Book et 15-minutters møde →", "ph_venue": "Jeres virksomheds navn", "ph_orgnr": "f.eks. 12345678", "ph_contact": "Navn", "ph_city": "f.eks. København", "ph_capacity": "f.eks. 250", "ph_message": "Fortæl os om jeres lokale — mødelokaler, belægningsmål, målmarkeder eller andet vi bør vide...", "opt_status": ["Ikke listet endnu", "Ja — baselisting", "Ja — Diamond-listing", "Usikker"], "opt_pkg": ["Usikker — anbefal en", "Minimum — Bliv fundet", "Growth — Bliv opdaget", "Premium — Skab efterspørgsel", "Portfolio — Ejer jeres marked"]};
+  var EN={
+    logoTag:'Certified Cvent sales partner', navCta:'Request a quote',
+    capH2:'Request a quote right away.<br><em>We\'ll put together the right package for you.</em>',
+    capP:'Fill in the form and we\'ll send you a tailored quote with a recommended package and price.<br><br>Want to go through the quote together? Book a 15-minute meeting and we\'ll walk through everything and answer your questions.',
+    miniLabel1:'Quote within 24h', miniLabel2:'Package tiers', miniLabel3:'Walkthrough',
+    capLi1:'Quote tailored to your venue', capLi2:'Clear package, price and what\'s included', capLi3:'We set everything up for you at the start',
+    successMsg:'Thanks! We\'ve received your request and will send your quote within 24 hours.',
+    errorMsg:'Something went wrong sending your request. Please try again or email us at malin@eventpartner.io.', sending:'Sending…',
+    lblVenue:'Company name', lblOrgNr:'Organization number', lblContact:'Contact person', lblEmail:'Email', lblPhone:'Phone',
+    lblCity:'City', lblCapacity:'Max event capacity', lblStatus:'Currently on Cvent?', lblPkg:'Package you\'re interested in', lblMessage:'Message (optional)',
+    lblHeadroom:'How much more capacity do you have to accept?',
+    hrDesc:'Choose roughly what share of your total capacity (100%) you could fill with more bookings. This covers hotel rooms, meeting rooms and events.',
+    hrBtn1:'5–10%', hrBtn2:'10–20%', hrBtn3:'20–30%', hrBtn4:'30–40%', hrBtn5:'40–50%', hrBtn6:'50%+', hrBtn7:'Not sure',
+    submitBtn:'Request my quote →', capBookLink:'Want to go through the quote together? Book a 15-minute meeting →',
+    ph_venue:'Your company name', ph_orgnr:'e.g. 556677-8899', ph_contact:'Name', ph_city:'e.g. Stockholm', ph_capacity:'e.g. 250',
+    ph_message:'Tell us about your venue — meeting spaces, occupancy goals, target markets, or anything else we should know...',
+    opt_status:['Not listed yet','Yes — basic listing','Yes — Diamond listing','Not sure'],
+    opt_pkg:['Not sure — recommend one','Minimum — Be Found','Growth — Get Discovered','Premium — Create Demand','Portfolio — Own Your Market']
+  };
+  Object.assign(SV,{successMsg:'Tack! Vi har tagit emot din förfrågan och återkommer med en offert inom 24 timmar.',errorMsg:'Något gick fel när förfrågan skulle skickas. Försök igen eller mejla oss på malin@eventpartner.io.',sending:'Skickar…'});
+  Object.assign(NO,{successMsg:'Takk! Vi har mottatt forespørselen din og sender deg et tilbud innen 24 timer.',errorMsg:'Noe gikk galt under sendingen. Prøv igjen eller send oss en e-post på malin@eventpartner.io.',sending:'Sender…'});
+  Object.assign(DA,{successMsg:'Tak! Vi har modtaget din forespørgsel og sender dig et tilbud inden for 24 timer.',errorMsg:'Noget gik galt under afsendelsen. Prøv igen, eller send os en e-mail på malin@eventpartner.io.',sending:'Sender…'});
+  var DICTS={en:EN,sv:SV,no:NO,da:DA};
+  var PH={ph_venue:'venue',ph_orgnr:'orgnr',ph_contact:'contact',ph_city:'city',ph_capacity:'capacity',ph_message:'message'};
+  var textIds=Object.keys(EN).filter(function(k){return k.indexOf('ph_')!==0&&k.indexOf('opt_')!==0;});
+  var current='en';
+
+  function applyLang(lang){
+    var d=DICTS[lang]||EN; current=lang;
+    textIds.forEach(function(id){var el=document.getElementById(id); if(el&&d[id]!==undefined) el.innerHTML=d[id];});
+    Object.keys(PH).forEach(function(k){var el=document.getElementById(PH[k]); if(el&&d[k]!==undefined) el.setAttribute('placeholder',d[k]);});
+    ['status','pkg'].forEach(function(id){Array.prototype.forEach.call(document.getElementById(id).options,function(o,i){o.text=d['opt_'+id][i];});});
+    document.documentElement.lang=lang;
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===lang?'true':'false');});
+    try{localStorage.setItem('ep-lang',lang);}catch(e){}
+  }
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.dataset.lang);});});
+
+  var start='en';
+  try{
+    var valid=['en','sv','no','da'];
+    var u=new URLSearchParams(window.location.search).get('lang');
+    var s=localStorage.getItem('ep-lang');
+    if(valid.indexOf(u)>-1) start=u; else if(valid.indexOf(s)>-1) start=s;
+  }catch(e){}
+  applyLang(start);
+
+  var btns=document.querySelectorAll('.headroom-btn'), hidden=document.getElementById('headroom');
+  function pick(b){btns.forEach(function(x){x.classList.remove('active');}); b.classList.add('active'); hidden.value=b.dataset.val;}
+  btns.forEach(function(b){b.addEventListener('click',function(){pick(b);});});
+  pick(btns[0]);
+
+  var form=document.getElementById('leadForm'), ok=document.getElementById('successMsg'), err=document.getElementById('errorMsg'), sb=document.getElementById('submitBtn');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    ok.classList.remove('show'); err.classList.remove('show');
+    function v(id){return document.getElementById(id).value;}
+    var payload={venue:v('venue'),orgnr:v('orgnr'),contact:v('contact'),email:v('email'),phone:v('phone'),city:v('city'),capacity:v('capacity'),status:v('status'),pkg:v('pkg'),headroom:v('headroom'),message:v('message'),language:current,website:v('website')};
+    sb.disabled=true; sb.textContent=(DICTS[current]||EN).sending;
+    fetch('/api/requestaquote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+      .then(function(){ ok.classList.add('show'); form.reset(); pick(btns[0]); ok.scrollIntoView({block:'center',behavior:'smooth'}); })
+      .catch(function(){ err.classList.add('show'); err.scrollIntoView({block:'center',behavior:'smooth'}); })
+      .then(function(){ sb.disabled=false; sb.textContent=(DICTS[current]||EN).submitBtn; });
+  });
+})();
+</script>
+
+</body>
+</html>
