@@ -121,49 +121,29 @@
         <div class="success-msg" id="successMsg" role="status">Thanks! We've received your request and will send your quote within 24 hours.</div>
         <div class="error-msg" id="errorMsg" role="alert">Something went wrong sending your request. Please try again or email us at malin@eventpartner.io.</div>
         <div class="hp" aria-hidden="true"><label>Website<input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <div class="field-row three">
-          <div class="field"><label for="venue" id="lblVenue">Company name</label><input type="text" id="venue" placeholder="Your company name" required></div>
-          <div class="field"><label for="orgnr" id="lblOrgNr">Organization number</label><input type="text" id="orgnr" placeholder="e.g. 556677-8899"></div>
-          <div class="field"><label for="contact" id="lblContact">Contact person</label><input type="text" id="contact" placeholder="Name" required></div>
+        <div class="field"><label for="eventName" id="lblF1">01 · Event name and dates</label><input type="text" id="eventName" placeholder="" required></div>
+        <div class="field"><label for="cityVenue" id="lblF2">02 · City and venue</label><input type="text" id="cityVenue" placeholder=""></div>
+        <div class="field-row">
+          <div class="field"><label for="attendees" id="lblF3">03 · Number of attendees</label><input type="number" min="0" id="attendees" placeholder=""></div>
+          <div class="field"><label for="listAccess" id="lblF3b">Can you get the attendee list?</label><select id="listAccess"><option value="Yes">Yes</option><option value="No">No</option><option value="Not sure">Not sure</option></select></div>
+        </div>
+        <div class="field"><label for="targets" id="lblF4">04 · Who you want to meet</label><textarea id="targets" rows="2" placeholder=""></textarea></div>
+        <div class="field"><label for="markets" id="lblF5">05 · Markets and languages</label><input type="text" id="markets" placeholder=""></div>
+        <div class="field-row">
+          <div class="field"><label for="goal" id="lblF6">06 · Your meeting goal</label><input type="number" min="0" id="goal" placeholder=""></div>
+          <div class="field"><label for="team" id="lblF7">07 · Team members going</label><input type="number" min="0" id="team" placeholder=""></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="email" id="lblEmail">Email</label><input type="email" id="email" placeholder="you@venue.com" required></div>
+          <div class="field"><label for="video" id="lblF8">08 · Video card add-on</label><select id="video"><option value="No">No</option><option value="Yes">Yes</option></select></div>
+          <div class="field"><label for="videoCount" id="lblF8b">Roughly how many?</label><input type="number" min="0" id="videoCount" placeholder=""></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="contact" id="lblF9">09 · Your contact details</label><input type="text" id="contact" placeholder="" required></div>
+          <div class="field"><label for="company" id="lblCompany">Company</label><input type="text" id="company" placeholder=""></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="email" id="lblEmail">Email</label><input type="email" id="email" placeholder="you@company.com" required></div>
           <div class="field"><label for="phone" id="lblPhone">Phone</label><input type="tel" id="phone" placeholder="+46 70 123 45 67"></div>
-        </div>
-        <div class="field-row">
-          <div class="field"><label for="city" id="lblCity">City</label><input type="text" id="city" placeholder="e.g. Stockholm"></div>
-          <div class="field"><label for="capacity" id="lblCapacity">Max event capacity</label><input type="number" id="capacity" placeholder="e.g. 250"></div>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="status" id="lblStatus">Currently on Cvent?</label>
-            <select id="status"><option value="Not listed yet">Not listed yet</option><option value="Yes — basic listing">Yes — basic listing</option><option value="Yes — Diamond listing">Yes — Diamond listing</option><option value="Not sure">Not sure</option></select>
-          </div>
-          <div class="field">
-            <label for="pkg" id="lblPkg">Package you're interested in</label>
-            <select id="pkg"><option value="Not sure — recommend one">Not sure — recommend one</option><option value="Minimum — Be Found">Minimum — Be Found</option><option value="Growth — Get Discovered">Growth — Get Discovered</option><option value="Premium — Create Demand">Premium — Create Demand</option><option value="Portfolio — Own Your Market">Portfolio — Own Your Market</option></select>
-          </div>
-        </div>
-        <div class="headroom-box">
-          <div class="headroom-label-row">
-            <span class="headroom-label" id="lblHeadroom">How much more capacity do you have to accept?</span>
-            <span class="info-dot" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.5" r="1.2" fill="currentColor"/></svg></span>
-          </div>
-          <p class="headroom-desc" id="hrDesc">Choose roughly what share of your total capacity (100%) you could fill with more bookings. This covers hotel rooms, meeting rooms and events.</p>
-          <div class="headroom-btns" id="headroomBtns" role="group">
-            <button type="button" class="headroom-btn" id="hrBtn1" data-val="5–10%">5–10%</button>
-            <button type="button" class="headroom-btn" id="hrBtn2" data-val="10–20%">10–20%</button>
-            <button type="button" class="headroom-btn" id="hrBtn3" data-val="20–30%">20–30%</button>
-            <button type="button" class="headroom-btn" id="hrBtn4" data-val="30–40%">30–40%</button>
-            <button type="button" class="headroom-btn" id="hrBtn5" data-val="40–50%">40–50%</button>
-            <button type="button" class="headroom-btn" id="hrBtn6" data-val="50%+">50%+</button>
-            <button type="button" class="headroom-btn" id="hrBtn7" data-val="Not sure">Not sure</button>
-          </div>
-          <input type="hidden" id="headroom" value="">
-        </div>
-        <div class="field">
-          <label for="message" id="lblMessage">Message (optional)</label>
-          <textarea id="message" rows="3" placeholder="Tell us about your venue — meeting spaces, occupancy goals, target markets, or anything else we should know..."></textarea>
         </div>
         <button type="submit" class="submit-btn" id="submitBtn">Request my quote →</button>
         <a href="https://cal.com/eventpartner/15min" target="_blank" rel="noopener" class="book-link">
@@ -199,8 +179,12 @@
   Object.assign(SV,{successMsg:'Tack! Vi har tagit emot din förfrågan och återkommer med en offert inom 24 timmar.',errorMsg:'Något gick fel när förfrågan skulle skickas. Försök igen eller mejla oss på malin@eventpartner.io.',sending:'Skickar…'});
   Object.assign(NO,{successMsg:'Takk! Vi har mottatt forespørselen din og sender deg et tilbud innen 24 timer.',errorMsg:'Noe gikk galt under sendingen. Prøv igjen eller send oss en e-post på malin@eventpartner.io.',sending:'Sender…'});
   Object.assign(DA,{successMsg:'Tak! Vi har modtaget din forespørgsel og sender dig et tilbud inden for 24 timer.',errorMsg:'Noget gik galt under afsendelsen. Prøv igen, eller send os en e-mail på malin@eventpartner.io.',sending:'Sender…'});
+  Object.assign(EN,{"capH2": "Tell us nine things.<br><em>Get a tailored quote.</em>", "capP": "Fill in the nine fields and we'll send you a tailored quote.<br><br>Want to go through the quote together? Book a 15-minute meeting and we'll walk through everything and answer your questions.", "capLi1": "Quote tailored to your event", "lblF1": "01 · Event name and dates", "ph_eventName": "Trade show, conference or your own event", "lblF2": "02 · City and venue", "ph_cityVenue": "Where it takes place", "lblF3": "03 · Number of attendees", "ph_attendees": "e.g. 5000", "lblF3b": "Can you get the attendee list?", "opt_listAccess": ["Yes", "No", "Not sure"], "lblF4": "04 · Who you want to meet", "ph_targets": "Roles, industries, company size", "lblF5": "05 · Markets and languages", "ph_markets": "Countries and languages to reach", "lblF6": "06 · Your meeting goal", "ph_goal": "How many meetings?", "lblF7": "07 · Team members going", "ph_team": "How many will take meetings", "lblF8": "08 · Video card add-on", "opt_video": ["No", "Yes"], "lblF8b": "Roughly how many?", "ph_videoCount": "e.g. 20", "lblF9": "09 · Your contact details", "ph_contact": "Name", "lblCompany": "Company", "ph_company": "Company name"});
+  Object.assign(SV,{"capH2": "Berätta nio saker.<br><em>Få en skräddarsydd offert.</em>", "capP": "Fyll i de nio fälten så skickar vi en skräddarsydd offert.<br><br>Vill ni gå igenom offerten tillsammans? Boka ett 15-minuters möte, så går vi igenom allt och svarar på era frågor.", "capLi1": "Offert anpassad efter ert event", "lblF1": "01 · Eventnamn och datum", "ph_eventName": "Mässa, konferens eller ert eget event", "lblF2": "02 · Stad och lokal", "ph_cityVenue": "Var det äger rum", "lblF3": "03 · Antal deltagare", "ph_attendees": "t.ex. 5000", "lblF3b": "Kan ni få deltagarlistan?", "opt_listAccess": ["Ja", "Nej", "Osäker"], "lblF4": "04 · Vem vill ni träffa", "ph_targets": "Roller, branscher, företagsstorlek", "lblF5": "05 · Marknader och språk", "ph_markets": "Länder och språk ni vill nå", "lblF6": "06 · Ert mötesmål", "ph_goal": "Hur många möten?", "lblF7": "07 · Antal från ert team", "ph_team": "Hur många ska ta möten", "lblF8": "08 · Tillägg: videokort", "opt_video": ["Nej", "Ja"], "lblF8b": "Ungefär hur många?", "ph_videoCount": "t.ex. 20", "lblF9": "09 · Era kontaktuppgifter", "ph_contact": "Namn", "lblCompany": "Företag", "ph_company": "Företagsnamn"});
+  Object.assign(NO,{"capH2": "Fortell oss ni ting.<br><em>Få et skreddersydd tilbud.</em>", "capP": "Fyll ut de ni feltene, så sender vi et skreddersydd tilbud.<br><br>Vil dere gå gjennom tilbudet sammen? Book et 15-minutters møte, så går vi gjennom alt og svarer på spørsmålene deres.", "capLi1": "Tilbud tilpasset arrangementet deres", "lblF1": "01 · Arrangementsnavn og datoer", "ph_eventName": "Messe, konferanse eller eget arrangement", "lblF2": "02 · By og lokale", "ph_cityVenue": "Hvor det finner sted", "lblF3": "03 · Antall deltakere", "ph_attendees": "f.eks. 5000", "lblF3b": "Kan dere få deltakerlisten?", "opt_listAccess": ["Ja", "Nei", "Usikker"], "lblF4": "04 · Hvem vil dere møte", "ph_targets": "Roller, bransjer, bedriftsstørrelse", "lblF5": "05 · Markeder og språk", "ph_markets": "Land og språk dere vil nå", "lblF6": "06 · Møtemålet deres", "ph_goal": "Hvor mange møter?", "lblF7": "07 · Teammedlemmer som reiser", "ph_team": "Hvor mange skal ta møter", "lblF8": "08 · Tillegg: videokort", "opt_video": ["Nei", "Ja"], "lblF8b": "Omtrent hvor mange?", "ph_videoCount": "f.eks. 20", "lblF9": "09 · Kontaktinformasjon", "ph_contact": "Navn", "lblCompany": "Firma", "ph_company": "Firmanavn"});
+  Object.assign(DA,{"capH2": "Fortæl os ni ting.<br><em>Få et skræddersyet tilbud.</em>", "capP": "Udfyld de ni felter, så sender vi et skræddersyet tilbud.<br><br>Vil I gennemgå tilbuddet sammen? Book et 15-minutters møde, så gennemgår vi det hele og svarer på jeres spørgsmål.", "capLi1": "Tilbud tilpasset jeres event", "lblF1": "01 · Eventnavn og datoer", "ph_eventName": "Messe, konference eller jeres eget event", "lblF2": "02 · By og lokale", "ph_cityVenue": "Hvor det finder sted", "lblF3": "03 · Antal deltagere", "ph_attendees": "f.eks. 5000", "lblF3b": "Kan I få deltagerlisten?", "opt_listAccess": ["Ja", "Nej", "Usikker"], "lblF4": "04 · Hvem vil I møde", "ph_targets": "Roller, brancher, virksomhedsstørrelse", "lblF5": "05 · Markeder og sprog", "ph_markets": "Lande og sprog I vil nå", "lblF6": "06 · Jeres mødemål", "ph_goal": "Hvor mange møder?", "lblF7": "07 · Teammedlemmer der deltager", "ph_team": "Hvor mange skal tage møder", "lblF8": "08 · Tilføjelse: videokort", "opt_video": ["Nej", "Ja"], "lblF8b": "Cirka hvor mange?", "ph_videoCount": "f.eks. 20", "lblF9": "09 · Jeres kontaktoplysninger", "ph_contact": "Navn", "lblCompany": "Virksomhed", "ph_company": "Virksomhedsnavn"});
   var DICTS={en:EN,sv:SV,no:NO,da:DA};
-  var PH={ph_venue:'venue',ph_orgnr:'orgnr',ph_contact:'contact',ph_city:'city',ph_capacity:'capacity',ph_message:'message'};
+  var PH={ph_eventName:'eventName',ph_cityVenue:'cityVenue',ph_attendees:'attendees',ph_targets:'targets',ph_markets:'markets',ph_goal:'goal',ph_team:'team',ph_videoCount:'videoCount',ph_contact:'contact',ph_company:'company'};
   var textIds=Object.keys(EN).filter(function(k){return k.indexOf('ph_')!==0&&k.indexOf('opt_')!==0;});
   var current='en';
 
@@ -208,7 +192,7 @@
     var d=DICTS[lang]||EN; current=lang;
     textIds.forEach(function(id){var el=document.getElementById(id); if(el&&d[id]!==undefined) el.innerHTML=d[id];});
     Object.keys(PH).forEach(function(k){var el=document.getElementById(PH[k]); if(el&&d[k]!==undefined) el.setAttribute('placeholder',d[k]);});
-    ['status','pkg'].forEach(function(id){Array.prototype.forEach.call(document.getElementById(id).options,function(o,i){o.text=d['opt_'+id][i];});});
+    ['listAccess','video'].forEach(function(id){Array.prototype.forEach.call(document.getElementById(id).options,function(o,i){o.text=(d['opt_'+id]||[])[i]||o.text;});});
     document.documentElement.lang=lang;
     document.querySelectorAll('.lang-btn').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===lang?'true':'false');});
     try{localStorage.setItem('ep-lang',lang);}catch(e){}
@@ -224,21 +208,16 @@
   }catch(e){}
   applyLang(start);
 
-  var btns=document.querySelectorAll('.headroom-btn'), hidden=document.getElementById('headroom');
-  function pick(b){btns.forEach(function(x){x.classList.remove('active');}); b.classList.add('active'); hidden.value=b.dataset.val;}
-  btns.forEach(function(b){b.addEventListener('click',function(){pick(b);});});
-  pick(btns[0]);
-
   var form=document.getElementById('leadForm'), ok=document.getElementById('successMsg'), err=document.getElementById('errorMsg'), sb=document.getElementById('submitBtn');
   form.addEventListener('submit',function(e){
     e.preventDefault();
     ok.classList.remove('show'); err.classList.remove('show');
     function v(id){return document.getElementById(id).value;}
-    var payload={venue:v('venue'),orgnr:v('orgnr'),contact:v('contact'),email:v('email'),phone:v('phone'),city:v('city'),capacity:v('capacity'),status:v('status'),pkg:v('pkg'),headroom:v('headroom'),message:v('message'),language:current,website:v('website')};
+    var payload={eventName:v('eventName'),cityVenue:v('cityVenue'),attendees:v('attendees'),listAccess:v('listAccess'),targets:v('targets'),markets:v('markets'),goal:v('goal'),team:v('team'),video:v('video'),videoCount:v('videoCount'),contact:v('contact'),company:v('company'),email:v('email'),phone:v('phone'),language:current,website:v('website')};
     sb.disabled=true; sb.textContent=(DICTS[current]||EN).sending;
     fetch('/api/requestaquote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
       .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
-      .then(function(){ ok.classList.add('show'); form.reset(); pick(btns[0]); ok.scrollIntoView({block:'center',behavior:'smooth'}); })
+      .then(function(){ ok.classList.add('show'); form.reset(); ok.scrollIntoView({block:'center',behavior:'smooth'}); })
       .catch(function(){ err.classList.add('show'); err.scrollIntoView({block:'center',behavior:'smooth'}); })
       .then(function(){ sb.disabled=false; sb.textContent=(DICTS[current]||EN).submitBtn; });
   });
