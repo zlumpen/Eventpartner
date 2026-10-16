@@ -37,42 +37,48 @@ export async function POST(req: NextRequest) {
     if (clean(body.website)) return NextResponse.json({ success: true });
 
     const f = {
-      venue: clean(body.venue),
-      orgnr: clean(body.orgnr),
+      eventName: clean(body.eventName),
+      cityVenue: clean(body.cityVenue),
+      attendees: clean(body.attendees, 20),
+      listAccess: clean(body.listAccess, 20),
+      targets: clean(body.targets, 2000),
+      markets: clean(body.markets),
+      goal: clean(body.goal, 20),
+      team: clean(body.team, 20),
+      video: clean(body.video, 10),
+      videoCount: clean(body.videoCount, 20),
       contact: clean(body.contact),
+      company: clean(body.company),
       email: clean(body.email, 200),
       phone: clean(body.phone, 60),
-      city: clean(body.city),
-      capacity: clean(body.capacity, 20),
-      status: clean(body.status),
-      pkg: clean(body.pkg),
-      headroom: clean(body.headroom, 40),
       language: clean(body.language, 5),
-      message: clean(body.message, 5000),
     };
 
-    if (!f.venue || !f.contact || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) {
+    if (!f.eventName || !f.contact || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) {
       return NextResponse.json({ error: 'Missing or invalid fields' }, { status: 400 });
     }
 
     const rows: [string, string][] = [
-      ['Company', f.venue],
-      ['Organization number', f.orgnr],
-      ['Contact person', f.contact],
-      ['Email', f.email],
-      ['Phone', f.phone],
-      ['City', f.city],
-      ['Max event capacity', f.capacity],
-      ['Currently on Cvent', f.status],
-      ['Package of interest', f.pkg],
-      ['Capacity headroom', f.headroom],
+      ['01 Event name and dates', f.eventName],
+      ['02 City and venue', f.cityVenue],
+      ['03 Number of attendees', f.attendees],
+      ['03 Can get attendee list', f.listAccess],
+      ['04 Who they want to meet', f.targets],
+      ['05 Markets and languages', f.markets],
+      ['06 Meeting goal', f.goal],
+      ['07 Team members going', f.team],
+      ['08 Video card add-on', f.video === 'Yes' ? `Yes${f.videoCount ? ` (about ${f.videoCount})` : ''}` : f.video],
+      ['09 Contact person', f.contact],
+      ['09 Company', f.company],
+      ['09 Email', f.email],
+      ['09 Phone', f.phone],
       ['Page language', f.language],
     ];
 
     const tableRows = rows
       .map(
         ([k, v]) =>
-          `<tr style="border-bottom: 1px solid #eee;"><td style="padding: 12px 0; color: #666; width: 160px;">${esc(k)}</td><td style="padding: 12px 0;">${esc(v || '-')}</td></tr>`
+          `<tr style="border-bottom: 1px solid #eee;"><td style="padding: 12px 0; color: #666; width: 200px; vertical-align: top;">${esc(k)}</td><td style="padding: 12px 0;">${esc(v || '-').replace(/\n/g, '<br>')}</td></tr>`
       )
       .join('');
 
@@ -80,22 +86,14 @@ export async function POST(req: NextRequest) {
       from: FROM_EMAIL,
       to: TO_EMAILS,
       replyTo: f.email,
-      subject: `Cvent package request — ${esc(f.venue)}`,
+      subject: `Quote request — ${f.eventName}`,
       html: `
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
 <div style="background: linear-gradient(135deg, #111 0%, #1a1a1a 100%); border-radius: 16px; padding: 32px; margin-bottom: 24px;">
-<h1 style="color: #6AD8D2; font-size: 20px; margin: 0 0 4px;">Cvent Quote Request</h1>
+<h1 style="color: #6AD8D2; font-size: 20px; margin: 0 0 4px;">Quote Request</h1>
 <p style="color: rgba(255,255,255,0.5); font-size: 13px; margin: 0;">Received via eventpartner.io/requestaquote</p>
 </div>
 <table style="width: 100%; border-collapse: collapse; font-size: 14px;">${tableRows}</table>
-${
-  f.message
-    ? `<div style="margin-top: 24px; padding: 20px; background: #f8f9fa; border-radius: 12px;">
-<p style="color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 8px;">Message</p>
-<p style="margin: 0; white-space: pre-wrap; line-height: 1.6;">${esc(f.message)}</p>
-</div>`
-    : ''
-}
 <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #eee;">
 <p style="color: #999; font-size: 12px; margin: 0;">Reply directly to this email to respond to ${esc(f.contact)} at ${esc(f.email)}</p>
 </div>
