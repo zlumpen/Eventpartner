@@ -28,6 +28,8 @@ const CONFIG = {
   // Where form leads go. Empty = the visitor's e-mail app opens with the details filled in.
   // For automatic collection: create a free form at formspree.io and paste its URL here.
   formEndpoint: "",
+// Paste the guide PDF link here when it is ready. It is then shown as a download link after the form is sent.
+guideUrl: "",
   people: {
     pontus: {
       name: "Pontus Bredal-Hansen",
@@ -52,10 +54,10 @@ const CONFIG = {
   },
   defaultPerson: "pontus",
   videoCards: [
-    { name: "Video Brochure", note: "Print meets motion", sizes: "4.3″ · 5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_brochure.png" },
+    { name: "Video Brochure", note: "Print meets motion", sizes: "4.3″ · 5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_hilton.png", wide: true },
     { name: "Video Business Card", note: "Leave an impression", sizes: "2.4″", img: SITE + "/Images/vpp/sothebys_cards_on_slate_1783434005267.png" },
-    { name: "Video Box", note: "Unboxing as experience", sizes: "5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_box.png" },
-    { name: "Video Mailer", note: "Direct mail, redefined", sizes: "4.3″ · 5″ · 7″", img: SITE + "/Images/vpp/vpp_mailer.png" }
+    { name: "Video Box", note: "Unboxing as experience", sizes: "5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_motto.png", wide: true },
+    { name: "Video Mailer", note: "Direct mail, redefined", sizes: "4.3″ · 5″ · 7″", img: SITE + "/Images/vpp/vpp_alandsbanken.png", wide: true }
   ],
   merch: [
     { name: "Zip hoodie", img: "https://files.cdn.printful.com/files/f2f/f2ff379aa221af94fc9cc7309c0d7ae3_preview.png" },
@@ -137,11 +139,13 @@ h2{font:700 1.65rem/1.1 var(--serif);margin:0;letter-spacing:-.005em}
 .lede{color:var(--muted);margin:8px 0 0;max-width:36ch}
 
 /* video cards: swipe rail */
-.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 6px;margin-inline:-20px;scrollbar-width:none}
+.rail{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 6px;margin-inline:-20px;scrollbar-width:none}
 .rail::-webkit-scrollbar{display:none}
 .vc{flex:0 0 78%;scroll-snap-align:start;border-radius:20px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
 .vc .img{aspect-ratio:1/1;background:#0d0d0e;overflow:hidden}
 .vc .img img{width:100%;height:100%;object-fit:cover;transform:scale(1.18)}
+.vc .img.wide{aspect-ratio:3/2}
+.vc .img.wide img{transform:none}
 .vc .cap{padding:14px 16px 16px;display:flex;justify-content:space-between;align-items:end;gap:10px}
 .vc b{display:block;font:700 1.15rem/1.2 var(--serif)}
 .vc i{font-style:normal;color:var(--muted);font-size:.8rem}
@@ -231,13 +235,14 @@ footer .swap a{color:var(--fg)}
     <section aria-labelledby="offerH">
       <div class="offer">
         <p class="eyebrow">For Cvent CONNECT attendees</p>
-        <h2 id="offerH">A free video card sample</h2>
-        <p class="lede">Leave your details and we'll send a sample with your own video, ready for your next event or sales meeting.</p>
+        <h2 id="offerH">Download your free copy of our popular guide</h2>
+        <p class="lede">How to get the best ROI and business value from your corporate events. Leave your details and we'll send it straight to you.</p>
         <form id="leadForm" novalidate>
           <label for="fName">Name<input id="fName" name="name" autocomplete="name" required></label>
           <label for="fCompany">Company<input id="fCompany" name="company" autocomplete="organization" required></label>
           <label for="fEmail">Work e-mail<input id="fEmail" name="email" type="email" autocomplete="email" required></label>
-          <button class="btn" type="submit" id="submitBtn">Send me a sample</button>
+          <label for="fPhone">Phone<input id="fPhone" name="phone" type="tel" autocomplete="tel" required></label>
+<button class="btn" type="submit" id="submitBtn">Send me the guide</button>
           <p class="fine">We only use your details to follow up on this request.</p>
           <div class="done" id="done" role="status"></div>
         </form>
@@ -286,7 +291,7 @@ footer .swap a{color:var(--fg)}
 
   // products
   $("rail").innerHTML = CONFIG.videoCards.map(v =>
-    `<article class="vc"><div class="img"><img loading="lazy" src="${v.img}" alt="${v.name}"></div>
+    `<article class="vc"><div class="img${v.wide?' wide':''}"><img loading="lazy" src="${v.img}" alt="${v.name}"></div>
      <div class="cap"><div><b>${v.name}</b><i>${v.note}</i></div><div class="sz">${v.sizes}</div></div></article>`).join("");
   $("merch").innerHTML = CONFIG.merch.map(m =>
     `<div class="mi"><img loading="lazy" src="${m.img}" alt="${m.name}"><span>${m.name}</span></div>`).join("");
@@ -303,20 +308,21 @@ footer .swap a{color:var(--fg)}
   $("leadForm").addEventListener("submit", async (e)=>{
     e.preventDefault();
     const f=e.target, done=$("done"), btn=$("submitBtn");
-    const name=f.name.value.trim(), company=f.company.value.trim(), email=f.email.value.trim();
+    const name=f.name.value.trim(), company=f.company.value.trim(), email=f.email.value.trim(), phone=f.phone.value.trim();
     done.classList.add("show");
-    if(!name||!company||!/^\S+@\S+\.\S+$/.test(email)){ done.textContent="Please fill in your name, company and a valid e-mail address."; return; }
-    const data={name,company,email,met:P.name,source:CONFIG.eventTag};
+const addGuide=()=>{ if(CONFIG.guideUrl){ const a=document.createElement("a"); a.href=CONFIG.guideUrl; a.target="_blank"; a.rel="noopener"; a.textContent="Download the guide →"; done.append(" ", a); } };
+    if(!name||!company||!/^\S+@\S+\.\S+$/.test(email)||phone.replace(/\D/g,"").length<6){ done.textContent="Please fill in your name, company, a valid e-mail address and your phone number."; return; }
+    const data={name,company,email,phone,met:P.name,source:CONFIG.eventTag};
     if(CONFIG.formEndpoint){
       btn.disabled=true; btn.textContent="Sending…";
       try{ const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify(data)});
-        if(!r.ok) throw 0; done.textContent="Thank you, "+name.split(" ")[0]+". "+first+" will be in touch within a few days."; f.reset();
+        if(!r.ok) throw 0; done.textContent="Thank you, "+name.split(" ")[0]+". Your guide is on its way to your inbox, and "+first+" will be in touch."; addGuide(); f.reset();
       }catch(_){ done.textContent="That didn't go through. Please e-mail "+P.email+" directly."; }
-      btn.disabled=false; btn.textContent="Send me a sample";
+      btn.disabled=false; btn.textContent="Send me the guide";
     } else {
       const body=Object.entries(data).map(([k,v])=>k+": "+v).join("\n");
-      location.href="mailto:"+P.email+"?subject="+encodeURIComponent("Video card sample – "+company)+"&body="+encodeURIComponent(body);
-      done.textContent="Your e-mail app should open with your details filled in. Press send and "+first+" will be in touch.";
+      location.href="mailto:"+P.email+"?subject="+encodeURIComponent("Guide request – "+company)+"&body="+encodeURIComponent(body);
+      done.textContent="Your e-mail app should open with your details filled in. Press send and "+first+" will be in touch."; addGuide();
     }
   });
 })();
