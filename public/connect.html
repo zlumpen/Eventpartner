@@ -27,7 +27,7 @@ const CONFIG = {
   eventTag: "Cvent CONNECT Europe · London 2026",
   // Where form leads go. Empty = the visitor's e-mail app opens with the details filled in.
   // For automatic collection: create a free form at formspree.io and paste its URL here.
-  formEndpoint: "",
+  formEndpoint: "/api/connect-lead",
 // Paste the guide PDF link here when it is ready. It is then shown as a download link after the form is sent.
 guideUrl: "",
   people: {
@@ -242,6 +242,7 @@ footer .swap a{color:var(--fg)}
           <label for="fCompany">Company<input id="fCompany" name="company" autocomplete="organization" required></label>
           <label for="fEmail">Work e-mail<input id="fEmail" name="email" type="email" autocomplete="email" required></label>
           <label for="fPhone">Phone<input id="fPhone" name="phone" type="tel" autocomplete="tel" required></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 <button class="btn" type="submit" id="submitBtn">Send me the guide</button>
           <p class="fine">We only use your details to follow up on this request.</p>
           <div class="done" id="done" role="status"></div>
@@ -312,7 +313,7 @@ footer .swap a{color:var(--fg)}
     done.classList.add("show");
 const addGuide=()=>{ if(CONFIG.guideUrl){ const a=document.createElement("a"); a.href=CONFIG.guideUrl; a.target="_blank"; a.rel="noopener"; a.textContent="Download the guide →"; done.append(" ", a); } };
     if(!name||!company||!/^\S+@\S+\.\S+$/.test(email)||phone.replace(/\D/g,"").length<6){ done.textContent="Please fill in your name, company, a valid e-mail address and your phone number."; return; }
-    const data={name,company,email,phone,met:P.name,source:CONFIG.eventTag};
+    const data={name,company,email,phone,person:(CONFIG.people[key]?key:CONFIG.defaultPerson),website:(f.website?f.website.value:""),met:P.name,source:CONFIG.eventTag};
     if(CONFIG.formEndpoint){
       btn.disabled=true; btn.textContent="Sending…";
       try{ const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify(data)});
