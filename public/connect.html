@@ -57,10 +57,10 @@ guideUrl: "",
       { name: "Video Box", note: "Unboxing as experience", sizes: "5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_motto.png", imgLogo: SITE + "/Images/vpp/vpp_motto_logo.png", wide: true }
     ],
     merch: [
-    { name: "Zip hoodie", img: "https://files.cdn.printful.com/files/f2f/f2ff379aa221af94fc9cc7309c0d7ae3_preview.png" },
-    { name: "Cap", img: "https://files.cdn.printful.com/files/a72/a72f10570acc80ece358c9b455970c05_preview.png" },
-    { name: "Backpack", img: "https://files.cdn.printful.com/files/431/431eb021517d843c74ca8e18824ccb27_preview.png" },
-    { name: "Mug", img: "https://files.cdn.printful.com/files/ab8/ab84ebd359040c4cba74f564464decb9_preview.png" }
+    { name: "Zip hoodie", img: "https://files.cdn.printful.com/files/f2f/f2ff379aa221af94fc9cc7309c0d7ae3_preview.png", imgLogo: SITE + "/Images/merch/merch_hoodie_logo.jpg" },
+    { name: "Cap", img: "https://files.cdn.printful.com/files/a72/a72f10570acc80ece358c9b455970c05_preview.png", imgLogo: SITE + "/Images/merch/merch_cap_logo.jpg" },
+    { name: "Backpack", img: "https://files.cdn.printful.com/files/431/431eb021517d843c74ca8e18824ccb27_preview.png", imgLogo: SITE + "/Images/merch/merch_backpack_logo.jpg" },
+    { name: "Mug", img: "https://files.cdn.printful.com/files/ab8/ab84ebd359040c4cba74f564464decb9_preview.png", imgLogo: SITE + "/Images/merch/merch_mug_logo.jpg" }
   ]
 };
 </script>
@@ -153,7 +153,9 @@ h2{font:700 1.65rem/1.1 var(--serif);margin:0;letter-spacing:-.005em}
 /* merch grid */
 .merch{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .mi{border-radius:18px;overflow:hidden;background:#FFFFFF;position:relative;aspect-ratio:1/1}
-.mi img{width:100%;height:100%;object-fit:cover}
+.mi img{width:100%;height:100%;object-fit:cover;display:block}
+.mi{aspect-ratio:auto}.mi .mimg{aspect-ratio:1/1;overflow:hidden;background:#fff}.mi .mimg.second{border-top:1px solid rgba(0,0,0,.12)}
+.merch .mi span{bottom:auto;top:10px}
 .mi span{position:absolute;left:10px;bottom:10px;font:400 .62rem var(--mono);letter-spacing:.08em;text-transform:uppercase;
   color:#1b1b1b;background:rgba(255,255,255,.8);padding:4px 8px;border-radius:999px}
 
@@ -249,8 +251,7 @@ footer .swap a{color:var(--fg)}
         <div><p class="eyebrow">Branded merch</p><h2 id="mH">Kept after the event</h2></div>
         <a class="more" id="lnkShop2" target="_blank" rel="noopener">Shop →</a>
       </div>
-      <p class="lede">Your logo, not ours. Everything here is made with your own branding — the EventPartner mark is just our example. Hoodies, caps, bags and mugs, custom-branded for your event.</p>
-      <div class="merch" id="merch" style="margin-top:16px"></div>
+      <div class="merch" id="merch"></div>
     </section>
 
     </div>
@@ -322,7 +323,9 @@ footer .swap a{color:var(--fg)}
     (v.imgLogo ? '<div class="img wide second"><img loading="lazy" src="' + v.imgLogo + '" alt="' + v.name + ' - your logo here"></div>' : "") +
     '<div class="cap"><div><b>' + v.name + '</b><i>' + v.note + '</i></div><div class="sz">' + v.sizes + '</div></div></article>').join("");
   $("merch").innerHTML = CONFIG.merch.map(m =>
-    `<div class="mi"><img loading="lazy" src="${m.img}" alt="${m.name}"><span>${m.name}</span></div>`).join("");
+    '<div class="mi"><div class="mimg"><img loading="lazy" src="' + m.img + '" alt="' + m.name + '"></div>' +
+    (m.imgLogo ? '<div class="mimg second"><img loading="lazy" src="' + m.imgLogo + '" alt="' + m.name + ' - your logo here"></div>' : "") +
+    '<span>' + m.name + '</span></div>').join("");
 
   const other = Object.entries(CONFIG.people).find(([,o])=>o!==P);
   if (other){ const [k,o]=other, a=document.createElement("a"); a.href="?p="+k; a.textContent=o.name;
