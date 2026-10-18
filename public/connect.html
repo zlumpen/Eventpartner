@@ -185,7 +185,10 @@ footer .swap a{color:var(--fg)}
 .hot{position:absolute;display:block;border-radius:999px}.hot[hidden]{display:none}
 .deck-nav{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:22px;line-height:1;cursor:pointer}.deck-nav.prev{left:8px}.deck-nav.next{right:8px}
 .deck-bar{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font:400 .7rem var(--mono);color:var(--muted)}.dots{display:flex;gap:6px}.dots i{width:6px;height:6px;border-radius:50%;background:var(--line);display:block}.dots i.on{background:var(--gold)}
-.btn.quote{display:block;text-align:center;text-decoration:none;margin-top:14px}
+.btn.quote{display:flex;text-decoration:none;margin-top:18px;min-height:60px;padding:0 26px;font-weight:700;letter-spacing:.01em;background:linear-gradient(135deg,#E6CB8E 0%,#C8A96A 55%,#B08F4F 100%);color:#17130A;box-shadow:0 10px 28px rgba(200,169,106,.28),inset 0 1px 0 rgba(255,255,255,.45);transition:transform .18s ease,box-shadow .18s ease}
+.btn.quote span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(23,19,10,.14);transition:transform .18s ease}
+.btn.quote:hover,.btn.quote:active{transform:translateY(-1px);box-shadow:0 14px 34px rgba(200,169,106,.4),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn.quote:hover span{transform:translateX(3px)}
 .lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.94);overflow:auto;display:none}.lb.show{display:flex}.lb .lbwrap{position:relative;width:100vw;margin:auto;flex:none}@media (orientation:portrait){.lb .lbwrap{width:230vw}}.lb .lbwrap img{width:100%;display:block}
 .lb button.x{position:fixed;top:12px;right:12px;z-index:51;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.18);color:#fff;font-size:24px;cursor:pointer}
 </style>
@@ -228,7 +231,7 @@ footer .swap a{color:var(--fg)}
     <button class="deck-nav prev" id="deckPrev" aria-label="Previous slide" type="button">‹</button>
     <button class="deck-nav next" id="deckNext" aria-label="Next slide" type="button">›</button></div>
   <div class="deck-bar"><span id="deckCount">1 / 6</span><span class="dots" id="deckDots"></span></div>
-  <a class="btn quote" href="https://eventpartner.io/requestaquote">Request a tailored quote →</a>
+  <a class="btn quote" href="https://eventpartner.io/requestaquote">Request a tailored quote <span aria-hidden="true">→</span></a>
 </section>
 
 <section aria-labelledby="vcH">
