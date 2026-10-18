@@ -25,7 +25,6 @@ const CONFIG = {
   shop: SITE + "/en/shop",
   logo: SITE + "/Images/logos/ep-icon-chrome.png",
   eventTag: "Cvent CONNECT Europe · London 2026",
-  // Where form leads go. Empty = the visitor's e-mail app opens with the details filled in.
   // For automatic collection: create a free form at formspree.io and paste its URL here.
   formEndpoint: "/api/connect-lead",
 // Paste the guide PDF link here when it is ready. It is then shown as a download link after the form is sent.
@@ -54,11 +53,10 @@ guideUrl: "",
   },
   defaultPerson: "pontus",
   videoCards: [
-    { name: "Video Brochure", note: "Print meets motion", sizes: "4.3″ · 5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_hilton.png", wide: true },
-    { name: "Video Box", note: "Unboxing as experience", sizes: "5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_motto.png", wide: true },
-    { name: "Video Mailer", note: "Direct mail, redefined", sizes: "4.3″ · 5″ · 7″", img: SITE + "/Images/vpp/vpp_alandsbanken.png", wide: true }
-  ],
-  merch: [
+      { name: "Video Brochure", note: "Print meets motion", sizes: "4.3″ · 5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_hilton.png", imgLogo: SITE + "/Images/vpp/vpp_hilton_logo.png", wide: true },
+      { name: "Video Box", note: "Unboxing as experience", sizes: "5″ · 7″ · 10″", img: SITE + "/Images/vpp/vpp_motto.png", imgLogo: SITE + "/Images/vpp/vpp_motto_logo.png", wide: true }
+    ],
+    merch: [
     { name: "Zip hoodie", img: "https://files.cdn.printful.com/files/f2f/f2ff379aa221af94fc9cc7309c0d7ae3_preview.png" },
     { name: "Cap", img: "https://files.cdn.printful.com/files/a72/a72f10570acc80ece358c9b455970c05_preview.png" },
     { name: "Backpack", img: "https://files.cdn.printful.com/files/431/431eb021517d843c74ca8e18824ccb27_preview.png" },
@@ -181,6 +179,15 @@ footer .swap a{color:var(--fg)}
   .hero .photo{animation:settle 1.4s cubic-bezier(.2,.7,.2,1) both}
   @keyframes settle{from{transform:scale(1.06)}to{transform:none}}
 }
+.rail{flex-direction:column;align-items:stretch;overflow:visible;padding:4px 0 6px;margin-inline:0;scroll-snap-type:none}.vc{flex:none}.vc .img.second{border-top:1px solid var(--line)}
+.deck{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#000}.deck-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.deck-track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;position:relative;aspect-ratio:16/9;cursor:zoom-in}.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.hot{position:absolute;display:block;border-radius:999px}.hot[hidden]{display:none}
+.deck-nav{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:22px;line-height:1;cursor:pointer}.deck-nav.prev{left:8px}.deck-nav.next{right:8px}
+.deck-bar{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font:400 .7rem var(--mono);color:var(--muted)}.dots{display:flex;gap:6px}.dots i{width:6px;height:6px;border-radius:50%;background:var(--line);display:block}.dots i.on{background:var(--gold)}
+.btn.quote{display:block;text-align:center;text-decoration:none;margin-top:14px}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.94);overflow:auto;display:none}.lb.show{display:flex}.lb .lbwrap{position:relative;width:100vw;margin:auto;flex:none}@media (orientation:portrait){.lb .lbwrap{width:230vw}}.lb .lbwrap img{width:100%;display:block}
+.lb button.x{position:fixed;top:12px;right:12px;z-index:51;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.18);color:#fff;font-size:24px;cursor:pointer}
 </style>
 </head>
 <body>
@@ -213,14 +220,25 @@ footer .swap a{color:var(--fg)}
       <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
     </a>
 
-    <section aria-labelledby="vcH">
+    <section aria-labelledby="deckH">
+  <div class="eyebrow">Event ROI Engine</div>
+  <h2 id="deckH">How we do it</h2>
+  <p class="lede">Six slides from attendee list to booked meeting. Swipe through, or tap a slide to enlarge it.</p>
+  <div class="deck"><div class="deck-track" id="deckTrack"></div>
+    <button class="deck-nav prev" id="deckPrev" aria-label="Previous slide" type="button">‹</button>
+    <button class="deck-nav next" id="deckNext" aria-label="Next slide" type="button">›</button></div>
+  <div class="deck-bar"><span id="deckCount">1 / 6</span><span class="dots" id="deckDots"></span></div>
+  <a class="btn quote" href="https://eventpartner.io/requestaquote">Request a tailored quote →</a>
+</section>
+
+<section aria-labelledby="vcH">
       <div class="sec-head">
         <div><p class="eyebrow">Video cards</p><h2 id="vcH">Print that plays</h2></div>
         <a class="more" id="lnkShop1" target="_blank" rel="noopener">View all →</a>
       </div>
       <p class="lede">A real video screen inside a printed card. Invitations, venue showcases and thank-yous that stay on the desk.</p>
       <div class="rail" id="rail" style="margin-top:16px"></div>
-      <p class="price">From <b>€15</b> per card · fully custom print and video</p>
+      <p class="price">From <b>€29</b> per card · fully custom print and video</p>
     </section>
 
     <section aria-labelledby="mH">
@@ -231,24 +249,7 @@ footer .swap a{color:var(--fg)}
       <div class="merch" id="merch"></div>
     </section>
 
-    <section aria-labelledby="offerH">
-      <div class="offer">
-        <p class="eyebrow">For Cvent CONNECT attendees</p>
-        <h2 id="offerH">Download your free copy of our popular guide</h2>
-        <p class="lede">How to get the best ROI and business value from your corporate events. Leave your details and we'll send it straight to you.</p>
-        <form id="leadForm" novalidate>
-          <label for="fName">Name<input id="fName" name="name" autocomplete="name" required></label>
-          <label for="fCompany">Company<input id="fCompany" name="company" autocomplete="organization" required></label>
-          <label for="fEmail">Work e-mail<input id="fEmail" name="email" type="email" autocomplete="email" required></label>
-          <label for="fPhone">Phone<input id="fPhone" name="phone" type="tel" autocomplete="tel" required></label>
-<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-<button class="btn" type="submit" id="submitBtn">Send me the guide</button>
-          <p class="fine">We only use your details to follow up on this request.</p>
-          <div class="done" id="done" role="status"></div>
-        </form>
-      </div>
-    </section>
-  </div>
+    </div>
 
   <footer class="pad">
     <img id="logo2" alt="EventPartner">
@@ -257,6 +258,7 @@ footer .swap a{color:var(--fg)}
     <div class="sig">Everything your event needs · One partner</div>
   </footer>
 </main>
+<div class="lb" id="lb" aria-hidden="true"><button class="x" id="lbClose" type="button" aria-label="Close">×</button><div class="lbwrap"><img id="lbImg" alt=""><a class="hot" id="lbHot" hidden href="https://eventpartner.io/requestaquote" style="left:6.7%;top:69.9%;width:21.6%;height:6.7%" aria-label="Request your quote"></a></div></div>
 
 <script>
 (function(){
@@ -289,10 +291,32 @@ footer .swap a{color:var(--fg)}
   const visible = document.querySelectorAll(".act:not([hidden])").length;
   document.querySelector(".actions").style.gridTemplateColumns = "repeat("+visible+",1fr)";
 
+  // ROI deck slider
+  (function(){
+    const dk = CONFIG.people[key] ? key : CONFIG.defaultPerson, N = 6, track = $("deckTrack"), dots = $("deckDots"), cnt = $("deckCount");
+    const lbEl = $("lb"), lbImg = $("lbImg"), lbHot = $("lbHot");
+    for (let n = 1; n <= N; n++){
+      const s = document.createElement("div"); s.className = "slide";
+      s.innerHTML = '<img loading="lazy" src="' + SITE + '/Images/roi/' + dk + '-' + n + '.jpg" alt="Slide ' + n + '">';
+      if (n === N){ const h = document.createElement("a"); h.className = "hot"; h.href = "https://eventpartner.io/requestaquote"; h.setAttribute("aria-label","Request your quote"); h.style.cssText = "left:6.7%;top:69.9%;width:21.6%;height:6.7%"; h.addEventListener("click", e => e.stopPropagation()); s.appendChild(h); }
+      s.addEventListener("click", () => { lbImg.src = s.querySelector("img").src; lbHot.hidden = n !== N; lbEl.classList.add("show"); lbEl.setAttribute("aria-hidden","false"); lbEl.scrollLeft = 0; lbEl.scrollTop = 0; });
+      track.appendChild(s); dots.appendChild(document.createElement("i"));
+    }
+    function upd(){ const i = Math.min(N - 1, Math.round(track.scrollLeft / track.clientWidth)); cnt.textContent = (i + 1) + " / " + N; [...dots.children].forEach((d, j) => d.classList.toggle("on", j === i)); }
+    track.addEventListener("scroll", upd, { passive: true }); upd();
+    $("deckPrev").addEventListener("click", () => track.scrollBy({ left: -track.clientWidth, behavior: "smooth" }));
+    $("deckNext").addEventListener("click", () => track.scrollBy({ left: track.clientWidth, behavior: "smooth" }));
+    function closeLb(){ lbEl.classList.remove("show"); lbEl.setAttribute("aria-hidden","true"); }
+    $("lbClose").addEventListener("click", closeLb);
+    lbEl.addEventListener("click", e => { if (e.target === lbEl) closeLb(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); });
+  })();
+
   // products
   $("rail").innerHTML = CONFIG.videoCards.map(v =>
-    `<article class="vc"><div class="img${v.wide?' wide':''}"><img loading="lazy" src="${v.img}" alt="${v.name}"></div>
-     <div class="cap"><div><b>${v.name}</b><i>${v.note}</i></div><div class="sz">${v.sizes}</div></div></article>`).join("");
+    '<article class="vc"><div class="img wide"><img loading="lazy" src="' + v.img + '" alt="' + v.name + '"></div>' +
+    (v.imgLogo ? '<div class="img wide second"><img loading="lazy" src="' + v.imgLogo + '" alt="' + v.name + ' - your logo here"></div>' : "") +
+    '<div class="cap"><div><b>' + v.name + '</b><i>' + v.note + '</i></div><div class="sz">' + v.sizes + '</div></div></article>').join("");
   $("merch").innerHTML = CONFIG.merch.map(m =>
     `<div class="mi"><img loading="lazy" src="${m.img}" alt="${m.name}"><span>${m.name}</span></div>`).join("");
 
@@ -304,27 +328,6 @@ footer .swap a{color:var(--fg)}
   // iPhone Safari, in-app QR-scanner browsers and Android, where blob downloads fail.
   $("saveContact").href = "/connect-" + (CONFIG.people[key] ? key : CONFIG.defaultPerson) + ".vcf";
 
-  // Lead form
-  $("leadForm").addEventListener("submit", async (e)=>{
-    e.preventDefault();
-    const f=e.target, done=$("done"), btn=$("submitBtn");
-    const name=f.name.value.trim(), company=f.company.value.trim(), email=f.email.value.trim(), phone=f.phone.value.trim();
-    done.classList.add("show");
-const addGuide=()=>{ if(CONFIG.guideUrl){ const a=document.createElement("a"); a.href=CONFIG.guideUrl; a.target="_blank"; a.rel="noopener"; a.textContent="Download the guide →"; done.append(" ", a); } };
-    if(!name||!company||!/^\S+@\S+\.\S+$/.test(email)||phone.replace(/\D/g,"").length<6){ done.textContent="Please fill in your name, company, a valid e-mail address and your phone number."; return; }
-    const data={name,company,email,phone,person:(CONFIG.people[key]?key:CONFIG.defaultPerson),website:(f.website?f.website.value:""),met:P.name,source:CONFIG.eventTag};
-    if(CONFIG.formEndpoint){
-      btn.disabled=true; btn.textContent="Sending…";
-      try{ const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify(data)});
-        if(!r.ok) throw 0; done.textContent="Thank you, "+name.split(" ")[0]+". Your guide is on its way to your inbox, and "+first+" will be in touch."; addGuide(); f.reset();
-      }catch(_){ done.textContent="That didn't go through. Please e-mail "+P.email+" directly."; }
-      btn.disabled=false; btn.textContent="Send me the guide";
-    } else {
-      const body=Object.entries(data).map(([k,v])=>k+": "+v).join("\n");
-      location.href="mailto:"+P.email+"?subject="+encodeURIComponent("Guide request – "+company)+"&body="+encodeURIComponent(body);
-      done.textContent="Your e-mail app should open with your details filled in. Press send and "+first+" will be in touch."; addGuide();
-    }
-  });
 })();
 </script>
 </body>
