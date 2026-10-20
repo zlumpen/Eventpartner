@@ -92,12 +92,19 @@ body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--sans);-w
 img{max-width:100%;display:block;color:transparent}
 a{color:inherit}
 
+/* ---------- official Cvent Agency Partner banner ---------- */
+.partner{position:relative;background:#0a4f95;padding-top:env(safe-area-inset-top,0px);overflow:hidden}
+.partner img{width:100%;height:auto;aspect-ratio:1200/425;display:block}
+.partner::before{content:"";position:absolute;left:0;right:0;bottom:0;height:42px;background:linear-gradient(180deg,rgba(10,10,11,0),rgba(10,10,11,.6));pointer-events:none}
+.partner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+@media (prefers-reduced-motion:no-preference){.partner img{animation:dropin .9s cubic-bezier(.2,.7,.2,1) both}@keyframes dropin{from{opacity:0;transform:translateY(-10px) scale(1.03)}to{opacity:1;transform:none}}}
+
 /* ---------- hero ---------- */
 .hero{position:relative;aspect-ratio:4/4.6;max-height:560px;overflow:hidden;background:#000}
 .hero .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.05)}
 .hero::after{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(10,10,11,.55) 0%,rgba(10,10,11,0) 22%,rgba(10,10,11,0) 48%,rgba(10,10,11,.85) 78%,var(--bg) 100%)}
-.topbar{position:absolute;z-index:2;top:calc(env(safe-area-inset-top,0px) + 16px);left:20px;right:20px;display:flex;justify-content:space-between;align-items:center}
+.topbar{position:absolute;z-index:2;top:16px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center}
 .brand{display:flex;align-items:center;gap:8px;font:600 .9rem var(--sans);letter-spacing:.01em}
 .brand img{height:22px;width:auto}
 .tag{font:400 .6rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);
@@ -197,6 +204,8 @@ footer .swap a{color:var(--fg)}
 </head>
 <body>
 <main class="page">
+
+  <div class="partner"><img src="/cvent-agency-partner.webp" width="1200" height="425" alt="Official Cvent Agency Partner" fetchpriority="high"></div>
 
   <header class="hero">
     <img class="photo" id="photo" alt="">
