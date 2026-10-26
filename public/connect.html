@@ -24,7 +24,7 @@ const CONFIG = {
   website: SITE + "/en",
   shop: SITE + "/en/shop",
   logo: SITE + "/Images/logos/ep-icon-chrome.png",
-  eventTag: "Cvent CONNECT Europe · London 2026",
+  eventTag: "Cvent CONNECT Europe 2026",
   // For automatic collection: create a free form at formspree.io and paste its URL here.
   formEndpoint: "/api/connect-lead",
 // Paste the guide PDF link here when it is ready. It is then shown as a download link after the form is sent.
@@ -123,6 +123,7 @@ h1{font:700 clamp(2.1rem,9.5vw,2.7rem)/1 var(--serif);margin:10px 0 6px;letter-s
 .act:focus-visible .ring,.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .act[hidden]{display:none!important}
 
+.connect-note{margin:22px 0 -10px;text-align:center;font:500 .88rem/1.4 var(--sans);color:var(--gold);text-wrap:balance}
 .book{margin-top:22px;display:flex;align-items:center;gap:12px;padding:12px 14px 12px 12px;border-radius:20px;text-decoration:none;
   background:linear-gradient(135deg,#1d1a14,#121214 60%);border:1px solid rgba(200,169,106,.35)}
 .book .av{width:54px;height:54px;border-radius:50%;overflow:hidden;flex:none;border:1px solid rgba(200,169,106,.5)}
@@ -228,9 +229,10 @@ footer .swap a{color:var(--fg)}
       <a class="act" id="lnkLinkedin" target="_blank" rel="noopener"><span class="ring"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.38-.03-3.16-1.93-3.16-1.93 0-2.22 1.5-2.22 3.06V21H9z"/></svg></span>LinkedIn</a>
     </nav>
 
-    <a class="book" id="lnkBook" target="_blank" rel="noopener">
+    <p class="connect-note">Cvent CONNECT was great. Let's keep the conversation going.</p>
+<a class="book" id="lnkBook" target="_blank" rel="noopener">
       <span class="av"><img id="bookPhoto" alt=""></span>
-      <div class="t"><b id="bookTitle">Book a meeting</b><span>15 minutes · in London or online</span></div>
+      <div class="t"><b id="bookTitle">Book a meeting</b><span>15 minutes · online</span></div>
       <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
     </a>
 
@@ -288,7 +290,7 @@ footer .swap a{color:var(--fg)}
   if (P.heroZoom){ const h=$("photo"); h.style.objectPosition="50% 0%"; h.style.transformOrigin=P.heroFocus; h.style.animation="none"; h.style.transform="scale("+P.heroZoom+")"; }
   if (P.avatarZoom){ const b=$("bookPhoto"); b.style.objectPosition="50% 0%"; b.style.transformOrigin=P.avatarFocus; b.style.transform="scale("+P.avatarZoom+")"; }
   $("logo").src = CONFIG.logo; $("logo2").src = CONFIG.logo;
-  $("eventTag").textContent = "London 2026";
+  $("eventTag").textContent = "CONNECT 2026";
   $("kicker").textContent = CONFIG.company;
   $("pName").textContent = P.name.replace(/-/g,"\u2011");
   $("pTitle").textContent = P.title;
@@ -301,7 +303,7 @@ footer .swap a{color:var(--fg)}
   if (P.linkedin) $("lnkLinkedin").href = P.linkedin; else $("lnkLinkedin").hidden = true;
   if (P.phone) $("lnkPhone").href = "tel:"+P.phone.replace(/[^\d+]/g,""); else $("lnkPhone").hidden = true;
   if (P.booking) $("lnkBook").href = P.booking;
-  else { $("lnkBook").href = "mailto:"+P.email+"?subject="+encodeURIComponent("Meeting at Cvent CONNECT London"); $("lnkBook").removeAttribute("target"); }
+  else { $("lnkBook").href = "mailto:"+P.email+"?subject="+encodeURIComponent("Meeting after Cvent CONNECT"); $("lnkBook").removeAttribute("target"); }
   const visible = document.querySelectorAll(".act:not([hidden])").length;
   document.querySelector(".actions").style.gridTemplateColumns = "repeat("+visible+",1fr)";
 
@@ -338,7 +340,7 @@ footer .swap a{color:var(--fg)}
 
   const other = Object.entries(CONFIG.people).find(([,o])=>o!==P);
   if (other){ const [k,o]=other, a=document.createElement("a"); a.href="?p="+k; a.textContent=o.name;
-    $("swap").append("Also in London: ", a); }
+    $("swap").append("Also meet: ", a); }
 
   // Save contact: a real .vcf file (public/connect-<key>.vcf). A plain link works in
   // iPhone Safari, in-app QR-scanner browsers and Android, where blob downloads fail.
