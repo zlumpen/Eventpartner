@@ -405,11 +405,11 @@ export const EUROPE: Country[] = [
   {
     slug: "cyprus", code: "cy", name: "Cyprus", nameSv: "Cypern", venues: "850+",
     topVenues: [
-      { name: "Filoxenia Conference Centre", city: "Nicosia", capacity: "1 200", type: "Convention center" },
-      { name: "Parklane Resort & Spa Convention Centre", city: "Limassol", capacity: "2 000", type: "Hotel & Conference" },
-      { name: "Elias Beach Hotel Conference Centre", city: "Limassol", capacity: "1 000", type: "Hotel & Conference" },
-      { name: "Amathus Beach Hotel Conference Centre", city: "Limassol", capacity: "800", type: "Hotel & Conference" },
-      { name: "Hilton Nicosia Conference Centre", city: "Nicosia", capacity: "1 500", type: "Hotel & Conference" },
+      { name: "Filoxenia Conference Centre", city: "Nicosia", capacity: "1 200", type: "Convention center", image: "/Images/venues/cyprus/venue-1.jpg" },
+      { name: "Parklane Resort & Spa Convention Centre", city: "Limassol", capacity: "2 000", type: "Hotel & Conference", image: "/Images/venues/cyprus/venue-2.jpg" },
+      { name: "Elias Beach Hotel Conference Centre", city: "Limassol", capacity: "1 000", type: "Hotel & Conference", image: "/Images/venues/cyprus/venue-3.jpg" },
+      { name: "Amathus Beach Hotel Conference Centre", city: "Limassol", capacity: "800", type: "Hotel & Conference", image: "/Images/venues/cyprus/venue-4.jpg" },
+      { name: "Hilton Nicosia Conference Centre", city: "Nicosia", capacity: "1 500", type: "Hotel & Conference", image: "/Images/venues/cyprus/venue-5.jpg" },
     ],
   },
 ];
