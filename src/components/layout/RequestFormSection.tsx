@@ -524,6 +524,42 @@ export function RequestFormSection({ cms }: { cms?: {
             {cms?.meetingButton || t('meetingSection.cta')}
           </button>
         </motion.div>
+
+        {/* Venue banner: send venue owners to the venues page */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.35, duration: 0.9, ease: EASE }}
+          className="mt-4 md:mt-5 relative overflow-hidden rounded-2xl border border-[var(--border-default)] bg-[var(--bg-primary)] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 transition-colors duration-500"
+          style={{
+            backgroundImage: isDark
+              ? "radial-gradient(600px 160px at 0% 0%, rgba(91,62,232,0.18), transparent 70%), radial-gradient(500px 160px at 100% 100%, rgba(34,230,239,0.10), transparent 70%)"
+              : "radial-gradient(600px 160px at 0% 0%, rgba(91,62,232,0.08), transparent 70%), radial-gradient(500px 160px at 100% 100%, rgba(34,230,239,0.08), transparent 70%)",
+          }}
+        >
+          <div className="w-full md:w-auto">
+            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-purple mb-1">
+              {sv ? 'För venues' : 'For venues'}
+            </p>
+            <h3 className="font-display text-lg md:text-xl font-medium text-[var(--text-primary)]">
+              {sv ? 'Driver du ett venue? Få fler bokningar.' : 'Run a venue? Get more bookings.'}
+            </h3>
+            <p className="text-[13px] md:text-[14px] text-[var(--text-muted)] mt-0.5 leading-relaxed max-w-xl">
+              {sv
+                ? 'Nå eventplanerare i hela världen med våra Cvent-paket för hotell och konferensanläggningar.'
+                : 'Reach event planners worldwide with our Cvent marketing packages for hotels and conference venues.'}
+            </p>
+          </div>
+          <a
+            href="/venues"
+            className="group w-full md:w-auto shrink-0 inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-medium text-white transition-all hover:-translate-y-0.5"
+            style={{ background: "linear-gradient(135deg,#5B3EE8,#7A5CF0)", boxShadow: "0 8px 24px rgba(91,62,232,0.30)" }}
+          >
+            {sv ? 'Se venue-paketen' : 'See venue packages'}
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );
