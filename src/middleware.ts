@@ -30,6 +30,18 @@ export default function middleware(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  // Hidden venues page (Cvent marketing packages for venues, noindex).
+  // Served from public/venues.html, outside the /en and /sv locale routing.
+  // Remove the noindex meta in venues.html (and replace with a proper
+  // [locale]/venues page) when the page is released with SEO.
+  if (pathname === "/venues" || pathname === "/venues/") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/venues.html";
+    const res = NextResponse.rewrite(url);
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return res;
+  }
+
   return handleI18n(request);
 }
 
