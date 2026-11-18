@@ -32,6 +32,8 @@ interface NavLink {
   href: string;
   disabled?: boolean;
   hasDropdown?: boolean;
+  /** Link outside locale routing (e.g. /venues is served from public/venues.html) */
+  plain?: boolean;
 }
 
 interface NavCMS {
@@ -44,6 +46,7 @@ export function Navbar({ cms }: { cms?: NavCMS }) {
   const NAV_LINKS: NavLink[] = [
     { label: t('vip'), href: "/vip" },
     { label: t('customize'), href: "/customize" },
+    { label: t('venues'), href: "/venues", plain: true },
     { label: t('shop'), href: "/shop" },
     { label: t('about'), href: "/about" },
     { label: t('leadership'), href: "/leadership" },
@@ -175,7 +178,7 @@ export function Navbar({ cms }: { cms?: NavCMS }) {
                   onMouseLeave={link.hasDropdown ? closeDropdown : undefined}
                 >
                   <a
-                    href={`/${locale}${link.href}`}
+                    href={link.plain ? link.href : `/${locale}${link.href}`}
                     className={`
                       relative text-[13px] font-medium px-3.5 py-2 rounded-full
                       transition-all duration-300 flex items-center gap-1.5
@@ -340,7 +343,7 @@ export function Navbar({ cms }: { cms?: NavCMS }) {
             {NAV_LINKS.map((link, i) => (
               <motion.a
                 key={link.label}
-                href={`/${locale}${link.href}`}
+                href={link.plain ? link.href : `/${locale}${link.href}`}
                 onClick={() => setIsOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
