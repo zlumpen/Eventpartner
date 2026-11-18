@@ -179,15 +179,27 @@ export function TopVenuesGrid({
             className="venue-panel flex-1 overflow-hidden cursor-pointer relative group"
             style={{ transition: "flex 0.5s ease" }}
           >
-            <Image
-              src={venue.image || getVenueImage(countrySlug, i, imageCount)}
-              alt={venue.name}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              loading="lazy"
-              unoptimized
-            />
+            {venue.imageComing ? (
+              <div
+                className="absolute inset-0 flex items-end justify-center pb-6"
+                style={{ background: "linear-gradient(160deg, #1a1d2e 0%, #0d0f1a 60%, #14213a 100%)" }}
+                aria-label={venue.name}
+              >
+                <span className="text-[10px] font-mono uppercase tracking-[0.15em] text-white/35">
+                  {sv ? "Bild kommer" : "Photo coming soon"}
+                </span>
+              </div>
+            ) : (
+              <Image
+                src={venue.image || getVenueImage(countrySlug, i, imageCount)}
+                alt={venue.name}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                loading="lazy"
+                unoptimized
+              />
+            )}
             {/* Overlay — visible on hover */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
               <span className="text-[10px] font-mono uppercase tracking-[0.15em] text-white/50 mb-2">

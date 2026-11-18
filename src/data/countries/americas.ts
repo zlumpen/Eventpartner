@@ -6,8 +6,8 @@ export const AMERICAS: Country[] = [
     slug: "antigua-and-barbuda", code: "ag", name: "Antigua and Barbuda", nameSv: "Antigua och Barbuda", venues: "400+",
     topVenues: [
       { name: "American University of Antigua Conference Centre", city: "St. John’s", capacity: "1 500+", type: "Convention center", image: "/Images/venues/antigua-and-barbuda/venue-1.jpg" },
-      { name: "Sandals Grande Antigua Conference Center", city: "St. John’s (Dickenson Bay)", capacity: "800+", type: "Convention center", image: "/Images/venues/antigua-and-barbuda/venue-9.jpg" },
-      { name: "Royalton Antigua Conference Facilities", city: "Five Islands Village", capacity: "600+", type: "Convention center", image: "/Images/venues/antigua-and-barbuda/venue-11.jpg" },
+      { name: "Sandals Grande Antigua Conference Center", city: "St. John’s (Dickenson Bay)", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/antigua-and-barbuda/venue-9.jpg" },
+      { name: "Royalton Antigua Conference Facilities", city: "Five Islands Village", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/antigua-and-barbuda/venue-11.jpg" },
       { name: "Trade Winds Hotel Conference Center", city: "St. John’s (Dickenson Bay-området)", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/antigua-and-barbuda/venue-14.jpg" },
       { name: "Hodges Bay Resort & Spa Conference Facilities", city: "Hodges Bay", capacity: "250+", type: "Hotel & Conference", image: "/Images/venues/antigua-and-barbuda/venue-4.jpg" },
     ],
@@ -17,7 +17,7 @@ export const AMERICAS: Country[] = [
     topVenues: [
       { name: "La Rural – Predio Ferial de Buenos Aires", city: "Buenos Aires", capacity: "40 000+", type: "Exhibition center", image: "/Images/venues/argentina/venue-1.jpg" },
       { name: "Centro Costa Salguero", city: "Buenos Aires", capacity: "20 000+", type: "Event Venue", image: "/Images/venues/argentina/venue-10.jpg" },
-      { name: "Centro de Convenciones Buenos Aires", city: "Buenos Aires", capacity: "5 000+", type: "Event Venue", image: "/Images/venues/argentina/venue-13.jpg" },
+      { name: "Centro de Convenciones Buenos Aires", city: "Buenos Aires", capacity: "5 000+", type: "Event Venue", imageComing: true },
       { name: "Córdoba Convention Center", city: "Córdoba", capacity: "6 000+", type: "Convention center", image: "/Images/venues/argentina/venue-2.jpg" },
       { name: "Centro de Convenciones Salta", city: "Salta", capacity: "3 000+", type: "Event Venue", image: "/Images/venues/argentina/venue-5.jpg" },
     ],
@@ -27,7 +27,7 @@ export const AMERICAS: Country[] = [
     topVenues: [
       { name: "Aruba Convention Center", city: "Oranjestad", capacity: "3 000+", type: "Convention center", image: "/Images/venues/aruba/venue-1.jpg" },
       { name: "Hyatt Regency Aruba Resort Convention Center", city: "Palm Beach", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/aruba/venue-10.jpg" },
-      { name: "Aruba Marriott Resort & Stellaris Casino Conference Center", city: "Palm Beach", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/aruba/venue-13.jpg" },
+      { name: "Aruba Marriott Resort & Stellaris Casino Conference Center", city: "Palm Beach", capacity: "1 200+", type: "Hotel & Conference", imageComing: true },
       { name: "Hilton Aruba Caribbean Resort & Casino Conference Facilities", city: "Palm Beach", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/aruba/venue-2.jpg" },
       { name: "Bucuti & Tara Beach Resort Conference Facilities", city: "Eagle Beach", capacity: "200+", type: "Hotel & Conference", image: "/Images/venues/aruba/venue-5.jpg" },
     ],
@@ -35,8 +35,8 @@ export const AMERICAS: Country[] = [
   {
     slug: "bahamas", code: "bs", name: "Bahamas", nameSv: "Bahamas", venues: "975+",
     topVenues: [
-      { name: "Atlantis Paradise Island Conference Center", city: "Paradise Island (Nassau)", capacity: "10 000+", type: "Convention center", image: "/Images/venues/bahamas/venue-1.jpg" },
-      { name: "Baha Mar Convention, Arts & Entertainment Center", city: "Nassau", capacity: "8 000+", type: "Convention center", image: "/Images/venues/bahamas/venue-7.jpg" },
+      { name: "Atlantis Paradise Island Conference Center", city: "Paradise Island (Nassau)", capacity: "10 000+", type: "Hotel & Conference", image: "/Images/venues/bahamas/venue-1.jpg" },
+      { name: "Baha Mar Convention, Arts & Entertainment Center", city: "Nassau", capacity: "8 000+", type: "Hotel & Conference", image: "/Images/venues/bahamas/venue-7.jpg" },
       { name: "Grand Hyatt Baha Mar Conference Facilities", city: "Nassau", capacity: "3 000+", type: "Hotel & Conference", image: "/Images/venues/bahamas/venue-8.jpg" },
       { name: "British Colonial Hilton Nassau Conference Center", city: "Nassau", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/bahamas/venue-12.jpg" },
       { name: "Margaritaville Beach Resort Nassau Conference Center", city: "Nassau", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/bahamas/venue-3.jpg" },
@@ -47,7 +47,7 @@ export const AMERICAS: Country[] = [
     topVenues: [
       { name: "Lloyd Erskine Sandiford Centre", city: "Bridgetown", capacity: "2 000+", type: "Convention center", image: "/Images/venues/barbados/venue-1.jpg" },
       { name: "Hilton Barbados Resort Conference Centre", city: "Bridgetown", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/barbados/venue-10.jpg" },
-      { name: "Wyndham Grand Barbados Sam Lords Castle Conference Center", city: "St. Philip", capacity: "1 200+", type: "Convention center", image: "/Images/venues/barbados/venue-13.jpg" },
+      { name: "Wyndham Grand Barbados Sam Lords Castle Conference Center", city: "St. Philip", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/barbados/venue-13.jpg" },
       { name: "Radisson Aquatica Resort Conference Facilities", city: "Bridgetown", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/barbados/venue-2.jpg" },
       { name: "Accra Beach Hotel & Spa Conference Center", city: "Rockley (Christ Church)", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/barbados/venue-5.jpg" },
     ],
@@ -56,7 +56,7 @@ export const AMERICAS: Country[] = [
     slug: "belize", code: "bz", name: "Belize", nameSv: "Belize", venues: "400+",
     topVenues: [
       { name: "Belize City Civic Center", city: "Belize City", capacity: "6 000+", type: "Convention center", image: "/Images/venues/belize/venue-1.jpg" },
-      { name: "Best Western Plus Belize Biltmore Plaza Convention Center", city: "Belize City", capacity: "1 200+", type: "Convention center", image: "/Images/venues/belize/venue-8.jpg" },
+      { name: "Best Western Plus Belize Biltmore Plaza Convention Center", city: "Belize City", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/belize/venue-8.jpg" },
       { name: "Ramada Belize City Princess Hotel & Convention Center", city: "Belize City", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/belize/venue-11.jpg" },
       { name: "Mahogany Bay Resort & Beach Club Conference Facilities", city: "San Pedro (Ambergris Caye)", capacity: "500+", type: "Hotel & Conference", image: "/Images/venues/belize/venue-12.jpg" },
       { name: "Placencia Resort Conference Center", city: "Placencia", capacity: "400+", type: "Hotel & Conference", image: "/Images/venues/belize/venue-3.jpg" },
@@ -65,11 +65,11 @@ export const AMERICAS: Country[] = [
   {
     slug: "bermuda", code: "bm", name: "Bermuda", nameSv: "Bermuda", venues: "975+",
     topVenues: [
-      { name: "Hamilton Princess & Beach Club Conference Center", city: "Hamilton", capacity: "1 200+", type: "Convention center", image: "/Images/venues/bermuda/venue-1.jpg" },
-      { name: "Fairmont Southampton Conference Center", city: "Southampton", capacity: "2 000+", type: "Exhibition center", image: "/Images/venues/bermuda/venue-8.jpg" },
-      { name: "Fairmont Hamilton Princess Conference Facilities", city: "Hamilton", capacity: "800+", type: "Exhibition center", image: "/Images/venues/bermuda/venue-6.jpg" },
-      { name: "Bermuda College Conference Center", city: "Paget Parish", capacity: "500+", type: "Convention center", image: "/Images/venues/bermuda/venue-8.jpg" },
-      { name: "Rosewood Bermuda Conference Facilities", city: "Tucker’s Point", capacity: "300+", type: "Convention center", image: "/Images/venues/bermuda/venue-3.jpg" },
+      { name: "Grotto Bay Beach Resort", city: "Hamilton Parish", capacity: "300+", type: "Hotel & Conference", imageComing: true },
+      { name: "Fairmont Southampton Conference Center", city: "Southampton", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/bermuda/venue-8.jpg" },
+      { name: "Fairmont Hamilton Princess Conference Facilities", city: "Hamilton", capacity: "800+", type: "Hotel & Conference", imageComing: true },
+      { name: "Bermuda College Conference Center", city: "Paget Parish", capacity: "500+", type: "Convention center", imageComing: true },
+      { name: "Rosewood Bermuda Conference Facilities", city: "Tucker’s Point", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/bermuda/venue-3.jpg" },
     ],
   },
   {
@@ -106,9 +106,9 @@ export const AMERICAS: Country[] = [
     slug: "cayman-islands", code: "ky", name: "Cayman Islands", nameSv: "Caymanöarna", venues: "975+",
     topVenues: [
       { name: "Cayman Islands Marriott Resort Grand Cayman Ballroom & Conference Center", city: "Grand Cayman (Seven Mile Beach)", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/cayman-islands/venue-1.jpg" },
-      { name: "The Ritz-Carlton Grand Cayman Conference Center", city: "Grand Cayman", capacity: "2 000+", type: "Convention center", image: "/Images/venues/cayman-islands/venue-9.jpg" },
+      { name: "The Ritz-Carlton Grand Cayman Conference Center", city: "Grand Cayman", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/cayman-islands/venue-9.jpg" },
       { name: "Kimpton Seafire Resort + Spa Conference Facilities", city: "Grand Cayman", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/cayman-islands/venue-12.jpg" },
-      { name: "Grand Cayman Marriott Beach Resort Conference Center", city: "Grand Cayman", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/cayman-islands/venue-2.jpg" },
+      { name: "Grand Cayman Marriott Beach Resort Conference Center", city: "Grand Cayman", capacity: "800+", type: "Hotel & Conference", imageComing: true },
       { name: "Pedro St. James Conference & Event Facilities", city: "Grand Cayman", capacity: "500+", type: "Convention center", image: "/Images/venues/cayman-islands/venue-4.jpg" },
     ],
   },
@@ -137,7 +137,7 @@ export const AMERICAS: Country[] = [
     topVenues: [
       { name: "Costa Rica Convention Center", city: "San José (Heredia)", capacity: "10 000+", type: "Convention center", image: "/Images/venues/costa-rica/venue-1.jpg" },
       { name: "Parque Viva Event Center", city: "Alajuela", capacity: "20 000+", type: "Convention center", image: "/Images/venues/costa-rica/venue-10.jpg" },
-      { name: "Centro de Convenciones Wyndham Herradura", city: "San José", capacity: "4 500+", type: "Event Venue", image: "/Images/venues/costa-rica/venue-13.jpg" },
+      { name: "Centro de Convenciones Wyndham Herradura", city: "San José", capacity: "4 500+", type: "Hotel & Conference", image: "/Images/venues/costa-rica/venue-13.jpg" },
       { name: "Hotel Real InterContinental Convention Center", city: "San José (Escazú)", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/costa-rica/venue-2.jpg" },
       { name: "El Pedregal Event Center", city: "Belén (nära San José)", capacity: "8 000+", type: "Convention center", image: "/Images/venues/costa-rica/venue-5.jpg" },
     ],
@@ -159,7 +159,7 @@ export const AMERICAS: Country[] = [
       { name: "Santo Domingo Convention Center", city: "Santo Domingo", capacity: "4 000+", type: "Convention center", image: "/Images/venues/dominican-republic/venue-9.jpg" },
       { name: "Hard Rock Hotel & Casino Punta Cana Convention Center", city: "Punta Cana", capacity: "7 000+", type: "Hotel & Conference", image: "/Images/venues/dominican-republic/venue-12.jpg" },
       { name: "Dominican Fiesta Hotel & Convention Center", city: "Santo Domingo", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/dominican-republic/venue-2.jpg" },
-      { name: "Casa de Campo Conference Center", city: "La Romana", capacity: "1 500+", type: "Convention center", image: "/Images/venues/dominican-republic/venue-4.jpg" },
+      { name: "Casa de Campo Conference Center", city: "La Romana", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/dominican-republic/venue-4.jpg" },
     ],
   },
   {
@@ -178,7 +178,7 @@ export const AMERICAS: Country[] = [
       { name: "Grenada Trade Centre", city: "St. George’s", capacity: "2 000+", type: "Exhibition center", image: "/Images/venues/grenada/venue-1.jpg" },
       { name: "Radisson Grenada Beach Resort Conference Center", city: "Grand Anse (St. George’s)", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/grenada/venue-9.jpg" },
       { name: "Spice Island Beach Resort Conference Facilities", city: "Grand Anse", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/grenada/venue-11.jpg" },
-      { name: "Silversands Grenada Conference Facilities", city: "Grand Anse", capacity: "250+", type: "Convention center", image: "/Images/venues/grenada/venue-14.jpg" },
+      { name: "Silversands Grenada Conference Facilities", city: "Grand Anse", capacity: "250+", type: "Hotel & Conference", image: "/Images/venues/grenada/venue-14.jpg" },
       { name: "True Blue Bay Boutique Resort Conference Center", city: "True Blue (St. George’s)", capacity: "200+", type: "Hotel & Conference", image: "/Images/venues/grenada/venue-4.jpg" },
     ],
   },
@@ -187,7 +187,7 @@ export const AMERICAS: Country[] = [
     topVenues: [
       { name: "Tikal Futura Convention Center", city: "Guatemala City", capacity: "7 000+", type: "Convention center", image: "/Images/venues/guatemala/venue-1.jpg" },
       { name: "Parque de la Industria", city: "Guatemala City", capacity: "20 000+", type: "Event Venue", image: "/Images/venues/guatemala/venue-10.jpg" },
-      { name: "Westin Camino Real Convention Center", city: "Guatemala City", capacity: "3 000+", type: "Convention center", image: "/Images/venues/guatemala/venue-13.jpg" },
+      { name: "Westin Camino Real Convention Center", city: "Guatemala City", capacity: "3 000+", type: "Hotel & Conference", image: "/Images/venues/guatemala/venue-13.jpg" },
       { name: "Grand Tikal Futura Hotel Conference Facilities", city: "Guatemala City", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/guatemala/venue-2.jpg" },
       { name: "Casa Santo Domingo Convention Center", city: "Antigua Guatemala", capacity: "1 000+", type: "Convention center", image: "/Images/venues/guatemala/venue-5.jpg" },
     ],
@@ -195,7 +195,7 @@ export const AMERICAS: Country[] = [
   {
     slug: "honduras", code: "hn", name: "Honduras", nameSv: "Honduras", venues: "975+",
     topVenues: [
-      { name: "Expocentro", city: "San Pedro Sula", capacity: "10 000+", type: "Exhibition center", image: "/Images/venues/honduras/venue-1.jpg" },
+      { name: "Expocentro", city: "San Pedro Sula", capacity: "10 000+", type: "Exhibition center", imageComing: true },
       { name: "Centro de Convenciones Copantl", city: "San Pedro Sula", capacity: "3 000+", type: "Event Venue", image: "/Images/venues/honduras/venue-10.jpg" },
       { name: "Centro de Convenciones del Banco Central de Honduras", city: "Tegucigalpa", capacity: "1 500+", type: "Event Venue", image: "/Images/venues/honduras/venue-13.jpg" },
       { name: "Honduras Maya Hotel Convention Center", city: "Tegucigalpa", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/honduras/venue-2.jpg" },
@@ -205,8 +205,8 @@ export const AMERICAS: Country[] = [
   {
     slug: "jamaica", code: "jm", name: "Jamaica", nameSv: "Jamaica", venues: "975+",
     topVenues: [
-      { name: "Montego Bay Convention Centre", city: "Montego Bay", capacity: "5 000+", type: "Convention center", image: "/Images/venues/jamaica/venue-1.jpg" },
-      { name: "Jamaica Conference Centre", city: "Kingston", capacity: "3 500+", type: "Convention center", image: "/Images/venues/jamaica/venue-9.jpg" },
+      { name: "Montego Bay Convention Centre", city: "Montego Bay", capacity: "5 000+", type: "Convention center", imageComing: true },
+      { name: "Jamaica Conference Centre", city: "Kingston", capacity: "3 500+", type: "Convention center", imageComing: true },
       { name: "Rose Hall Resort Conference Center", city: "Montego Bay", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/jamaica/venue-12.jpg" },
       { name: "Hyatt Ziva / Zilara Rose Hall Conference Facilities", city: "Montego Bay", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/jamaica/venue-2.jpg" },
       { name: "Spanish Court Hotel Conference Center", city: "Kingston", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/jamaica/venue-5.jpg" },
@@ -217,7 +217,7 @@ export const AMERICAS: Country[] = [
     topVenues: [
       { name: "Centro Citibanamex", city: "Mexico City", capacity: "100 000+", type: "Event Venue", image: "/Images/venues/mexico/venue-1.jpg" },
       { name: "Expo Guadalajara", city: "Guadalajara", capacity: "60 000+", type: "Exhibition center", image: "/Images/venues/mexico/venue-10.jpg" },
-      { name: "Centro Banamex", city: "Mexico City", capacity: "30 000+", type: "Event Venue", image: "/Images/venues/mexico/venue-13.jpg" },
+      { name: "Expo Santa Fe México", city: "Mexico City", capacity: "10 000+", type: "Exhibition center", imageComing: true },
       { name: "Cancun International Convention Center", city: "Cancún", capacity: "6 000+", type: "Convention center", image: "/Images/venues/mexico/venue-2.jpg" },
       { name: "Monterrey Cintermex", city: "Monterrey", capacity: "25 000+", type: "Event Venue", image: "/Images/venues/mexico/venue-5.jpg" },
     ],
@@ -226,10 +226,10 @@ export const AMERICAS: Country[] = [
     slug: "nicaragua", code: "ni", name: "Nicaragua", nameSv: "Nicaragua", venues: "975+",
     topVenues: [
       { name: "Centro de Convenciones Olof Palme", city: "Managua", capacity: "3 000+", type: "Event Venue", image: "/Images/venues/nicaragua/venue-1.jpg" },
-      { name: "Crowne Plaza Managua Convention Center", city: "Managua", capacity: "2 000+", type: "Convention center", image: "/Images/venues/nicaragua/venue-9.jpg" },
+      { name: "Crowne Plaza Managua Convention Center", city: "Managua", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/nicaragua/venue-9.jpg" },
       { name: "Hotel InterContinental Managua Convention Center", city: "Managua", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/nicaragua/venue-12.jpg" },
       { name: "Centro de Convenciones del INCAE Business School", city: "Managua (nära Carretera Sur)", capacity: "800+", type: "Event Venue", image: "/Images/venues/nicaragua/venue-2.jpg" },
-      { name: "Hotel Camino Real Managua Conference Center", city: "Managua", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/nicaragua/venue-12.jpg" },
+      { name: "Hotel Camino Real Managua Conference Center", city: "Managua", capacity: "1 000+", type: "Hotel & Conference", imageComing: true },
     ],
   },
   {
@@ -238,7 +238,7 @@ export const AMERICAS: Country[] = [
       { name: "Panama Convention Center", city: "Panama City", capacity: "23 000+", type: "Convention center", image: "/Images/venues/panama/venue-1.jpg" },
       { name: "ATLAPA Convention Center", city: "Panama City", capacity: "10 000+", type: "Convention center", image: "/Images/venues/panama/venue-8.jpg" },
       { name: "Megapolis Convention Center", city: "Panama City", capacity: "3 500+", type: "Convention center", image: "/Images/venues/panama/venue-11.jpg" },
-      { name: "Vasco Núñez de Balboa Convention Center", city: "Panama City", capacity: "2 500+", type: "Convention center", image: "/Images/venues/panama/venue-1.jpg" },
+      { name: "Vasco Núñez de Balboa Convention Center", city: "Panama City", capacity: "2 500+", type: "Convention center", imageComing: true },
       { name: "Panama Maritime Authority Conference Center", city: "Panama City", capacity: "1 500+", type: "Convention center", image: "/Images/venues/panama/venue-3.jpg" },
     ],
   },
@@ -268,8 +268,8 @@ export const AMERICAS: Country[] = [
       { name: "Puerto Rico Convention Center", city: "San Juan", capacity: "25 000+", type: "Convention center", image: "/Images/venues/puerto-rico/venue-1.jpg" },
       { name: "Sheraton Puerto Rico Hotel & Casino Convention Center", city: "San Juan", capacity: "2 500+", type: "Hotel & Conference", image: "/Images/venues/puerto-rico/venue-10.jpg" },
       { name: "Caribe Hilton Conference Center", city: "San Juan", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/puerto-rico/venue-13.jpg" },
-      { name: "Wyndham Grand Rio Mar Convention Center", city: "Río Grande", capacity: "1 500+", type: "Convention center", image: "/Images/venues/puerto-rico/venue-2.jpg" },
-      { name: "La Concha Renaissance San Juan Conference Center", city: "San Juan", capacity: "1 000+", type: "Convention center", image: "/Images/venues/puerto-rico/venue-5.jpg" },
+      { name: "Wyndham Grand Rio Mar Convention Center", city: "Río Grande", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/puerto-rico/venue-2.jpg" },
+      { name: "La Concha Renaissance San Juan Conference Center", city: "San Juan", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/puerto-rico/venue-5.jpg" },
     ],
   },
   {
@@ -278,7 +278,7 @@ export const AMERICAS: Country[] = [
       { name: "St. Kitts Marriott Resort & Royal Beach Casino Conference Center", city: "Frigate Bay (St. Kitts)", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/saint-kitts-and-nevis/venue-1.jpg" },
       { name: "Park Hyatt St. Kitts Conference Facilities", city: "Christophe Harbour (St. Kitts)", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/saint-kitts-and-nevis/venue-8.jpg" },
       { name: "Royal St. Kitts Hotel Conference Center", city: "Frigate Bay (St. Kitts)", capacity: "400+", type: "Hotel & Conference", image: "/Images/venues/saint-kitts-and-nevis/venue-6.jpg" },
-      { name: "Nevis Performing Arts Center Conference Facilities", city: "Charlestown (Nevis)", capacity: "300+", type: "Convention center", image: "/Images/venues/saint-kitts-and-nevis/venue-13.jpg" },
+      { name: "Nevis Performing Arts Center Conference Facilities", city: "Charlestown (Nevis)", capacity: "300+", type: "Convention center", imageComing: true },
       { name: "Four Seasons Resort Nevis Conference Center", city: "Nevis", capacity: "350+", type: "Hotel & Conference", image: "/Images/venues/saint-kitts-and-nevis/venue-4.jpg" },
     ],
   },
@@ -286,17 +286,17 @@ export const AMERICAS: Country[] = [
     slug: "saint-lucia", code: "lc", name: "Saint Lucia", nameSv: "Saint Lucia", venues: "400+",
     topVenues: [
       { name: "Saint Lucia National Cultural Centre", city: "Castries", capacity: "2 000+", type: "Convention center", image: "/Images/venues/saint-lucia/venue-1.jpg" },
-      { name: "Bay Gardens Hotel & Conference Centre", city: "Rodney Bay", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/saint-lucia/venue-9.jpg" },
-      { name: "Sandals Grande St. Lucian Conference Facilities", city: "Gros Islet", capacity: "600+", type: "Convention center", image: "/Images/venues/saint-lucia/venue-11.jpg" },
-      { name: "Royalton Saint Lucia Conference Center", city: "Cap Estate (Gros Islet)", capacity: "500+", type: "Convention center", image: "/Images/venues/saint-lucia/venue-14.jpg" },
+      { name: "Bay Gardens Hotel & Conference Centre", city: "Rodney Bay", capacity: "800+", type: "Hotel & Conference", imageComing: true },
+      { name: "Sandals Grande St. Lucian Conference Facilities", city: "Gros Islet", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/saint-lucia/venue-11.jpg" },
+      { name: "Royalton Saint Lucia Conference Center", city: "Cap Estate (Gros Islet)", capacity: "500+", type: "Hotel & Conference", image: "/Images/venues/saint-lucia/venue-14.jpg" },
       { name: "Coconut Bay Beach Resort & Spa Conference Facilities", city: "Vieux Fort", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/saint-lucia/venue-4.jpg" },
     ],
   },
   {
     slug: "saint-vincent-and-the-grenadines", code: "vc", name: "Saint Vincent and the Grenadines", nameSv: "Saint Vincent och Grenadinerna", venues: "400+",
     topVenues: [
-      { name: "St. Vincent and the Grenadines National Conference Centre", city: "Kingstown (St. Vincent)", capacity: "1 000+", type: "Convention center", image: "/Images/round-table-discussion-business-conference-meeting-event-audience-conference-hall-business.webp" },
-      { name: "Buccament Bay Resort Conference Facilities", city: "Buccament (St. Vincent)", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/saint-vincent-and-the-grenadines/venue-buccament.jpg" },
+      { name: "St. Vincent and the Grenadines National Conference Centre", city: "Kingstown (St. Vincent)", capacity: "1 000+", type: "Convention center", imageComing: true },
+      { name: "Buccament Bay Resort Conference Facilities", city: "Buccament (St. Vincent)", capacity: "600+", type: "Hotel & Conference", imageComing: true },
       { name: "Beachcombers Hotel Conference Center", city: "Villa (St. Vincent)", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/saint-vincent-and-the-grenadines/venue-7.jpg" },
       { name: "Blue Lagoon Hotel & Marina Conference Facilities", city: "Blue Lagoon (St. Vincent)", capacity: "250+", type: "Hotel & Conference", image: "/Images/venues/saint-vincent-and-the-grenadines/venue-10.jpg" },
       { name: "Canouan Estate Resort Conference Facilities", city: "Canouan Island", capacity: "200+", type: "Hotel & Conference", image: "/Images/venues/saint-vincent-and-the-grenadines/venue-2.jpg" },
@@ -348,7 +348,7 @@ export const AMERICAS: Country[] = [
       { name: "Karibe Hotel & Convention Center", city: "Port-au-Prince", capacity: "1 500", type: "Hotel & Conference", image: "/Images/venues/haiti/venue-1.jpg" },
       { name: "Oasis Hotel Conference Centre", city: "Pétion-Ville", capacity: "800", type: "Hotel & Conference", image: "/Images/venues/haiti/venue-2.jpg" },
       { name: "NH El Rancho Conference Hall", city: "Pétion-Ville", capacity: "500", type: "Hotel & Conference", image: "/Images/venues/haiti/venue-3.jpg" },
-      { name: "Decameron Indigo Beach Conference", city: "Montrouis", capacity: "600", type: "Resort & Conference", image: "/Images/venues/haiti/venue-4.jpg" },
+      { name: "Marriott Port-au-Prince Hotel", city: "Port-au-Prince", capacity: "600", type: "Hotel & Conference", imageComing: true },
       { name: "Royal Decameron Indigo Hall", city: "Côte des Arcadins", capacity: "400", type: "Resort & Conference", image: "/Images/venues/haiti/venue-5.jpg" },
     ],
   },
