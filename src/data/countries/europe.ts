@@ -19,17 +19,17 @@ export const EUROPE: Country[] = [
       { name: "Hills Hotel Sarajevo Congress Centre", city: "Sarajevo", capacity: "3 500", type: "Hotel & Conference", image: "/Images/venues/bosnia-herzegovina/venue-10.jpg" },
       { name: "Hotel Europe Congress Centre", city: "Sarajevo", capacity: "1 500", type: "Hotel & Conference", image: "/Images/venues/bosnia-herzegovina/venue-13.jpg" },
       { name: "Mostar Fair", city: "Mostar", capacity: "5 000+", type: "Exhibition center", image: "/Images/venues/bosnia-herzegovina/venue-2.jpg" },
-      { name: "Swissôtel Sarajevo Conference Centre", city: "Sarajevo", capacity: "1 000", type: "Convention center", image: "/Images/venues/bosnia-herzegovina/venue-5.jpg" },
+      { name: "Swissôtel Sarajevo Conference Centre", city: "Sarajevo", capacity: "1 000", type: "Hotel & Conference", image: "/Images/venues/bosnia-herzegovina/venue-5.jpg" },
     ],
   },
   {
     slug: "croatia", code: "hr", name: "Croatia", nameSv: "Kroatien", venues: "1,075+",
     topVenues: [
       { name: "Zagreb Fair Congress Center", city: "Zagreb", capacity: "20 000+", type: "Exhibition center", image: "/Images/venues/croatia/venue-1.jpg" },
-      { name: "Dubrovnik Valamar Lacroma Conference Centre", city: "Dubrovnik", capacity: "1 200", type: "Convention center", image: "/Images/venues/croatia/venue-4.jpg" },
-      { name: "Spaladium Arena & Conference Centre", city: "Split", capacity: "12 000", type: "Hotel & Conference", image: "/Images/venues/croatia/venue-7.jpg" },
+      { name: "Dubrovnik Valamar Lacroma Conference Centre", city: "Dubrovnik", capacity: "1 200", type: "Hotel & Conference", image: "/Images/venues/croatia/venue-4.jpg" },
+      { name: "Spaladium Arena & Conference Centre", city: "Split", capacity: "12 000", type: "Event Venue", image: "/Images/venues/croatia/venue-7.jpg" },
       { name: "Amadria Park Convention Centre Šibenik", city: "Šibenik", capacity: "4 000", type: "Convention center", image: "/Images/venues/croatia/venue-10.jpg" },
-      { name: "Westin Zagreb Conference Center", city: "Zagreb", capacity: "1 500", type: "Convention center", image: "/Images/venues/croatia/venue-13.jpg" },
+      { name: "Westin Zagreb Conference Center", city: "Zagreb", capacity: "1 500", type: "Hotel & Conference", image: "/Images/venues/croatia/venue-13.jpg" },
     ],
   },
   {
@@ -48,14 +48,14 @@ export const EUROPE: Country[] = [
       { name: "Tallinn Creative Hub", city: "Tallinn", capacity: "6 000", type: "Event Venue", image: "/Images/venues/estonia/venue-1.jpg" },
       { name: "Eesti Näituste Fair Centre", city: "Tallinn", capacity: "10 000+", type: "Exhibition center", image: "/Images/venues/estonia/venue-4.jpg" },
       { name: "Hilton Tallinn Park Conference Centre", city: "Tallinn", capacity: "1 800", type: "Hotel & Conference", image: "/Images/venues/estonia/venue-7.jpg" },
-      { name: "Swissôtel Tallinn Conference Centre", city: "Tallinn", capacity: "1 000", type: "Convention center", image: "/Images/venues/estonia/venue-10.jpg" },
-      { name: "Tartu National Museum Conference Centre", city: "Tartu", capacity: "1 500", type: "Convention center", image: "/Images/venues/estonia/venue-13.jpg" },
+      { name: "Swissôtel Tallinn Conference Centre", city: "Tallinn", capacity: "1 000", type: "Hotel & Conference", image: "/Images/venues/estonia/venue-10.jpg" },
+      { name: "Tartu National Museum Conference Centre", city: "Tartu", capacity: "1 500", type: "Convention center", imageComing: true },
     ],
   },
   {
     slug: "france", code: "fr", name: "France", nameSv: "Frankrike", venues: "8,525+",
     topVenues: [
-      { name: "Paris Expo Porte de Versailles", city: "Paris", capacity: "200 000+", type: "Exhibition center", image: "/Images/venues/france/venue-1.jpg" },
+      { name: "Paris Expo Porte de Versailles", city: "Paris", capacity: "200 000+", type: "Exhibition center", imageComing: true },
       { name: "Palais des Congrès de Paris", city: "Paris", capacity: "3 700", type: "Event Venue", image: "/Images/venues/france/venue-4.jpg" },
       { name: "Cannes Palais des Festivals et des Congrès", city: "Cannes", capacity: "35 000", type: "Event Venue", image: "/Images/venues/france/venue-7.jpg" },
       { name: "Lyon Convention Centre", city: "Lyon", capacity: "19 000", type: "Convention center", image: "/Images/venues/france/venue-10.jpg" },
@@ -69,7 +69,7 @@ export const EUROPE: Country[] = [
       { name: "Megaron Athens International Conference Centre", city: "Athens", capacity: "6 000", type: "Convention center", image: "/Images/venues/greece/venue-4.jpg" },
       { name: "Thessaloniki International Exhibition & Congress Center", city: "Thessaloniki", capacity: "20 000+", type: "Exhibition center", image: "/Images/venues/greece/venue-7.jpg" },
       { name: "Stavros Niarchos Foundation Cultural Center", city: "Athens", capacity: "5 000", type: "Convention center", image: "/Images/venues/greece/venue-10.jpg" },
-      { name: "Creta Maris Convention Center", city: "Kreta", capacity: "5 500", type: "Convention center", image: "/Images/venues/greece/venue-13.jpg" },
+      { name: "Creta Maris Convention Center", city: "Kreta", capacity: "5 500", type: "Hotel & Conference", image: "/Images/venues/greece/venue-13.jpg" },
     ],
   },
   {
@@ -79,7 +79,7 @@ export const EUROPE: Country[] = [
       { name: "Budapest Congress Center", city: "Budapest", capacity: "3 000", type: "Convention center", image: "/Images/venues/hungary/venue-4.jpg" },
       { name: "Bálna Budapest", city: "Budapest", capacity: "3 000+", type: "Event Venue", image: "/Images/venues/hungary/venue-7.jpg" },
       { name: "Groupama Arena Conference & Event Center", city: "Budapest", capacity: "5 000", type: "Convention center", image: "/Images/venues/hungary/venue-10.jpg" },
-      { name: "Corinthia Budapest Conference Center", city: "Budapest", capacity: "2 200", type: "Convention center", image: "/Images/venues/hungary/venue-13.jpg" },
+      { name: "Corinthia Budapest Conference Center", city: "Budapest", capacity: "2 200", type: "Hotel & Conference", image: "/Images/venues/hungary/venue-13.jpg" },
     ],
   },
   {
@@ -88,7 +88,7 @@ export const EUROPE: Country[] = [
       { name: "Harpa Concert Hall & Conference Centre", city: "Reykjavik", capacity: "3 500+", type: "Convention center", image: "/Images/venues/iceland/venue-1.jpg" },
       { name: "Hilton Reykjavik Nordica Conference Centre", city: "Reykjavik", capacity: "2 000", type: "Hotel & Conference", image: "/Images/venues/iceland/venue-4.jpg" },
       { name: "Laugardalshöll Arena & Conference Centre", city: "Reykjavik", capacity: "5 500", type: "Convention center", image: "/Images/venues/iceland/venue-7.jpg" },
-      { name: "Reykjavík Natura Conference Centre", city: "Reykjavik", capacity: "1 000", type: "Convention center", image: "/Images/venues/iceland/venue-10.jpg" },
+      { name: "Reykjavík Natura Conference Centre", city: "Reykjavik", capacity: "1 000", type: "Hotel & Conference", image: "/Images/venues/iceland/venue-10.jpg" },
       { name: "Hof Cultural and Conference Centre", city: "Akureyri", capacity: "1 500", type: "Convention center", image: "/Images/venues/iceland/venue-13.jpg" },
     ],
   },
@@ -117,7 +117,7 @@ export const EUROPE: Country[] = [
     topVenues: [
       { name: "Kipsala International Exhibition Centre", city: "Riga", capacity: "15 000+", type: "Exhibition center", image: "/Images/venues/latvia/venue-1.jpg" },
       { name: "ATTA Centre Riga", city: "Riga", capacity: "5 500", type: "Convention center", image: "/Images/venues/latvia/venue-4.jpg" },
-      { name: "Radisson Blu Latvija Conference Centre", city: "Riga", capacity: "2 500", type: "Hotel & Conference", image: "/Images/venues/latvia/venue-7.jpg" },
+      { name: "Radisson Blu Latvija Conference Centre", city: "Riga", capacity: "2 500", type: "Hotel & Conference", imageComing: true },
       { name: "Hanzas Perons", city: "Riga", capacity: "2 000", type: "Event Venue", image: "/Images/venues/latvia/venue-10.jpg" },
       { name: "Jurmala Conference Centre", city: "Jūrmala", capacity: "1 000", type: "Convention center", image: "/Images/venues/latvia/venue-13.jpg" },
     ],
@@ -129,7 +129,7 @@ export const EUROPE: Country[] = [
       { name: "LITEXPO Congress Centre", city: "Vilnius", capacity: "5 000", type: "Exhibition center", image: "/Images/venues/lithuania/venue-4.jpg" },
       { name: "Radisson Blu Hotel Lietuva Conference Centre", city: "Vilnius", capacity: "1 200", type: "Hotel & Conference", image: "/Images/venues/lithuania/venue-7.jpg" },
       { name: "Žalgiris Arena Conference Centre", city: "Kaunas", capacity: "15 000", type: "Convention center", image: "/Images/venues/lithuania/venue-10.jpg" },
-      { name: "Vilnius Grand Resort Conference Centre", city: "Vilnius", capacity: "1 000", type: "Hotel & Conference", image: "/Images/venues/lithuania/venue-13.jpg" },
+      { name: "Vilnius Grand Resort Conference Centre", city: "Vilnius", capacity: "1 000", type: "Hotel & Conference", imageComing: true },
     ],
   },
   {
@@ -147,7 +147,7 @@ export const EUROPE: Country[] = [
     topVenues: [
       { name: "Malta Fairs & Conventions Centre", city: "Ta’ Qali", capacity: "10 000+", type: "Exhibition center", image: "/Images/venues/malta/venue-1.jpg" },
       { name: "Mediterranean Conference Centre", city: "Valletta", capacity: "1 400", type: "Convention center", image: "/Images/venues/malta/venue-4.jpg" },
-      { name: "InterContinental Malta Conference Centre", city: "St. Julian’s", capacity: "1 700", type: "Convention center", image: "/Images/venues/malta/venue-7.jpg" },
+      { name: "InterContinental Malta Conference Centre", city: "St. Julian’s", capacity: "1 700", type: "Hotel & Conference", image: "/Images/venues/malta/venue-7.jpg" },
       { name: "Hilton Malta Conference Centre", city: "St. Julian’s", capacity: "1 500", type: "Hotel & Conference", image: "/Images/venues/malta/venue-10.jpg" },
       { name: "Radisson Blu Golden Sands Conference Centre", city: "Mellieħa", capacity: "1 000", type: "Hotel & Conference", image: "/Images/venues/malta/venue-13.jpg" },
     ],
@@ -159,7 +159,7 @@ export const EUROPE: Country[] = [
       { name: "Hilton Podgorica Conference Centre", city: "Podgorica", capacity: "1 500", type: "Hotel & Conference", image: "/Images/venues/montenegro/venue-4.jpg" },
       { name: "Splendid Conference & Spa Resort", city: "Budva", capacity: "2 000", type: "Hotel & Conference", image: "/Images/venues/montenegro/venue-7.jpg" },
       { name: "Hotel Mediteran Conference Centre", city: "Bečići", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/montenegro/venue-10.jpg" },
-      { name: "Regent Porto Montenegro Conference Venue", city: "Tivat", capacity: "800", type: "Convention center", image: "/Images/venues/montenegro/venue-13.jpg" },
+      { name: "Regent Porto Montenegro Conference Venue", city: "Tivat", capacity: "800", type: "Hotel & Conference", image: "/Images/venues/montenegro/venue-13.jpg" },
     ],
   },
   {
@@ -188,7 +188,7 @@ export const EUROPE: Country[] = [
       { name: "Oslofjord Convention Center", city: "Melsomvik", capacity: "9 000+", type: "Convention center", image: "/Images/venues/norway/venue-1.jpg" },
       { name: "NOVA Spektrum", city: "Lillestrøm", capacity: "20 000+", type: "Event Venue", image: "/Images/venues/norway/venue-4.jpg" },
       { name: "The Qube Conference Centre", city: "Gardermoen/Oslo Airport", capacity: "8 000", type: "Convention center", image: "/Images/venues/norway/venue-7.jpg" },
-      { name: "Grieghallen Conference Centre", city: "Bergen", capacity: "3 500", type: "Convention center", image: "/Images/venues/norway/venue-10.jpg" },
+      { name: "Grieghallen Conference Centre", city: "Bergen", capacity: "3 500", type: "Convention center", imageComing: true },
       { name: "Trondheim Spektrum", city: "Trondheim", capacity: "8 500", type: "Event Venue", image: "/Images/venues/norway/venue-13.jpg" },
     ],
   },
@@ -216,7 +216,7 @@ export const EUROPE: Country[] = [
     slug: "romania", code: "ro", name: "Romania", nameSv: "Rumänien", venues: "3,975+",
     topVenues: [
       { name: "Romexpo Exhibition Centre", city: "Bucharest", capacity: "40 000+", type: "Exhibition center", image: "/Images/venues/romania/venue-doc-1.jpg" },
-      { name: "Palace of the Parliament – International Conference Center", city: "Bucharest", capacity: "5 000+", type: "Hotel & Conference", image: "/Images/venues/romania/venue-doc-2.jpg" },
+      { name: "Palace of the Parliament – International Conference Center", city: "Bucharest", capacity: "5 000+", type: "Convention center", image: "/Images/venues/romania/venue-doc-2.jpg" },
       { name: "Radisson Blu Hotel Bucharest Conference Center", city: "Bucharest", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/romania/venue-doc-3.jpg" },
       { name: "Cluj Arena & BT Arena Conference Facilities", city: "Cluj-Napoca", capacity: "10 000+", type: "Convention center", image: "/Images/venues/romania/venue-doc-4.jpg" },
       { name: "Iulius Congress Hall", city: "Timișoara", capacity: "1 500+", type: "Convention center", image: "/Images/venues/romania/venue-13.jpg" },
@@ -227,7 +227,7 @@ export const EUROPE: Country[] = [
     topVenues: [
       { name: "Sava Center", city: "Belgrad", capacity: "7 000+", type: "Convention center", image: "/Images/venues/serbia/venue-1.jpg" },
       { name: "Belgrade Fair", city: "Belgrad", capacity: "30 000+", type: "Exhibition center", image: "/Images/venues/serbia/venue-4.jpg" },
-      { name: "Crowne Plaza Belgrade Conference Centre", city: "Belgrad", capacity: "4 000", type: "Convention center", image: "/Images/venues/serbia/venue-7.jpg" },
+      { name: "Crowne Plaza Belgrade Conference Centre", city: "Belgrad", capacity: "4 000", type: "Hotel & Conference", image: "/Images/venues/serbia/venue-7.jpg" },
       { name: "Kombank Arena / Stark Arena Event Center", city: "Belgrad", capacity: "20 000", type: "Convention center", image: "/Images/venues/serbia/venue-10.jpg" },
       { name: "Metropol Palace Conference Centre", city: "Belgrad", capacity: "1 500", type: "Hotel & Conference", image: "/Images/venues/serbia/venue-13.jpg" },
     ],
@@ -239,7 +239,7 @@ export const EUROPE: Country[] = [
       { name: "x-bionic sphere", city: "Šamorín", capacity: "10 000", type: "Event Venue", image: "/Images/venues/slovakia/venue-4.jpg" },
       { name: "DoubleTree by Hilton Bratislava Conference Centre", city: "Bratislava", capacity: "2 500", type: "Hotel & Conference", image: "/Images/venues/slovakia/venue-7.jpg" },
       { name: "Bratislava Castle Conference Venue", city: "Bratislava", capacity: "1 000+", type: "Convention center", image: "/Images/venues/slovakia/venue-10.jpg" },
-      { name: "Crowne Plaza Bratislava Conference Center", city: "Bratislava", capacity: "1 200", type: "Convention center", image: "/Images/venues/slovakia/venue-13.jpg" },
+      { name: "Crowne Plaza Bratislava Conference Center", city: "Bratislava", capacity: "1 200", type: "Hotel & Conference", image: "/Images/venues/slovakia/venue-13.jpg" },
     ],
   },
   {
@@ -268,7 +268,7 @@ export const EUROPE: Country[] = [
       { name: "Stockholmsmässan", city: "Stockholm", capacity: "30 000+", type: "Event Venue", image: "/Images/venues/sweden/venue-1.jpg" },
       { name: "Svenska Mässan Gothia Towers", city: "Gothenburg", capacity: "18 000+", type: "Event Venue", image: "/Images/venues/sweden/venue-6.jpg" },
       { name: "Stockholm Waterfront Congress Centre", city: "Stockholm", capacity: "3 000", type: "Event Venue", image: "/Images/venues/sweden/venue-7.jpg" },
-      { name: "Malmömässan", city: "Malmö", capacity: "10 000+", type: "Event Venue", image: "/Images/venues/sweden/venue-10.jpg" },
+      { name: "Malmömässan", city: "Malmö", capacity: "10 000+", type: "Event Venue", imageComing: true },
       { name: "Scandinavian XPO", city: "Stockholm/Arlanda", capacity: "8 000", type: "Event Venue", image: "/Images/venues/sweden/venue-13.jpg" },
     ],
   },
@@ -295,7 +295,7 @@ export const EUROPE: Country[] = [
   {
     slug: "albania", code: "al", name: "Albania", nameSv: "Albanien", venues: "1,075+",
     topVenues: [
-      { name: "Palace of Congresses", city: "Tirana", capacity: "4 000+", type: "Hotel & Conference", image: "/Images/venues/albania/venue-1.jpg" },
+      { name: "Palace of Congresses", city: "Tirana", capacity: "4 000+", type: "Convention center", image: "/Images/venues/albania/venue-1.jpg" },
       { name: "Tirana International Hotel & Conference Centre", city: "Tirana", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/albania/venue-10.jpg" },
       { name: "Expo City Albania", city: "Tirana", capacity: "10 000+", type: "Exhibition center", image: "/Images/venues/albania/venue-13.jpg" },
       { name: "Rogner Hotel Conference Centre", city: "Tirana", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/albania/venue-2.jpg" },
@@ -316,7 +316,7 @@ export const EUROPE: Country[] = [
     slug: "bulgaria", code: "bg", name: "Bulgaria", nameSv: "Bulgarien", venues: "1,450+",
     topVenues: [
       { name: "Inter Expo Center Sofia", city: "Sofia", capacity: "20 000+", type: "Exhibition center", image: "/Images/venues/bulgaria/venue-1.jpg" },
-      { name: "National Palace of Culture", city: "Sofia", capacity: "15 000+", type: "Hotel & Conference", image: "/Images/venues/bulgaria/venue-10.jpg" },
+      { name: "National Palace of Culture", city: "Sofia", capacity: "15 000+", type: "Convention center", image: "/Images/venues/bulgaria/venue-10.jpg" },
       { name: "Sofia Tech Park – John Atanasoff Innovation Forum", city: "Sofia", capacity: "1 000+", type: "Event Venue", image: "/Images/venues/bulgaria/venue-13.jpg" },
       { name: "International Fair Plovdiv", city: "Plovdiv", capacity: "30 000+", type: "Exhibition center", image: "/Images/venues/bulgaria/venue-2.jpg" },
       { name: "Burgas International Congress Center", city: "Burgas", capacity: "2 000+", type: "Convention center", image: "/Images/venues/bulgaria/venue-5.jpg" },
@@ -377,9 +377,9 @@ export const EUROPE: Country[] = [
     topVenues: [
       { name: "Grimaldi Forum Monaco", city: "Monaco", capacity: "3 000+", type: "Event Venue", image: "/Images/venues/monaco/venue-1.jpg" },
       { name: "One Monte-Carlo Conference Center", city: "Monaco", capacity: "1 200+", type: "Convention center", image: "/Images/venues/monaco/venue-10.jpg" },
-      { name: "Fairmont Monte Carlo Conference Center", city: "Monaco", capacity: "1 500+", type: "Exhibition center", image: "/Images/venues/monaco/venue-13.jpg" },
-      { name: "Hôtel Hermitage Monte-Carlo Conference Facilities", city: "Monaco", capacity: "600+", type: "Convention center", image: "/Images/venues/monaco/venue-2.jpg" },
-      { name: "Le Méridien Beach Plaza Conference Center", city: "Monaco", capacity: "800+", type: "Convention center", image: "/Images/venues/monaco/venue-5.jpg" },
+      { name: "Fairmont Monte Carlo Conference Center", city: "Monaco", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/monaco/venue-13.jpg" },
+      { name: "Hôtel Hermitage Monte-Carlo Conference Facilities", city: "Monaco", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/monaco/venue-2.jpg" },
+      { name: "Le Méridien Beach Plaza Conference Center", city: "Monaco", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/monaco/venue-5.jpg" },
     ],
   },
   {
@@ -387,7 +387,7 @@ export const EUROPE: Country[] = [
     topVenues: [
       { name: "International Exhibition Centre", city: "Kyiv", capacity: "30 000+", type: "Exhibition center", image: "/Images/venues/ukraine/venue-1.jpg" },
       { name: "Parkovy Convention and Exhibition Center", city: "Kyiv", capacity: "3 000+", type: "Exhibition center", image: "/Images/venues/ukraine/venue-9.jpg" },
-      { name: "ACCO International Exhibition Center", city: "Kyiv", capacity: "10 000+", type: "Exhibition center", image: "/Images/venues/ukraine/venue-9.jpg" },
+      { name: "ACCO International Exhibition Center", city: "Kyiv", capacity: "10 000+", type: "Exhibition center", imageComing: true },
       { name: "Lviv Arena Conference & Event Facilities", city: "Lviv", capacity: "8 000+", type: "Convention center", image: "/Images/venues/ukraine/venue-14.jpg" },
       { name: "Odessa Expo & Convention Center", city: "Odessa", capacity: "5 000+", type: "Exhibition center", image: "/Images/venues/ukraine/venue-4.jpg" },
     ],
