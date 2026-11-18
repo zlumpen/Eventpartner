@@ -540,14 +540,14 @@ export function RequestFormSection({ cms }: { cms?: {
         >
           <div className="w-full md:w-auto">
             <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-purple mb-1">
-              {sv ? 'För venues' : 'For venues'}
+              {sv ? 'För hotell & lokaler' : 'For venues'}
             </p>
             <h3 className="font-display text-lg md:text-xl font-medium text-[var(--text-primary)]">
-              {sv ? 'Driver du ett venue? Få fler bokningar.' : 'Run a venue? Get more bookings.'}
+              {sv ? 'Har du en konferensanläggning eller ett hotell? Få fler bokningar.' : 'Run a venue? Get more bookings.'}
             </h3>
             <p className="text-[13px] md:text-[14px] text-[var(--text-muted)] mt-0.5 leading-relaxed max-w-xl">
               {sv
-                ? 'Nå eventplanerare i hela världen med våra Cvent-paket för hotell och konferensanläggningar.'
+                ? 'Nå eventplanerare över hela världen med våra Cvent och marknadsföringspaket för hotell och konferensanläggningar.'
                 : 'Reach event planners worldwide with our Cvent marketing packages for hotels and conference venues.'}
             </p>
           </div>
@@ -556,7 +556,7 @@ export function RequestFormSection({ cms }: { cms?: {
             className="group w-full md:w-auto shrink-0 inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-medium text-white transition-all hover:-translate-y-0.5"
             style={{ background: "linear-gradient(135deg,#5B3EE8,#7A5CF0)", boxShadow: "0 8px 24px rgba(91,62,232,0.30)" }}
           >
-            {sv ? 'Se venue-paketen' : 'See venue packages'}
+            {sv ? 'Se våra paket' : 'See venue packages'}
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>
