@@ -291,10 +291,10 @@
   .process-list p{color:var(--muted);margin:0;max-width:58ch;}
   /* ---------- QUICK COMPARE TILES ---------- */
   section.tiles{background:var(--bg);}
-  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
   .cat-tile{
-    border-radius:var(--radius);border:1px solid var(--line);padding:26px 22px;min-height:150px;
-    display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;
+    border-radius:var(--radius);border:1px solid var(--line);padding:26px 22px;min-height:190px;
+    display:flex;flex-direction:column;justify-content:flex-start;position:relative;overflow:hidden;
   }
   .cat-tile::before{content:"";position:absolute;inset:0;opacity:0.55;}
   .cat-tile .mono{position:relative;z-index:1;color:var(--cyan-dim);margin-bottom:8px;}
@@ -305,7 +305,6 @@
   .cat-tile.c2::before{background:radial-gradient(circle at 70% 30%, rgba(91,62,232,0.26), transparent 60%);}
   .cat-tile.c3::before{background:radial-gradient(circle at 30% 80%, rgba(0,118,170,0.32), transparent 60%);}
   .cat-tile.c4::before{background:radial-gradient(circle at 70% 70%, rgba(34,230,239,0.22), transparent 60%);}
-  .cat-tile.c5{grid-column:span 4;min-height:110px;flex-direction:row;align-items:center;justify-content:space-between;}
   .cat-tile.c5::before{background:radial-gradient(circle at 50% 50%, rgba(91,62,232,0.24), transparent 70%);}
   /* ---------- PACKAGES ---------- */
   section.packages{background:var(--bg-panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
@@ -471,7 +470,7 @@
     .capture-shell{grid-template-columns:1fr;}
     .capture-info{border-right:none;border-bottom:1px solid var(--line);}
     .cat-grid{grid-template-columns:1fr 1fr;}
-    .cat-tile.c5{grid-column:span 2;flex-direction:column;align-items:flex-start;gap:14px;}
+    .cat-tile.c5{grid-column:span 2;}
     .price-grid{grid-template-columns:1fr 1fr;}
     .pain-layout{grid-template-columns:1fr;}
     .proof-strip{grid-template-columns:1fr 1fr;}
@@ -482,6 +481,7 @@
   @media (max-width: 620px){
     .cat-grid{grid-template-columns:1fr;}
     .cat-tile.c5{grid-column:span 1;}
+    .cat-tile{min-height:0;}
     .price-grid{grid-template-columns:1fr;}
     .match-shell{flex-direction:column;align-items:flex-start;}
     .headroom-btns{grid-template-columns:repeat(2,1fr);}
@@ -744,7 +744,7 @@
       </li>
       <li>
         <span class="num">02</span>
-        <div><h3 id="step2H3">We match you to a package</h3><p id="step2P">Minimum, Growth, Premium or Portfolio — chosen around your goals, not a generic tier.</p></div>
+        <div><h3 id="step2H3">We match you to a package</h3><p id="step2P">Start, Essential, Growth, Premium or Imperium — chosen around your goals, not a generic tier.</p></div>
       </li>
       <li>
         <span class="num">03</span>
@@ -757,14 +757,15 @@
 <section class="tiles" id="tiles">
   <div class="wrap">
     <div class="section-head">
-      <span class="mono" id="tilesMono">Four ways to grow on Cvent</span>
+      <span class="mono" id="tilesMono">Five ways to grow on Cvent</span>
       <h2 id="tilesH2">Pick the level of visibility your venue needs</h2>
     </div>
     <div class="cat-grid">
-      <div class="cat-tile c1"><span class="mono">Minimum &#128142;</span><h3 id="tile1H3">Be Found</h3><span class="desc" id="tile1Span">Top Responder &#8211; 20&times; more bookings</span></div>
-      <div class="cat-tile c2"><span class="mono">Growth &#128142;&#128142;</span><h3 id="tile2H3">Get Discovered</h3><span class="desc" id="tile2Span">Reach more active event planners</span></div>
-      <div class="cat-tile c3"><span class="pop" id="tile3Pop">Most popular</span><span class="mono">Premium &#128142;&#128142;&#128142;</span><h3 id="tile3H3">Become the First Choice</h3><span class="desc" id="tile3Span">Create demand with the right companies</span></div>
-      <div class="cat-tile c4"><span class="mono">Portfolio &#128142;&#128142;&#128142;&#128142;</span><h3 id="tile4H3">Reach Everyone</h3><span class="desc" id="tile4Span">Reach your entire potential market</span></div>
+      <div class="cat-tile c1"><span class="mono">&#9671;</span><h3 id="tile1H3">Start</h3><span class="desc" id="tile1Span">Get off to the right start on Cvent</span></div>
+      <div class="cat-tile c2"><span class="mono">&#9670;</span><h3 id="tile2H3">Essential</h3><span class="desc" id="tile2Span">Start getting seen on Cvent and get new client meetings every month</span></div>
+      <div class="cat-tile c3"><span class="mono">&#9670;&#9670;</span><h3 id="tile3H3">Growth</h3><span class="desc" id="tile3Span">Show up in more searches and reach new planners every month</span></div>
+      <div class="cat-tile c4"><span class="pop" id="tile4Pop">Recommended</span><span class="mono">&#9670;&#9670;&#9670;</span><h3 id="tile4H3">Premium</h3><span class="desc" id="tile4Span">Among the first planners see when they search in your region</span></div>
+      <div class="cat-tile c5"><span class="mono">&#9670;&#9670;&#9670;&#9670;</span><h3 id="tile5H3">Imperium</h3><span class="desc" id="tile5Span">Biggest visibility and the most client meetings in your market</span></div>
     </div>
   </div>
 </section>
@@ -814,7 +815,7 @@
         <p id="capP">Fill in the form and we'll send you a tailored quote with a recommended package and price.<br><br>Want to go through the quote together? Book a 15-minute meeting and we'll walk through everything and answer your questions.</p>
         <div class="mini-stats">
           <div><b>24h</b><span id="miniLabel1">Quote within 24h</span></div>
-          <div><b>4</b><span id="miniLabel2">Package tiers</span></div>
+          <div><b>5</b><span id="miniLabel2">Package tiers</span></div>
           <div><b>15 min</b><span id="miniLabel3">Walkthrough</span></div>
         </div>
         <ul>
@@ -852,10 +853,11 @@
             <label for="pkg" id="lblPkg">Package you're interested in</label>
             <select id="pkg">
               <option>Not sure — recommend one</option>
-              <option>Minimum — Be Found</option>
-              <option>Growth — Get Discovered</option>
-              <option>Premium — Create Demand</option>
-              <option>Portfolio — Own Your Market</option>
+              <option>Start</option>
+              <option>Essential</option>
+              <option>Growth</option>
+              <option>Premium (recommended)</option>
+              <option>Imperium</option>
             </select>
           </div>
         </div>
@@ -973,15 +975,16 @@
     processH2: 'Vi sätter upp, lanserar och sköter er Cvent-närvaro',
     processP: 'Ni behöver inte bli Cvent-experter. Berätta om er anläggning och vilken affär ni vill ha — vi sköter uppsättning, kampanjer och löpande optimering.',
     step1H3: 'Berätta om er anläggning', step1P: 'Dela er kapacitet, mötesytor, nuvarande Cvent-status och vilken typ av affär ni vill vinna.',
-    step2H3: 'Vi matchar er mot ett paket', step2P: 'Minimum, Growth, Premium eller Portfolio — valt utifrån era mål, inte en generisk nivå.',
+    step2H3: 'Vi matchar er mot ett paket', step2P: 'Start, Essential, Growth, Premium eller Imperium — valt utifrån era mål, inte en generisk nivå.',
     step3H3: 'Vi lanserar och optimerar', step3P: 'Förbättrad profil, riktade kampanjer och löpande rapportering — helt hanterat av EventPartners Cvent-team.',
-    tilesMono: 'Fyra sätt att växa på Cvent',
+    tilesMono: 'Fem sätt att växa på Cvent',
     tilesH2: 'Välj den synlighetsnivå er anläggning behöver',
-    tile1H3: 'Bli hittad', tile1Span: 'Top Responder – 20× fler bokningar',
-    tile2H3: 'Bli upptäckt', tile2Span: 'Nå fler aktiva eventplanerare',
-    tile3Pop: 'Mest populär', tile3H3: 'Bli förstahandsvalet', tile3Span: 'Skapa efterfrågan hos rätt företag',
-    tile4H3: 'Nå ut till alla', tile4Span: 'Nå hela er potentiella marknad',
-    tile5H3: 'Se exakt vad som ingår i varje paket', tile5Btn: 'Jämför paket ↓',
+    tile1H3: 'Start', tile1Span: 'Kom igång rätt på Cvent',
+    tile2H3: 'Essential', tile2Span: 'Börja synas på Cvent och få nya kundmöten varje månad',
+    tile3H3: 'Growth', tile3Span: 'Synas i fler sökningar och nå nya planners varje månad',
+    tile4H3: 'Premium', tile4Span: 'Bland de första planners ser när de söker i er region',
+    tile5H3: 'Imperium', tile5Span: 'Störst synlighet och flest kundmöten i er marknad',
+    tile4Pop: 'Rekommenderas',
     pkgMono: 'Paketen',
     pkgH2: 'Hur stor del av bokningarna vill ni ta?',
     pkgP: 'Välj hur mycket ni vill synas, vilka ni vill nå och hur stor del av bokningarna ni vill ta.',
@@ -1032,7 +1035,7 @@
     ph_venue: 'Ert företags namn', ph_orgnr: 't.ex. 556677-8899', ph_contact: 'Namn', ph_city: 't.ex. Stockholm', ph_capacity: 't.ex. 250',
     ph_message: 'Berätta om er anläggning — mötesytor, beläggningsmål, målmarknader eller annat vi bör veta...',
     opt_status: ['Inte listade än', 'Ja — baslistning', 'Ja — Diamond-listning', 'Osäker'],
-    opt_pkg: ['Osäker — rekommendera ett', 'Minimum — Bli hittad', 'Growth — Bli upptäckt', 'Premium — Skapa efterfrågan', 'Portfolio — Äg er marknad']
+    opt_pkg: ['Osäker — rekommendera ett', 'Start', 'Essential', 'Growth', 'Premium (rekommenderas)', 'Imperium']
   };
 
   const NO = {
@@ -1064,15 +1067,16 @@
     processH2: 'Vi setter opp, lanserer og drifter Cvent-tilstedeværelsen deres',
     processP: 'Dere trenger ikke bli Cvent-eksperter. Fortell oss om lokalet og hvilken type forretning dere vil ha — vi tar hånd om oppsett, kampanjer og løpende optimalisering.',
     step1H3: 'Fortell oss om lokalet', step1P: 'Del kapasitet, møterom, nåværende Cvent-status og typen forretning dere vil vinne.',
-    step2H3: 'Vi matcher dere med en pakke', step2P: 'Minimum, Growth, Premium eller Portfolio — valgt ut fra deres mål, ikke en generisk pakke.',
+    step2H3: 'Vi matcher dere med en pakke', step2P: 'Start, Essential, Growth, Premium eller Imperium — valgt ut fra deres mål, ikke en generisk pakke.',
     step3H3: 'Vi lanserer og optimaliserer', step3P: 'Forbedret profil, målrettede kampanjer og løpende rapportering — fullt driftet av EventPartners Cvent-team.',
-    tilesMono: 'Fire måter å vokse på Cvent',
+    tilesMono: 'Fem måter å vokse på Cvent',
     tilesH2: 'Velg synlighetsnivået lokalet trenger',
-    tile1H3: 'Bli funnet', tile1Span: 'Top Responder – 20× flere bookinger',
-    tile2H3: 'Bli oppdaget', tile2Span: 'Nå flere aktive arrangementsplanleggere',
-    tile3Pop: 'Mest populær', tile3H3: 'Bli førstevalget', tile3Span: 'Skap etterspørsel hos de riktige bedriftene',
-    tile4H3: 'Nå ut til alle', tile4Span: 'Nå hele deres potensielle marked',
-    tile5H3: 'Se nøyaktig hva som er inkludert i hver pakke', tile5Btn: 'Sammenlign pakker ↓',
+    tile1H3: 'Start', tile1Span: 'Kom riktig i gang på Cvent',
+    tile2H3: 'Essential', tile2Span: 'Begynn å bli synlig på Cvent og få nye kundemøter hver måned',
+    tile3H3: 'Growth', tile3Span: 'Bli synlig i flere søk og nå nye planleggere hver måned',
+    tile4H3: 'Premium', tile4Span: 'Blant de første planleggerne ser når de søker i deres region',
+    tile5H3: 'Imperium', tile5Span: 'Størst synlighet og flest kundemøter i markedet deres',
+    tile4Pop: 'Anbefalt',
     pkgMono: 'Pakkene',
     pkgH2: 'Hvor stor del av bookingene vil dere ta?',
     pkgP: 'Velg hvor synlige dere vil være, hvem dere vil nå, og hvor stor del av bookingene dere vil ta.',
@@ -1123,7 +1127,7 @@
     ph_venue: 'Firmaets navn', ph_orgnr: 'f.eks. 987 654 325', ph_contact: 'Navn', ph_city: 'f.eks. Oslo', ph_capacity: 'f.eks. 250',
     ph_message: 'Fortell oss om lokalet — møterom, beleggsmål, målmarkeder eller annet vi bør vite...',
     opt_status: ['Ikke listet ennå', 'Ja — baselisting', 'Ja — Diamond-listing', 'Usikker'],
-    opt_pkg: ['Usikker — anbefal en', 'Minimum — Bli funnet', 'Growth — Bli oppdaget', 'Premium — Skap etterspørsel', 'Portfolio — Eie markedet deres']
+    opt_pkg: ['Usikker — anbefal en', 'Start', 'Essential', 'Growth', 'Premium (anbefalt)', 'Imperium']
   };
 
   const DA = {
@@ -1155,15 +1159,16 @@
     processH2: 'Vi sætter op, lancerer og driver jeres Cvent-tilstedeværelse',
     processP: 'I behøver ikke blive Cvent-eksperter. Fortæl os om jeres lokale og hvilken forretning I vil have — vi klarer opsætning, kampagner og løbende optimering.',
     step1H3: 'Fortæl os om jeres lokale', step1P: 'Del kapacitet, mødelokaler, nuværende Cvent-status og hvilken type forretning I vil vinde.',
-    step2H3: 'Vi matcher jer med en pakke', step2P: 'Minimum, Growth, Premium eller Portfolio — valgt ud fra jeres mål, ikke et generisk niveau.',
+    step2H3: 'Vi matcher jer med en pakke', step2P: 'Start, Essential, Growth, Premium eller Imperium — valgt ud fra jeres mål, ikke et generisk niveau.',
     step3H3: 'Vi lancerer og optimerer', step3P: 'Forbedret profil, målrettede kampagner og løbende rapportering — fuldt håndteret af EventPartners Cvent-team.',
-    tilesMono: 'Fire måder at vokse på Cvent',
+    tilesMono: 'Fem måder at vokse på Cvent',
     tilesH2: 'Vælg det synlighedsniveau jeres lokale har brug for',
-    tile1H3: 'Bliv fundet', tile1Span: 'Top Responder – 20× flere bookinger',
-    tile2H3: 'Bliv opdaget', tile2Span: 'Nå flere aktive eventplanlæggere',
-    tile3Pop: 'Mest populær', tile3H3: 'Bliv førstevalget', tile3Span: 'Skab efterspørgsel hos de rigtige virksomheder',
-    tile4H3: 'Nå ud til alle', tile4Span: 'Nå hele jeres potentielle marked',
-    tile5H3: 'Se præcis hvad der er inkluderet i hver pakke', tile5Btn: 'Sammenlign pakker ↓',
+    tile1H3: 'Start', tile1Span: 'Kom godt i gang på Cvent',
+    tile2H3: 'Essential', tile2Span: 'Begynd at blive set på Cvent og få nye kundemøder hver måned',
+    tile3H3: 'Growth', tile3Span: 'Bliv set i flere søgninger og nå nye planlæggere hver måned',
+    tile4H3: 'Premium', tile4Span: 'Blandt de første planlæggere ser, når de søger i jeres region',
+    tile5H3: 'Imperium', tile5Span: 'Størst synlighed og flest kundemøder på jeres marked',
+    tile4Pop: 'Anbefalet',
     pkgMono: 'Pakkerne',
     pkgH2: 'Hvor stor en del af bookingerne vil I tage?',
     pkgP: 'Vælg hvor synlige I vil være, hvem I vil nå, og hvor stor en del af bookingerne I vil tage.',
@@ -1214,7 +1219,7 @@
     ph_venue: 'Jeres virksomheds navn', ph_orgnr: 'f.eks. 12345678', ph_contact: 'Navn', ph_city: 'f.eks. København', ph_capacity: 'f.eks. 250',
     ph_message: 'Fortæl os om jeres lokale — mødelokaler, belægningsmål, målmarkeder eller andet vi bør vide...',
     opt_status: ['Ikke listet endnu', 'Ja — baselisting', 'Ja — Diamond-listing', 'Usikker'],
-    opt_pkg: ['Usikker — anbefal en', 'Minimum — Bliv fundet', 'Growth — Bliv opdaget', 'Premium — Skab efterspørgsel', 'Portfolio — Ejer jeres marked']
+    opt_pkg: ['Usikker — anbefal en', 'Start', 'Essential', 'Growth', 'Premium (anbefalet)', 'Imperium']
   };
 
   // Capture the original English content once, so EN can be restored exactly.
@@ -1450,7 +1455,7 @@
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
     });
-    try { localStorage.setItem('ep-lang', lang); } catch (e) {}
+    try { localStorage.setItem('ep-venues-lang', lang); } catch (e) {}
   }
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1461,11 +1466,17 @@
   try {
     const validLangs = ['sv', 'en', 'no', 'da'];
     const urlLang = new URLSearchParams(window.location.search).get('lang');
-    const saved = localStorage.getItem('ep-lang');
+    const saved = localStorage.getItem('ep-venues-lang');
     if (validLangs.includes(urlLang)) {
       startLang = urlLang; // explicit campaign link (?lang=da etc.) always wins
     } else if (validLangs.includes(saved)) {
-      startLang = saved;
+      startLang = saved; // the visitor's own earlier choice on this page
+    } else {
+      // first visit: pick from the browser language (Swedish is the default for the Nordic market)
+      const prefs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'sv']);
+      const map = { sv: 'sv', nb: 'no', nn: 'no', no: 'no', da: 'da', en: 'en' };
+      const first = String(prefs[0] || 'sv').toLowerCase().split('-')[0];
+      startLang = map[first] || 'en';
     }
   } catch (e) {}
   applyLang(startLang);
