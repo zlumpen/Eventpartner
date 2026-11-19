@@ -298,6 +298,9 @@
   }
   .cat-tile::before{content:"";position:absolute;inset:0;opacity:0.55;}
   .cat-tile .mono{position:relative;z-index:1;color:var(--cyan-dim);margin-bottom:8px;}
+  .cat-tile .gems{display:flex;gap:5px;margin-bottom:12px;position:relative;z-index:1;}
+  .cat-tile .gem{width:20px;height:17px;filter:drop-shadow(0 0 7px rgba(34,230,239,.35));}
+  .cat-tile .gem-o{filter:none;}
   .cat-tile h3{font-size:1.15rem;font-weight:600;position:relative;z-index:1;}
   .cat-tile span.desc{font-size:0.82rem;color:var(--muted);position:relative;z-index:1;margin-top:4px;display:block;}
   .cat-tile .pop{position:absolute;top:16px;right:16px;z-index:1;font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--cyan-dim);padding:3px 8px;border-radius:20px;background:rgba(5,6,8,0.6);}
@@ -588,6 +591,12 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<linearGradient id="gemG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7DF4FA"/><stop offset=".55" stop-color="#22E6EF"/><stop offset="1" stop-color="#5B3EE8"/></linearGradient>
+<symbol id="gemF" viewBox="0 0 24 20"><path d="M6 1h12l5 6-11 12L1 7z" fill="url(#gemG)"/><path d="M1 7h22M6 1l3 6 3-6 3 6 3-6M9 7l3 12 3-12" fill="none" stroke="rgba(5,6,8,.38)" stroke-width=".9" stroke-linejoin="round"/><path d="M6 1h12l5 6-11 12L1 7z" fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".8" stroke-linejoin="round"/></symbol>
+<symbol id="gemO" viewBox="0 0 24 20"><path d="M1 7h22M6 1l3 6 3-6 3 6 3-6M9 7l3 12 3-12" fill="none" stroke="#22E6EF" stroke-opacity=".55" stroke-width="1" stroke-linejoin="round"/><path d="M6 1h12l5 6-11 12L1 7z" fill="rgba(34,230,239,.06)" stroke="#22E6EF" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
 <nav class="top">
   <div class="wrap">
     <div class="logo">
@@ -761,11 +770,11 @@
       <h2 id="tilesH2">Pick the level of visibility your venue needs</h2>
     </div>
     <div class="cat-grid">
-      <div class="cat-tile c1"><span class="mono">&#9671;</span><h3 id="tile1H3">Start</h3><span class="desc" id="tile1Span">Get off to the right start on Cvent</span></div>
-      <div class="cat-tile c2"><span class="mono">&#9670;</span><h3 id="tile2H3">Essential</h3><span class="desc" id="tile2Span">Start getting seen on Cvent and get new client meetings every month</span></div>
-      <div class="cat-tile c3"><span class="mono">&#9670;&#9670;</span><h3 id="tile3H3">Growth</h3><span class="desc" id="tile3Span">Show up in more searches and reach new planners every month</span></div>
-      <div class="cat-tile c4"><span class="pop" id="tile4Pop">Recommended</span><span class="mono">&#9670;&#9670;&#9670;</span><h3 id="tile4H3">Premium</h3><span class="desc" id="tile4Span">Among the first planners see when they search in your region</span></div>
-      <div class="cat-tile c5"><span class="mono">&#9670;&#9670;&#9670;&#9670;</span><h3 id="tile5H3">Imperium</h3><span class="desc" id="tile5Span">Biggest visibility and the most client meetings in your market</span></div>
+      <div class="cat-tile c1"><span class="gems" aria-hidden="true"><svg class="gem gem-o" viewBox="0 0 24 20"><use href="#gemO"/></svg></span><h3 id="tile1H3">Start</h3><span class="desc" id="tile1Span">Get off to the right start on Cvent</span></div>
+      <div class="cat-tile c2"><span class="gems" aria-hidden="true"><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg></span><h3 id="tile2H3">Essential</h3><span class="desc" id="tile2Span">Start getting seen on Cvent and get new client meetings every month</span></div>
+      <div class="cat-tile c3"><span class="gems" aria-hidden="true"><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg></span><h3 id="tile3H3">Growth</h3><span class="desc" id="tile3Span">Show up in more searches and reach new planners every month</span></div>
+      <div class="cat-tile c4"><span class="pop" id="tile4Pop">Recommended</span><span class="gems" aria-hidden="true"><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg></span><h3 id="tile4H3">Premium</h3><span class="desc" id="tile4Span">Among the first planners see when they search in your region</span></div>
+      <div class="cat-tile c5"><span class="gems" aria-hidden="true"><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg><svg class="gem" viewBox="0 0 24 20"><use href="#gemF"/></svg></span><h3 id="tile5H3">Imperium</h3><span class="desc" id="tile5Span">Biggest visibility and the most client meetings in your market</span></div>
     </div>
   </div>
 </section>
