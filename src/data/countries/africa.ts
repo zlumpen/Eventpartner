@@ -18,7 +18,7 @@ export const AFRICA: Country[] = [
       { name: "Centro de Convenções de Talatona", city: "Luanda", capacity: "8 000+", type: "Event Venue", image: "/Images/venues/angola/venue-1.jpg" },
       { name: "Futungo de Belas Conference Center", city: "Luanda", capacity: "3 000+", type: "Convention center", image: "/Images/venues/angola/venue-9.jpg" },
       { name: "Hotel Epic Sana Luanda Conference Center", city: "Luanda", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/angola/venue-12.jpg" },
-      { name: "Hotel Presidente Luanda", city: "Luanda", capacity: "800+", type: "Hotel & Conference", imageComing: true },
+      { name: "Hotel Presidente Luanda", city: "Luanda", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/angola/hotel-presidente-luanda.webp" },
       { name: "Belas Conference & Event Facilities", city: "Belas (Luanda-regionen)", capacity: "1 500+", type: "Convention center", image: "/Images/venues/angola/venue-4.jpg" },
     ],
   },
@@ -35,7 +35,7 @@ export const AFRICA: Country[] = [
   {
     slug: "botswana", code: "bw", name: "Botswana", nameSv: "Botswana", venues: "500+",
     topVenues: [
-      { name: "Gaborone International Convention Centre", city: "Gaborone", capacity: "3 500+", type: "Convention center", imageComing: true },
+      { name: "Gaborone International Convention Centre", city: "Gaborone", capacity: "3 500+", type: "Convention center", image: "/Images/venues/botswana/gaborone-international-convention-centre.webp" },
       { name: "Boipuso Hall", city: "Gaborone", capacity: "2 000+", type: "Convention center", image: "/Images/venues/botswana/venue-10.jpg" },
       { name: "Avani Gaborone Resort & Casino Conference Center", city: "Gaborone", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/botswana/venue-13.jpg" },
       { name: "Cresta Lodge Gaborone Conference Facilities", city: "Gaborone", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/botswana/venue-2.jpg" },
@@ -47,15 +47,15 @@ export const AFRICA: Country[] = [
     topVenues: [
       { name: "Centre International de Conférences de Ouaga 2000", city: "Ouagadougou", capacity: "3 000+", type: "Convention center", image: "/Images/venues/burkina-faso/venue-1.jpg" },
       { name: "Palais des Sports de Ouaga 2000", city: "Ouagadougou", capacity: "10 000+", type: "Event Venue", image: "/Images/venues/burkina-faso/venue-10.jpg" },
-      { name: "Hôtel Sopatel Silmandé Conference Center", city: "Ouagadougou", capacity: "1 500+", type: "Hotel & Conference", imageComing: true },
+      { name: "Hôtel Sopatel Silmandé Conference Center", city: "Ouagadougou", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/burkina-faso/hotel-sopatel-silmande-conference-center.webp" },
       { name: "Bravia Hotel Ouagadougou Conference Center", city: "Ouagadougou", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/burkina-faso/venue-2.jpg" },
-      { name: "Azalaï Hotel Indépendance Conference Facilities", city: "Ouagadougou", capacity: "600+", type: "Hotel & Conference", imageComing: true },
+      { name: "Azalaï Hotel Indépendance Conference Facilities", city: "Ouagadougou", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/burkina-faso/azalai-hotel-independance-conference-facilities.webp" },
     ],
   },
   {
     slug: "cameroon", code: "cm", name: "Cameroon", nameSv: "Kamerun", venues: "500+",
     topVenues: [
-      { name: "Palais des Congrès de Yaoundé", city: "Yaoundé", capacity: "3 000+", type: "Event Venue", imageComing: true },
+      { name: "Palais des Congrès de Yaoundé", city: "Yaoundé", capacity: "3 000+", type: "Event Venue", image: "/Images/venues/cameroon/palais-des-congres-de-yaounde.webp" },
       { name: "Douala Grand Mall Convention Center", city: "Douala", capacity: "2 500+", type: "Convention center", image: "/Images/venues/cameroon/venue-9.jpg" },
       { name: "Best Western Plus Soaho Douala Airport Conference Center", city: "Douala", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/cameroon/venue-11.jpg" },
       { name: "Mont Fébé Hotel Conference Center", city: "Yaoundé", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/cameroon/venue-14.jpg" },
@@ -109,7 +109,7 @@ export const AFRICA: Country[] = [
       { name: "Djibouti Palace Kempinski Conference Center", city: "Djibouti City", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/djibouti/venue-8.jpg" },
       { name: "Sheraton Djibouti Conference Facilities", city: "Djibouti City", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/djibouti/venue-11.jpg" },
       { name: "Ayla Grand Hotel Djibouti Conference Center", city: "Djibouti City", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/djibouti/venue-2.jpg" },
-      { name: "Kempinski Residences & Conference Facilities Djibouti", city: "Djibouti City", capacity: "400+", type: "Hotel & Conference", imageComing: true },
+      { name: "Kempinski Residences & Conference Facilities Djibouti", city: "Djibouti City", capacity: "400+", type: "Hotel & Conference", image: "/Images/venues/djibouti/kempinski-residences-conference-facilities-djibouti.webp" },
     ],
   },
   {
@@ -146,7 +146,7 @@ export const AFRICA: Country[] = [
     slug: "eswatini", code: "sz", name: "Eswatini", nameSv: "Eswatini", venues: "450+",
     topVenues: [
       { name: "Sibane Hotel & Convention Centre", city: "Mbabane", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/eswatini/venue-1.jpg" },
-      { name: "Royal Swazi Spa Convention Centre", city: "Ezulwini Valley", capacity: "2 000+", type: "Hotel & Conference", imageComing: true },
+      { name: "Royal Swazi Spa Convention Centre", city: "Ezulwini Valley", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/eswatini/royal-swazi-spa-convention-centre.webp" },
       { name: "Happy Valley Hotel & Casino Conference Center", city: "Ezulwini Valley", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/eswatini/venue-7.jpg" },
       { name: "Hilton Garden Inn Mbabane Conference Facilities", city: "Mbabane", capacity: "500+", type: "Hotel & Conference", image: "/Images/venues/eswatini/venue-11.jpg" },
       { name: "Lugogo Sun Conference Centre", city: "Ezulwini Valley", capacity: "800+", type: "Convention center", image: "/Images/venues/eswatini/venue-3.jpg" },
@@ -179,7 +179,7 @@ export const AFRICA: Country[] = [
       { name: "Kempinski Hotel Gold Coast City Conference Centre", city: "Accra", capacity: "2 500+", type: "Hotel & Conference", image: "/Images/venues/ghana/venue-10.jpg" },
       { name: "Labadi Beach Hotel Conference Centre", city: "Accra", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/ghana/venue-13.jpg" },
       { name: "Mövenpick Ambassador Hotel Conference Centre", city: "Accra", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/ghana/venue-2.jpg" },
-      { name: "Grand Arena", city: "Accra", capacity: "5 000+", type: "Convention center", imageComing: true },
+      { name: "Grand Arena", city: "Accra", capacity: "5 000+", type: "Convention center", image: "/Images/venues/ghana/grand-arena.webp" },
     ],
   },
   {
@@ -197,9 +197,9 @@ export const AFRICA: Country[] = [
     topVenues: [
       { name: "Palais du Gouvernement", city: "Bissau", capacity: "800+", type: "Event Venue", image: "/Images/venues/guinea-bissau/venue-1.jpg" },
       { name: "Centro Cultural Franco-Bissau-Guineense", city: "Bissau", capacity: "500+", type: "Event Venue", image: "/Images/venues/guinea-bissau/venue-6.jpg" },
-      { name: "Hotel Azalai 24 Setembro Conference Center", city: "Bissau", capacity: "600+", type: "Hotel & Conference", imageComing: true },
+      { name: "Hotel Azalai 24 Setembro Conference Center", city: "Bissau", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/guinea-bissau/hotel-azalai-24-setembro-conference-center.webp" },
       { name: "Hotel Coimbra Bissau Conference Facilities", city: "Bissau", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/guinea-bissau/venue-4.jpg" },
-      { name: "UN Conference & Training Facilities", city: "Bissau", capacity: "200+", type: "Convention center", imageComing: true },
+      { name: "UN Conference & Training Facilities", city: "Bissau", capacity: "200+", type: "Convention center", image: "/Images/venues/guinea-bissau/un-conference-training-facilities.webp" },
     ],
   },
   {
@@ -226,7 +226,7 @@ export const AFRICA: Country[] = [
     slug: "liberia", code: "lr", name: "Liberia", nameSv: "Liberia", venues: "500+",
     topVenues: [
       { name: "Ellen Johnson Sirleaf Ministerial Complex Conference Center", city: "Monrovia", capacity: "2 000+", type: "Convention center", image: "/Images/venues/liberia/venue-1.jpg" },
-      { name: "Monrovia City Hall Conference Centre", city: "Monrovia", capacity: "1 500+", type: "Convention center", imageComing: true },
+      { name: "Monrovia City Hall Conference Centre", city: "Monrovia", capacity: "1 500+", type: "Convention center", image: "/Images/venues/liberia/monrovia-city-hall-conference-centre.webp" },
       { name: "Farmington Hotel Conference Center", city: "Harbel (nära Monrovia)", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/liberia/venue-12.jpg" },
       { name: "RLJ Kendeja Resort & Villas Conference Facilities", city: "Paynesville (Monrovia)", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/liberia/venue-2.jpg" },
       { name: "Mamba Point Hotel Conference Center", city: "Monrovia", capacity: "400+", type: "Hotel & Conference", image: "/Images/venues/liberia/venue-4.jpg" },
@@ -236,7 +236,7 @@ export const AFRICA: Country[] = [
     slug: "madagascar", code: "mg", name: "Madagascar", nameSv: "Madagaskar", venues: "500+",
     topVenues: [
       { name: "Centre de Conférences International d’Ivato", city: "Antananarivo (Ivato)", capacity: "3 000+", type: "Convention center", image: "/Images/venues/madagascar/venue-1.jpg" },
-      { name: "Hôtel Le Louvre & Spa Antananarivo", city: "Antananarivo", capacity: "500+", type: "Hotel & Conference", imageComing: true },
+      { name: "Hôtel Le Louvre & Spa Antananarivo", city: "Antananarivo", capacity: "500+", type: "Hotel & Conference", image: "/Images/venues/madagascar/hotel-le-louvre-spa-antananarivo.webp" },
       { name: "Novotel Convention & Spa Antananarivo Conference Center", city: "Antananarivo", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/madagascar/venue-12.jpg" },
       { name: "Carlton Hotel Anosy Conference Center", city: "Antananarivo", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/madagascar/venue-11.jpg" },
       { name: "Eden Lodge & Conference Facilities", city: "Nosy Be", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/madagascar/venue-4.jpg" },
@@ -267,7 +267,7 @@ export const AFRICA: Country[] = [
     topVenues: [
       { name: "Palais des Congrès de Nouakchott", city: "Nouakchott", capacity: "2 000+", type: "Event Venue", image: "/Images/venues/mauritania/venue-1.jpg" },
       { name: "Centre International de Conférences Al Mourabitoune", city: "Nouakchott", capacity: "1 500+", type: "Convention center", image: "/Images/venues/mauritania/venue-10.jpg" },
-      { name: "Azalaï Hotel Nouakchott Conference Center", city: "Nouakchott", capacity: "1 200+", type: "Hotel & Conference", imageComing: true },
+      { name: "Azalaï Hotel Nouakchott Conference Center", city: "Nouakchott", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/mauritania/azalai-hotel-nouakchott-conference-center.webp" },
       { name: "Hôtel Semiramis Nouakchott Conference Facilities", city: "Nouakchott", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/mauritania/venue-2.jpg" },
       { name: "Hôtel Mauricenter Conference Center", city: "Nouakchott", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/mauritania/venue-5.jpg" },
     ],
@@ -279,7 +279,7 @@ export const AFRICA: Country[] = [
       { name: "Trianon Convention Centre", city: "Trianon (Quatre Bornes)", capacity: "3 000+", type: "Convention center", image: "/Images/venues/mauritius/venue-10.jpg" },
       { name: "InterContinental Mauritius Resort Conference Center", city: "Balaclava", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/mauritius/venue-13.jpg" },
       { name: "Hilton Mauritius Resort & Spa Conference Center", city: "Flic-en-Flac", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/mauritius/venue-2.jpg" },
-      { name: "Le Méridien Ile Maurice Conference Facilities", city: "Pointe aux Piments", capacity: "1 000+", type: "Hotel & Conference", imageComing: true },
+      { name: "Le Méridien Ile Maurice Conference Facilities", city: "Pointe aux Piments", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/mauritius/le-meridien-ile-maurice-conference-facilities.webp" },
     ],
   },
   {
@@ -338,7 +338,7 @@ export const AFRICA: Country[] = [
       { name: "Kigali Convention Centre", city: "Kigali", capacity: "5 000+", type: "Convention center", image: "/Images/venues/rwanda/venue-1.jpg" },
       { name: "BK Arena Conference & Event Facilities", city: "Kigali", capacity: "10 000+", type: "Convention center", image: "/Images/venues/rwanda/venue-9.jpg" },
       { name: "Kigali Serena Hotel Conference Center", city: "Kigali", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/rwanda/venue-12.jpg" },
-      { name: "Intare Conference Arena", city: "Kigali (Rusororo)", capacity: "8 000+", type: "Convention center", imageComing: true },
+      { name: "Intare Conference Arena", city: "Kigali (Rusororo)", capacity: "8 000+", type: "Convention center", image: "/Images/venues/rwanda/intare-conference-arena.webp" },
       { name: "Radisson Blu Hotel & Convention Centre Kigali", city: "Kigali", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/rwanda/venue-4.jpg" },
     ],
   },
@@ -348,8 +348,8 @@ export const AFRICA: Country[] = [
       { name: "Centro de Convenções de São Tomé", city: "São Tomé", capacity: "1 000+", type: "Event Venue", image: "/Images/venues/sao-tome-and-principe/venue-1.jpg" },
       { name: "Pestana São Tomé Conference Center", city: "São Tomé", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/sao-tome-and-principe/venue-8.jpg" },
       { name: "Omali Lodge Conference Facilities", city: "São Tomé (nära flygplatsen)", capacity: "250+", type: "Hotel & Conference", image: "/Images/venues/sao-tome-and-principe/venue-11.jpg" },
-      { name: "Bom Bom Island Resort Conference Facilities", city: "Príncipe", capacity: "150+", type: "Hotel & Conference", imageComing: true },
-      { name: "Miramar by Pestana Conference Facilities", city: "São Tomé", capacity: "200+", type: "Hotel & Conference", imageComing: true },
+      { name: "Bom Bom Island Resort Conference Facilities", city: "Príncipe", capacity: "150+", type: "Hotel & Conference", image: "/Images/venues/sao-tome-and-principe/bom-bom-island-resort-conference-facilities.webp" },
+      { name: "Miramar by Pestana Conference Facilities", city: "São Tomé", capacity: "200+", type: "Hotel & Conference", image: "/Images/venues/sao-tome-and-principe/miramar-by-pestana-conference-facilities.webp" },
     ],
   },
   {
@@ -376,9 +376,9 @@ export const AFRICA: Country[] = [
     slug: "sierra-leone", code: "sl", name: "Sierra Leone", nameSv: "Sierra Leone", venues: "500+",
     topVenues: [
       { name: "Bintumani International Conference Centre", city: "Freetown", capacity: "2 500+", type: "Convention center", image: "/Images/venues/sierra-leone/venue-1.jpg" },
-      { name: "Miatta Conference Centre", city: "Freetown", capacity: "1 000+", type: "Convention center", imageComing: true },
+      { name: "Miatta Conference Centre", city: "Freetown", capacity: "1 000+", type: "Convention center", image: "/Images/venues/sierra-leone/miatta-conference-centre.webp" },
       { name: "Radisson Blu Mammy Yoko Hotel Conference Center", city: "Freetown", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/sierra-leone/venue-11.jpg" },
-      { name: "Sierra Palms Resort Conference Facilities", city: "Freetown", capacity: "600+", type: "Hotel & Conference", imageComing: true },
+      { name: "Sierra Palms Resort Conference Facilities", city: "Freetown", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/sierra-leone/sierra-palms-resort-conference-facilities.webp" },
       { name: "New Brookfields Hotel Conference Center", city: "Freetown", capacity: "500+", type: "Hotel & Conference", image: "/Images/venues/sierra-leone/venue-4.jpg" },
     ],
   },
@@ -408,7 +408,7 @@ export const AFRICA: Country[] = [
       { name: "Freedom Hall", city: "Juba", capacity: "2 000+", type: "Convention center", image: "/Images/venues/south-sudan/venue-1.jpg" },
       { name: "Juba Grand Hotel Conference Center", city: "Juba", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/south-sudan/venue-6.jpg" },
       { name: "Palm Africa Hotel Conference Facilities", city: "Juba", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/south-sudan/venue-7.jpg" },
-      { name: "Crown Hotel Juba Conference Center", city: "Juba", capacity: "600+", type: "Hotel & Conference", imageComing: true },
+      { name: "Crown Hotel Juba Conference Center", city: "Juba", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/south-sudan/crown-hotel-juba-conference-center.webp" },
       { name: "Nyakuron Cultural Centre", city: "Juba", capacity: "700+", type: "Convention center", image: "/Images/venues/south-sudan/venue-11.jpg" },
     ],
   },

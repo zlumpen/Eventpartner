@@ -28,7 +28,7 @@ export const ASIA_PACIFIC: Country[] = [
       { name: "Melbourne Convention and Exhibition Centre", city: "Melbourne", capacity: "35 000+", type: "Exhibition center", image: "/Images/venues/australia/venue-1.jpg" },
       { name: "ICC Sydney", city: "Sydney", capacity: "35 000+", type: "Event Venue", image: "/Images/venues/australia/venue-9.jpg" },
       { name: "Brisbane Convention & Exhibition Centre", city: "Brisbane", capacity: "25 000+", type: "Exhibition center", image: "/Images/venues/australia/venue-12.jpg" },
-      { name: "Adelaide Convention Centre", city: "Adelaide", capacity: "20 000+", type: "Convention center", imageComing: true },
+      { name: "Adelaide Convention Centre", city: "Adelaide", capacity: "20 000+", type: "Convention center", image: "/Images/venues/australia/adelaide-convention-centre.webp" },
       { name: "Perth Convention and Exhibition Centre", city: "Perth", capacity: "23 000+", type: "Exhibition center", image: "/Images/venues/australia/venue-5.jpg" },
     ],
   },
@@ -79,7 +79,7 @@ export const ASIA_PACIFIC: Country[] = [
       { name: "Sokha Phnom Penh Convention Center", city: "Phnom Penh", capacity: "5 000+", type: "Convention center", image: "/Images/venues/cambodia/venue-9.jpg" },
       { name: "Phnom Penh Hotel Conference Center", city: "Phnom Penh", capacity: "2 000+", type: "Hotel & Conference", image: "/Images/venues/cambodia/venue-12.jpg" },
       { name: "Siem Reap Convention Center", city: "Siem Reap", capacity: "3 000+", type: "Convention center", image: "/Images/venues/cambodia/venue-2.jpg" },
-      { name: "Sofitel Phnom Penh Phokeethra", city: "Phnom Penh", capacity: "1 000+", type: "Hotel & Conference", imageComing: true },
+      { name: "Sofitel Phnom Penh Phokeethra", city: "Phnom Penh", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/cambodia/sofitel-phnom-penh-phokeethra.webp" },
     ],
   },
   {
@@ -109,7 +109,7 @@ export const ASIA_PACIFIC: Country[] = [
       { name: "Tbilisi Expo Center / East Point Conference Facilities", city: "Tbilisi", capacity: "5 000+", type: "Exhibition center", image: "/Images/venues/georgia/venue-9.jpg" },
       { name: "Biltmore Hotel Tbilisi Conference Center", city: "Tbilisi", capacity: "1 200+", type: "Hotel & Conference", image: "/Images/venues/georgia/venue-12.jpg" },
       { name: "Radisson Blu Iveria Hotel Conference Center", city: "Tbilisi", capacity: "800+", type: "Hotel & Conference", image: "/Images/venues/georgia/venue-14.jpg" },
-      { name: "Batumi International Conference Centre", city: "Batumi", capacity: "1 500+", type: "Convention center", imageComing: true },
+      { name: "Batumi International Conference Centre", city: "Batumi", capacity: "1 500+", type: "Convention center", image: "/Images/venues/georgia/batumi-international-conference-centre.webp" },
     ],
   },
   {
@@ -166,9 +166,9 @@ export const ASIA_PACIFIC: Country[] = [
     slug: "kiribati", code: "ki", name: "Kiribati", nameSv: "Kiribati", venues: "375+",
     topVenues: [
       { name: "Kiribati International Conference Centre", city: "South Tarawa", capacity: "600+", type: "Convention center", image: "/Images/venues/kiribati/venue-1.jpg" },
-      { name: "Kiribati Parliament Conference Hall", city: "South Tarawa", capacity: "300+", type: "Convention center", imageComing: true },
+      { name: "Kiribati Parliament Conference Hall", city: "South Tarawa", capacity: "300+", type: "Convention center", image: "/Images/venues/kiribati/kiribati-parliament-conference-hall.webp" },
       { name: "USP Kiribati Campus Conference Facilities", city: "South Tarawa", capacity: "200+", type: "Convention center", image: "/Images/venues/kiribati/venue-12.jpg" },
-      { name: "Betio Town Council Conference Hall", city: "Betio (South Tarawa)", capacity: "150+", type: "Convention center", imageComing: true },
+      { name: "Betio Town Council Conference Hall", city: "Betio (South Tarawa)", capacity: "150+", type: "Convention center", image: "/Images/venues/kiribati/betio-town-council-conference-hall.webp" },
       { name: "Mary’s Motel Conference Facilities", city: "South Tarawa", capacity: "100+", type: "Hotel & Conference", image: "/Images/venues/kiribati/venue-4.jpg" },
     ],
   },
@@ -176,7 +176,7 @@ export const ASIA_PACIFIC: Country[] = [
     slug: "kyrgyzstan", code: "kg", name: "Kyrgyzstan", nameSv: "Kirgizistan", venues: "900+",
     topVenues: [
       { name: "Kyrgyz State Residence Congress Hall", city: "Bishkek", capacity: "2 000+", type: "Convention center", image: "/Images/venues/kyrgyzstan/venue-1.jpg" },
-      { name: "Ala-Too Square Conference & Event Facilities", city: "Bishkek", capacity: "5 000+", type: "Convention center", imageComing: true },
+      { name: "Ala-Too Square Conference & Event Facilities", city: "Bishkek", capacity: "5 000+", type: "Convention center", image: "/Images/venues/kyrgyzstan/ala-too-square-conference-event-facilities.webp" },
       { name: "Hyatt Regency Bishkek Conference Center", city: "Bishkek", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/kyrgyzstan/venue-12.jpg" },
       { name: "Orion Hotel Bishkek Conference Center", city: "Bishkek", capacity: "400+", type: "Hotel & Conference", image: "/Images/venues/kyrgyzstan/venue-2.jpg" },
       { name: "Dostuk Hotel Conference Hall", city: "Bishkek", capacity: "600+", type: "Hotel & Conference", image: "/Images/venues/kyrgyzstan/venue-4.jpg" },
@@ -226,7 +226,7 @@ export const ASIA_PACIFIC: Country[] = [
     slug: "marshall-islands", code: "mh", name: "Marshall Islands", nameSv: "Marshallöarna", venues: "375+",
     topVenues: [
       { name: "Marshall Islands International Conference Center", city: "Majuro", capacity: "800+", type: "Convention center", image: "/Images/venues/marshall-islands/venue-1.jpg" },
-      { name: "Marshall Islands Resort Conference Center", city: "Majuro", capacity: "400+", type: "Hotel & Conference", imageComing: true },
+      { name: "Marshall Islands Resort Conference Center", city: "Majuro", capacity: "400+", type: "Hotel & Conference", image: "/Images/venues/marshall-islands/marshall-islands-resort-conference-center.webp" },
       { name: "Robert Reimers Hotel Conference Facilities", city: "Majuro", capacity: "300+", type: "Hotel & Conference", image: "/Images/venues/marshall-islands/venue-13.jpg" },
       { name: "USP Marshall Islands Campus Conference Facilities", city: "Majuro", capacity: "200+", type: "Convention center", image: "/Images/venues/marshall-islands/venue-2.jpg" },
       { name: "Marshall Islands Government Conference Hall", city: "Majuro", capacity: "150+", type: "Convention center", image: "/Images/venues/marshall-islands/venue-5.jpg" },
@@ -236,7 +236,7 @@ export const ASIA_PACIFIC: Country[] = [
     slug: "micronesia", code: "fm", name: "Micronesia", nameSv: "Mikronesien", venues: "375+",
     topVenues: [
       { name: "FSM National Government Conference Center", city: "Palikir (Pohnpei)", capacity: "500+", type: "Convention center", image: "/Images/venues/micronesia/venue-1.jpg" },
-      { name: "Pohnpei State Conference Hall", city: "Kolonia (Pohnpei)", capacity: "400+", type: "Convention center", imageComing: true },
+      { name: "Pohnpei State Conference Hall", city: "Kolonia (Pohnpei)", capacity: "400+", type: "Convention center", image: "/Images/venues/micronesia/pohnpei-state-conference-hall.webp" },
       { name: "College of Micronesia Conference Facilities", city: "Kolonia (Pohnpei)", capacity: "300+", type: "Convention center", image: "/Images/venues/micronesia/venue-13.jpg" },
       { name: "Kosrae Nautilus Resort Conference Facilities", city: "Kosrae", capacity: "150+", type: "Hotel & Conference", image: "/Images/venues/micronesia/venue-2.jpg" },
       { name: "Yap Pacific Dive Resort Conference Facilities", city: "Yap", capacity: "120+", type: "Hotel & Conference", image: "/Images/venues/micronesia/venue-5.jpg" },
@@ -246,7 +246,7 @@ export const ASIA_PACIFIC: Country[] = [
     slug: "mongolia", code: "mn", name: "Mongolia", nameSv: "Mongoliet", venues: "900+",
     topVenues: [
       { name: "Corporate Convention Center", city: "Ulaanbaatar", capacity: "3 000+", type: "Convention center", image: "/Images/venues/mongolia/venue-1.jpg" },
-      { name: "Misheel Expo Center", city: "Ulaanbaatar", capacity: "10 000+", type: "Exhibition center", imageComing: true },
+      { name: "Misheel Expo Center", city: "Ulaanbaatar", capacity: "10 000+", type: "Exhibition center", image: "/Images/venues/mongolia/misheel-expo-center.webp" },
       { name: "Shangri-La Ulaanbaatar Conference Center", city: "Ulaanbaatar", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/mongolia/venue-13.jpg" },
       { name: "Blue Sky Hotel & Tower Conference Center", city: "Ulaanbaatar", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/mongolia/venue-2.jpg" },
       { name: "Government House Conference Hall", city: "Ulaanbaatar", capacity: "800+", type: "Convention center", image: "/Images/venues/mongolia/venue-5.jpg" },
@@ -269,7 +269,7 @@ export const ASIA_PACIFIC: Country[] = [
       { name: "Government of Nauru Conference Hall", city: "Yaren District", capacity: "150+", type: "Convention center", image: "/Images/venues/nauru/venue-7.jpg" },
       { name: "Nauru Phosphate Corporation Conference Room", city: "Aiwo District", capacity: "100+", type: "Convention center", image: "/Images/venues/nauru/venue-10.jpg" },
       { name: "Civic Centre", city: "Yaren District", capacity: "120+", type: "Convention center", image: "/Images/venues/nauru/venue-12.jpg" },
-      { name: "OD-N-Aiwo Hotel Conference Facilities", city: "Aiwo District", capacity: "80+", type: "Hotel & Conference", imageComing: true },
+      { name: "OD-N-Aiwo Hotel Conference Facilities", city: "Aiwo District", capacity: "80+", type: "Hotel & Conference", image: "/Images/venues/nauru/od-n-aiwo-hotel-conference-facilities.webp" },
     ],
   },
   {
@@ -306,10 +306,10 @@ export const ASIA_PACIFIC: Country[] = [
     slug: "palau", code: "pw", name: "Palau", nameSv: "Palau", venues: "375+",
     topVenues: [
       { name: "Palau National Congress Conference Hall", city: "Ngerulmud", capacity: "500+", type: "Convention center", image: "/Images/venues/palau/venue-1.jpg" },
-      { name: "Palau International Coral Reef Center Conference Facilities", city: "Koror", capacity: "300+", type: "Convention center", imageComing: true },
+      { name: "Palau International Coral Reef Center Conference Facilities", city: "Koror", capacity: "300+", type: "Convention center", image: "/Images/venues/palau/palau-international-coral-reef-center-conference-facilities.webp" },
       { name: "Palau Royal Resort Conference Center", city: "Koror", capacity: "400+", type: "Hotel & Conference", image: "/Images/venues/palau/venue-12.jpg" },
       { name: "Palasia Hotel Conference Center", city: "Koror", capacity: "350+", type: "Hotel & Conference", image: "/Images/venues/palau/venue-2.jpg" },
-      { name: "Cove Resort Palau Conference Facilities", city: "Koror", capacity: "200+", type: "Hotel & Conference", imageComing: true },
+      { name: "Cove Resort Palau Conference Facilities", city: "Koror", capacity: "200+", type: "Hotel & Conference", image: "/Images/venues/palau/cove-resort-palau-conference-facilities.webp" },
     ],
   },
   {
@@ -338,7 +338,7 @@ export const ASIA_PACIFIC: Country[] = [
       { name: "Marina Bay Sands Expo & Convention Centre", city: "Singapore", capacity: "45 000+", type: "Exhibition center", image: "/Images/venues/singapore/venue-1.jpg" },
       { name: "Suntec Singapore Convention & Exhibition Centre", city: "Singapore", capacity: "42 000+", type: "Exhibition center", image: "/Images/venues/singapore/venue-10.jpg" },
       { name: "Singapore EXPO", city: "Singapore", capacity: "100 000+", type: "Exhibition center", image: "/Images/venues/singapore/venue-13.jpg" },
-      { name: "Raffles City Convention Centre", city: "Singapore", capacity: "6 500+", type: "Convention center", imageComing: true },
+      { name: "Raffles City Convention Centre", city: "Singapore", capacity: "6 500+", type: "Convention center", image: "/Images/venues/singapore/raffles-city-convention-centre.webp" },
       { name: "Sands Grand Ballroom", city: "Singapore", capacity: "11 000+", type: "Event Venue", image: "/Images/venues/singapore/venue-5.jpg" },
     ],
   },
