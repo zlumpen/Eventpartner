@@ -37,7 +37,7 @@ export const MIDDLE_EAST: Country[] = [
     topVenues: [
       { name: "Kuwait International Fairground", city: "Kuwait City (Mishref)", capacity: "30 000+", type: "Exhibition center", image: "/Images/venues/kuwait/venue-1.jpg" },
       { name: "Jumeirah Messilah Beach Hotel & Spa Conference Center", city: "Kuwait City", capacity: "2 500+", type: "Hotel & Conference", image: "/Images/venues/kuwait/venue-10.jpg" },
-      { name: "Kuwait Conference Centre", city: "Kuwait City", capacity: "6 000+", type: "Convention center", imageComing: true },
+      { name: "Kuwait Conference Centre", city: "Kuwait City", capacity: "6 000+", type: "Convention center", image: "/Images/venues/kuwait/kuwait-conference-centre.webp" },
       { name: "Regency Hotel Kuwait Conference Center", city: "Kuwait City", capacity: "1 500+", type: "Hotel & Conference", image: "/Images/venues/kuwait/venue-2.jpg" },
       { name: "Radisson Blu Hotel Kuwait Conference Facilities", city: "Kuwait City", capacity: "1 000+", type: "Hotel & Conference", image: "/Images/venues/kuwait/venue-5.jpg" },
     ],
@@ -86,7 +86,7 @@ export const MIDDLE_EAST: Country[] = [
     slug: "turkey", code: "tr", name: "Turkey", nameSv: "Turkiet", venues: "5,375+",
     topVenues: [
       { name: "Istanbul Expo Center", city: "Istanbul", capacity: "100 000+", type: "Exhibition center", image: "/Images/venues/turkey/venue-1.jpg" },
-      { name: "Istanbul Congress Center", city: "Istanbul", capacity: "5 000", type: "Convention center", imageComing: true },
+      { name: "Istanbul Congress Center", city: "Istanbul", capacity: "5 000", type: "Convention center", image: "/Images/venues/turkey/istanbul-congress-center.webp" },
       { name: "TÜYAP Fair Convention and Congress Center", city: "Istanbul", capacity: "60 000+", type: "Exhibition center", image: "/Images/venues/turkey/venue-13.jpg" },
       { name: "Antalya Expo Center", city: "Antalya", capacity: "30 000+", type: "Exhibition center", image: "/Images/venues/turkey/venue-2.jpg" },
       { name: "Haliç Congress Center", city: "Istanbul", capacity: "10 000", type: "Convention center", image: "/Images/venues/turkey/venue-5.jpg" },
