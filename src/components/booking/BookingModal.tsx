@@ -184,7 +184,7 @@ export function BookingModal() {
             <h2 className="font-display text-2xl md:text-3xl font-medium text-[var(--text-primary)]">{t.title}</h2>
             <p className="text-[14px] text-[var(--text-muted)] mt-2 leading-relaxed">{t.description}</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 max-w-[480px] mx-auto">
               {BOOKING_HOSTS.map((host, i) => (
                 <motion.button
                   key={host.name}
