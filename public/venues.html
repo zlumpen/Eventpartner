@@ -575,12 +575,13 @@
     
     }
 
-  .hero-slide.sl{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;padding:44px;background:var(--bg-panel);border:1px solid var(--line);border-radius:16px;overflow:visible;}
+  .hero-slide.sl{display:grid;grid-template-columns:1fr;text-align:center;gap:28px;padding:48px 44px;background:var(--bg-panel);border:1px solid var(--line);border-radius:16px;overflow:visible;}
   .sl-eyebrow{display:block;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;color:var(--cyan);margin-bottom:14px;}
   .sl-title{font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.2;margin-bottom:26px;}
   .sl-big{font-family:'Quicksand',sans-serif;font-weight:600;font-size:clamp(3.4rem,8vw,6.4rem);line-height:1;color:var(--cyan);letter-spacing:-0.02em;text-shadow:0 0 42px rgba(34,230,239,.35);}
-  .sl-sub{color:var(--muted);margin:10px 0 0;max-width:34ch;font-size:0.98rem;}
-  .sl-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px;}
+  .sl-sub{color:var(--muted);margin:10px auto 0;max-width:46ch;font-size:0.98rem;}
+  .sl-main{max-width:860px;margin:0 auto;}
+  .sl-facts{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin:34px auto 0;max-width:920px;}
   .sl-facts div{border-top:2px solid var(--cyan-dim);padding-top:12px;}
   .sl-facts b{display:block;font-family:'Quicksand',sans-serif;font-size:1.4rem;font-weight:600;white-space:nowrap;}
   .sl-facts span{display:block;color:var(--muted);font-size:0.82rem;line-height:1.35;margin-top:2px;}
@@ -592,8 +593,8 @@
   .sl-row b{font-weight:600;} .sl-row i{font-style:normal;} .sl-row i em{color:var(--cyan);font-style:normal;font-weight:600;margin-left:4px;}
   .sl-row u{display:block;height:7px;border-radius:4px;background:var(--cyan);margin-top:6px;text-decoration:none;}
   .sl-foot{margin:20px 0 0;font-size:0.9rem;color:var(--muted);}
-  .sl-src{grid-column:1/-1;color:var(--muted-dim);font-size:0.8rem;margin-top:-8px;}
-  @media (max-width:860px){.hero-slide.sl{grid-template-columns:1fr;padding:26px 22px;gap:28px;}.sl-facts{gap:18px 14px;grid-template-columns:repeat(2,1fr);}.sl-facts b{font-size:1.25rem;}}
+  .sl-src{grid-column:1/-1;color:var(--muted-dim);font-size:0.8rem;margin-top:-8px;text-align:center;}
+  @media (max-width:860px){.hero-slide.sl{grid-template-columns:1fr;padding:26px 22px;gap:28px;}.sl-facts{gap:18px 14px;grid-template-columns:repeat(2,1fr);}.sl-facts div:last-child:nth-child(odd){grid-column:1/-1;}.sl-facts b{font-size:1.25rem;}}
 
   .pm-overlay{position:fixed;inset:0;z-index:1000;background:rgba(5,6,8,0.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;overflow-y:auto;}
   .pm-overlay[hidden]{display:none;}
@@ -687,24 +688,14 @@
         <span class="sl-eyebrow" data-k="slEye">THE MARKET LEADER</span>
         <h2 class="sl-title" data-k="slTitle">The world's largest platform for meetings and events. <em>Now it's growing at home in the Nordics.</em></h2>
         <div class="sl-big" data-k="slBig">470,000+</div>
-        <p class="sl-sub" data-k="slSub">hotel nights arranged in the Nordics over the last 12 months – plus over 1,000 events booked and SEK 2+ billion in booking volume</p>
+        <p class="sl-sub" data-k="slSub">hotel nights arranged in the Nordics over the last 12 months – plus over 1,000 events booked</p>
         <div class="sl-facts">
+          <div><b data-k="slF5">2+ bn</b><span data-k="slF5t">SEK in booking volume in the Nordics</span></div>
           <div><b data-k="slF1">89/100</b><span data-k="slF1t">of Fortune 100 companies use Cvent</span></div>
           <div><b data-k="slF2">340,000+</b><span data-k="slF2t">venues on the platform</span></div>
           <div><b>175</b><span data-k="slF3t">countries where planners search and book</span></div>
           <div><b data-k="slF4">200 bn</b><span data-k="slF4t">SEK in global booking volume via Cvent</span></div>
         </div>
-      </div>
-      <div class="sl-card">
-        <span class="sl-eyebrow" data-k="slCardEye">WHO BOOKS, AND WHEN</span>
-        <div class="sl-cardbig" data-k="slCardBig">47.3%</div>
-        <p class="sl-sub" data-k="slCardSub">of event requests are booked more than 6 months ahead</p>
-        <div class="sl-row"><span><b data-k="slSe">Requests from companies</b><i data-k="slSeV">75.2%</i></span><u style="width:75.2%"></u></div>
-        <div class="sl-row"><span><b data-k="slGov">Requests from government agencies</b><i data-k="slGovV">0.2%</i></span><u style="width:0.2%;min-width:5px"></u></div>
-        <div class="sl-row"><span><b data-k="slDk">Booked 1+ year ahead</b><i data-k="slDkV">22%</i></span><u style="width:22%"></u></div>
-        <div class="sl-row"><span><b data-k="slNo">Bookings for 200 rooms or fewer</b><i data-k="slNoV">50%+</i></span><u style="width:50%"></u></div>
-        <div class="sl-row"><span><b data-k="slFi">Booked within 30 days</b><i data-k="slFiV">4.8%</i></span><u style="width:4.8%"></u></div>
-        <p class="sl-foot" data-k="slFoot">Share of all RFPs</p>
       </div>
       <figcaption class="sl-src" data-k="slSrc">Source: Cvent · All amounts in SEK</figcaption>
     </figure>
@@ -1334,7 +1325,7 @@
   "slEye": "VÄRLDSLEDAREN",
   "slTitle": "Världens största plattform för möten och event. <em>Nu växer den hemma i Norden.</em>",
   "slBig": "470 000+",
-  "slSub": "hotellnätter förmedlade i Norden de senaste 12 månaderna – plus över 1 000 event bokade och 2+ miljarder kronor (SEK) i bokningsvolym",
+  "slSub": "hotellnätter förmedlade i Norden de senaste 12 månaderna – plus över 1 000 event bokade",
   "slF1": "89/100",
   "slF1t": "av Fortune 100-företagen använder Cvent",
   "slF2": "340 000+",
@@ -1342,6 +1333,8 @@
   "slF3t": "länder där planerare söker och bokar",
   "slF4": "200 mdr",
   "slF4t": "kronor (SEK) i global bokningsvolym via Cvent",
+  "slF5": "2+ mdr",
+  "slF5t": "kronor (SEK) i bokningsvolym i Norden",
   "slCardEye": "VEM BOKAR, OCH NÄR",
   "slCardBig": "47,3 %",
   "slCardSub": "av förfrågningarna bokas mer än 6 månader i förväg",
@@ -1407,7 +1400,7 @@
   "slEye": "VERDENSLEDEREN",
   "slTitle": "Verdens største plattform for møter og arrangementer. <em>Nå vokser den hjemme i Norden.</em>",
   "slBig": "470 000+",
-  "slSub": "hotellnetter formidlet i Norden de siste 12 månedene – pluss over 1 000 arrangementer booket og 2+ milliarder kroner (SEK) i bookingvolum",
+  "slSub": "hotellnetter formidlet i Norden de siste 12 månedene – pluss over 1 000 arrangementer booket",
   "slF1": "89/100",
   "slF1t": "av Fortune 100-selskapene bruker Cvent",
   "slF2": "340 000+",
@@ -1415,6 +1408,8 @@
   "slF3t": "land der planleggere søker og booker",
   "slF4": "200 mrd",
   "slF4t": "kroner (SEK) i global bookingvolum via Cvent",
+  "slF5": "2+ mrd",
+  "slF5t": "kroner (SEK) i bookingvolum i Norden",
   "slCardEye": "HVEM BOOKER, OG NÅR",
   "slCardBig": "47,3 %",
   "slCardSub": "av forespørslene bookes mer enn 6 måneder i forveien",
@@ -1480,7 +1475,7 @@
   "slEye": "VERDENSLEDEREN",
   "slTitle": "Verdens største platform for møder og events. <em>Nu vokser den hjemme i Norden.</em>",
   "slBig": "470.000+",
-  "slSub": "hotelnætter formidlet i Norden de seneste 12 måneder – plus over 1.000 events booket og 2+ milliarder kroner (SEK) i bookingvolumen",
+  "slSub": "hotelnætter formidlet i Norden de seneste 12 måneder – plus over 1.000 events booket",
   "slF1": "89/100",
   "slF1t": "af Fortune 100-virksomhederne bruger Cvent",
   "slF2": "340.000+",
@@ -1488,6 +1483,8 @@
   "slF3t": "lande, hvor planlæggere søger og booker",
   "slF4": "200 mia.",
   "slF4t": "kroner (SEK) i global bookingvolumen via Cvent",
+  "slF5": "2+ mia.",
+  "slF5t": "kroner (SEK) i bookingvolumen i Norden",
   "slCardEye": "HVEM BOOKER, OG HVORNÅR",
   "slCardBig": "47,3 %",
   "slCardSub": "af forespørgslerne bookes mere end 6 måneder i forvejen",
