@@ -23,6 +23,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     initials: "PH",
     image: "/Images/Team/pontus.webp",
     linkedin: "https://www.linkedin.com/in/pontus-bredal-hansen-51a07a110",
+    calLink: "pontus-bredal-hansen-eventpartner/15min",
   },
   {
     name: "Malin Berlin",
@@ -30,6 +31,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     initials: "MB",
     image: "/Images/Team/malin-farg.webp",
     linkedin: "https://www.linkedin.com/in/malinberlins",
+    calLink: "eventpartner/15min",
   },
   {
     name: "Joakim Ström",
@@ -44,7 +46,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     initials: "BB",
     image: "/Images/Team/berivan.webp",
     linkedin: "https://www.linkedin.com/in/berivan-batak/",
-    calLink: "berivan-batak-eventpartner/15min",
   },
   {
     name: "Karolina Schauerova",
@@ -52,7 +53,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     initials: "KS",
     image: "/Images/Team/karolina.webp",
     linkedin: "https://www.linkedin.com/in/karolina-schauerova/",
-    calLink: "karolina-schauerova-eventpartner/15min",
   },
   {
     name: "Jennifer Ström",
@@ -60,7 +60,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     initials: "JS",
     image: "/Images/Team/jennifer.webp",
     linkedin: "https://www.linkedin.com/in/jennifer-stroem/",
-    calLink: "jennifer-strom-eventpartner/15min",
   },
   {
     name: "Johanna Glaad",
