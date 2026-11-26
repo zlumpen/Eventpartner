@@ -16,9 +16,8 @@ import { fixClaims } from "@/lib/venueCount";
 
 /** Team members customers can book a meeting with (shown as stacked avatars). */
 const MEETING_HOSTS = [
-  { name: "Jennifer Ström", image: "/Images/Team/jennifer.webp" },
-  { name: "Karolina Schauerova", image: "/Images/Team/karolina.webp" },
-  { name: "Berivan Batak", image: "/Images/Team/berivan.webp" },
+  { name: "Malin Berlin", image: "/Images/Team/malin.webp" },
+  { name: "Pontus Bredal-Hansen", image: "/Images/Team/pontus.webp" },
 ];
 
 export function RequestFormSection({ cms }: { cms?: {
