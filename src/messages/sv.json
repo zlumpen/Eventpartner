@@ -384,7 +384,7 @@
   "vpp": {
     "sectionLabel": "Videobroschyrer",
     "sectionBadge": "Helt anpassningsbara & tryckbara",
-    "priceHint": "Från 150 kr ex moms och frakt",
+    "priceHint": "Från 290 SEK / 290 NOK / 200 DKK / 27 EUR exkl. moms och frakt",
     "securityTicker": {
       "gdpr": { "title": "GDPR-kompatibel", "desc": "Utformad med GDPR-principer" },
       "iso": { "title": "ISO 27001-anpassad", "desc": "Säkerhetsramverk i linje med ISO" },
@@ -398,11 +398,11 @@
     "trustedBy": "Betrodda av 500+ globala varumärken",
     "quoteLabel": "Begär offert",
     "quoteHeadline": "Premiumvideobroschyrer.",
-    "quoteDescription": "Skicka inbjudningar till event och marknadsför er smartare med anpassade videobroschyrer — ett taktilt och slagkraftigt verktyg som kombinerar fysiskt tryck med video.",
+    "quoteDescription": "Hamna på skrivbordet. Inte i skräpposten.\n\nAlla får mejl. Ingen behöver fler. Men en snygg videobroschyr som landar direkt på skrivbordet? Den är svår att ignorera.\n\nSkapa uppmärksamhet, väck nyfikenhet och gör ert nästa utskick till något mottagaren faktiskt vill öppna. Perfekt för eventinbjudningar, kundpresentationer, produktlanseringar och personlig marknadsföring.\n\nVideobroschyrerna kombinerar exklusivt fysiskt tryck med inbyggd videoskärm och ger er möjlighet att presentera ert budskap med både bild, ljud och rörelse.\n\nSkicka något som märks. Något som öppnas. Något som blir ihågkommet.",
     "quotePoints": {
-      "customizable": { "label": "Helt anpassningsbar", "desc": "Din design, ditt varumärke, din video" },
-      "delivery": { "label": "Global leverans", "desc": "Leverans var som helst i världen" },
-      "rechargeable": { "label": "Laddningsbar", "desc": "USB-C-laddning, återanvändbart innehåll" }
+      "customizable": { "label": "Helt anpassningsbar", "desc": "Er design, ert varumärke och ert videoinnehåll." },
+      "delivery": { "label": "Global leverans", "desc": "Skicka era videobroschyrer till mottagare var som helst i världen." },
+      "rechargeable": { "label": "Laddningsbar och återanvändbar", "desc": "USB-C-laddning och möjlighet att uppdatera innehållet för framtida kampanjer." }
     },
     "quoteForm": {
       "fullName": "Fullständigt namn *",
