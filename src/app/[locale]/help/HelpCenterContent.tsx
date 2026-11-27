@@ -74,7 +74,7 @@ export function HelpCenterContent({ cms }: { cms?: HelpCMS }) {
   const stats = cms?.stats || defaultStats;
 
   const defaultChannels = [
-    { icon: "mail", title: t('channels.emailTitle'), desc: t('channels.emailDesc'), action: "support@eventpartner.io", href: "mailto:support@eventpartner.io" },
+    { icon: "mail", title: t('channels.emailTitle'), desc: t('channels.emailDesc'), action: "finance@eventpartner.io", href: "mailto:finance@eventpartner.io" },
   ];
   // Phone + live chat hidden until the AI receptionist is live (client request).
   const channels = (cms?.channels || defaultChannels).filter(
@@ -209,15 +209,15 @@ export function HelpCenterContent({ cms }: { cms?: HelpCMS }) {
                 {sv ? (
                   <>
                     Maila oss på{" "}
-                    <a href="mailto:support@eventpartner.io" className="text-tiffany hover:underline font-medium">
-                      support@eventpartner.io
+                    <a href="mailto:finance@eventpartner.io" className="text-tiffany hover:underline font-medium">
+                      finance@eventpartner.io
                     </a>
                   </>
                 ) : (
                   <>
                     Email us at{" "}
-                    <a href="mailto:support@eventpartner.io" className="text-tiffany hover:underline font-medium">
-                      support@eventpartner.io
+                    <a href="mailto:finance@eventpartner.io" className="text-tiffany hover:underline font-medium">
+                      finance@eventpartner.io
                     </a>
                   </>
                 )}

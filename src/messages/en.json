@@ -384,7 +384,7 @@
   "vpp": {
     "sectionLabel": "Video Brochures",
     "sectionBadge": "Fully customizable & printable",
-    "priceHint": "From €15 ex shipping & tax",
+    "priceHint": "From SEK 290 / NOK 290 / DKK 200 / EUR 27 excl. VAT and shipping",
     "securityTicker": {
       "gdpr": { "title": "GDPR Compliant", "desc": "Designed with GDPR principles" },
       "iso": { "title": "ISO 27001 Aligned", "desc": "Security framework alignment" },
@@ -398,11 +398,11 @@
     "trustedBy": "Trusted by 500+ global brands",
     "quoteLabel": "Request a Quote",
     "quoteHeadline": "Premium video\nbrochures.",
-    "quoteDescription": "Send event invitations and stand out at your next event with custom Video Brochure products — tangible, high-impact tools that combine print with embedded video.",
+    "quoteDescription": "Land on the desk. Not in the spam folder.\n\nEveryone gets email. No one needs more. But a sleek video brochure that lands right on the desk? It is hard to ignore.\n\nCreate attention, spark curiosity and turn your next mailing into something the recipient actually wants to open. Perfect for event invitations, client presentations, product launches and personal marketing.\n\nVideo brochures combine exclusive physical print with a built-in video screen, letting you present your message with image, sound and motion.\n\nSend something that gets noticed. Something that gets opened. Something that gets remembered.",
     "quotePoints": {
-      "customizable": { "label": "Fully Customizable", "desc": "Your design, your brand, your video" },
-      "delivery": { "label": "Global Delivery", "desc": "Ship anywhere in the world" },
-      "rechargeable": { "label": "Rechargeable", "desc": "USB-C charging, reusable content" }
+      "customizable": { "label": "Fully customizable", "desc": "Your design, your brand and your video content." },
+      "delivery": { "label": "Global delivery", "desc": "Send your video brochures to recipients anywhere in the world." },
+      "rechargeable": { "label": "Rechargeable and reusable", "desc": "USB-C charging and the ability to update the content for future campaigns." }
     },
     "quoteForm": {
       "fullName": "Full Name *",

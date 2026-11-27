@@ -40,7 +40,7 @@ export function SidebarNav() {
         window.scrollTo({ top: 0, behavior: "smooth" });
         break;
       case "contact":
-        window.location.href = "mailto:support@eventpartner.io";
+        window.location.href = "mailto:finance@eventpartner.io";
         break;
       case "language":
         router.replace(pathname, { locale: locale === "sv" ? "en" : "sv" });

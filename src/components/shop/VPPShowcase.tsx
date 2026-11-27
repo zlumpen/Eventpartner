@@ -576,8 +576,8 @@ function VPPQuoteForm({ preselectedProduct, productTypes }: { preselectedProduct
         <div className="flex items-center gap-5 w-full md:w-auto">
           <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shrink-0 border border-[var(--border-default)]">
             <Image
-              src="/Images/Team/pontus.webp"
-              alt="Pontus Bredal-Hansen — EventPartner"
+              src="/Images/Team/malin.webp"
+              alt="Malin Berlin — EventPartner"
               width={80}
               height={80}
               className="w-full h-full object-cover"
@@ -593,7 +593,7 @@ function VPPQuoteForm({ preselectedProduct, productTypes }: { preselectedProduct
         </div>
         <button
           type="button"
-          onClick={() => openCalBooking("pontus-bredal-hansen-eventpartner/15min")}
+          onClick={() => openCalBooking("eventpartner/15min")}
           className="w-full md:w-auto shrink-0 whitespace-nowrap inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-medium transition-colors bg-black/5 hover:bg-black/10 text-[#111] border border-black/5"
         >
           <Calendar className="w-4 h-4 shrink-0" />
@@ -648,7 +648,7 @@ export function VPPShowcase() {
             <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-tiffany block mb-6">{t('quoteLabel')}</span>
             <h2 className="font-display text-3xl md:text-4xl font-medium tracking-tight text-[var(--text-primary)] leading-[0.95]" dangerouslySetInnerHTML={{ __html: t('quoteHeadline').replace(/\n/g, '<br />') }} />
             <p className="font-mono text-[11px] text-tiffany mt-3">{t('priceHint')}</p>
-            <p className="text-[var(--text-secondary)] text-[15px] leading-[1.8] mt-6">
+            <p className="text-[var(--text-secondary)] text-[15px] leading-[1.8] mt-6 whitespace-pre-line">
               {t('quoteDescription')}
             </p>
             <div className="mt-8 space-y-4">
